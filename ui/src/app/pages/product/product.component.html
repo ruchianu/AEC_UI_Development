@@ -1,0 +1,136 @@
+<!--Section: Block Content---->
+<section class="mb-5" style="background-color: #ffffff;">
+ <div class="container-fluid  py-5 h-100">
+  <div class="small-container">
+   <div class="row">
+    <div class="col-md-6">
+     <div><ng-image-slider [images]="mainpic"  [imageSize]="{width: '70%', height: 330}" #nav></ng-image-slider></div>
+     <div><ng-image-slider #nav [images]="test" [infinite]="true" [imageSize]="{width: '25%', height: 200}"></ng-image-slider></div>
+    </div>
+
+    <div class="col-md-6">
+      
+      <span style="color:purple;" [innerHTML]="toHTML(name)"></span>
+         <ul class="list-unstyled list-inline mb-2">
+                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"> </i></li>
+                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+                  <li class="list-inline-item"><i class="fa fa-star-half-alt fa-xs"></i></li>
+          </ul>
+
+          <div class="card">
+            <div class="card-body">
+
+              <h5 class="card-title">Rs.{{price}}</h5> 
+              <h6 class="card-subtitle mb-2 text-muted"><s>Rs.{{mrp}}</s><i> |  Save 85%   <p class="card-text">   Inclusive of all taxes  (Note, 1 piece)</p>  </i></h6>  
+              <p class="card-text">In-Stock</p>
+                           
+              <h6>  {{selectAddonName}}  </h6>
+
+                          
+              <div class="chip" style="background-color: purple; color:whitesmoke;padding: 5px; align:center" *ngFor="let addonDatasss of addonData" (click) = "selectAddon(addonDatasss.id,addonDatasss.name,addonDatasss.priority)">
+                <h6>  {{addonDatasss.name}}  </h6>
+              </div>
+            
+<!--             
+              <div class="chip" style="background-color: purple; color:whitesmoke;padding: 5px; align:center; cursor: default;">
+                <h6>  Video  </h6>
+              </div>
+              <div class="chip" style="background-color: purple; color:whitesmoke; padding: 5px; align:center;cursor: default;">
+                  <h6>  e-book  </h6>
+              </div>
+              <div class="chip" style="background-color: purple; color:whitesmoke;padding: 5px; align:center;cursor: default; ">
+                  <h6>  Paperback + Video  </h6>
+              </div>
+              <div class="chip" style="background-color: purple; color:whitesmoke; padding: 5px; align:center;cursor: default;">
+                    <h6>  Video+e-book  </h6>
+              </div>    -->
+
+              <ul class="list-unstyled list-inline mb-2">
+              
+              <li class="list-inline-item me-0"> 
+                <div class="def-number-input number-input safari_only mb-0">
+                  <button (click)="decrementCounter()"
+                    class="minus">-</button>
+                  </div>
+                  </li>
+                    
+                    <li class="list-inline-item me-0">    
+                      <div class="def-number-input number-input safari_only mb-0"> 
+                  <input class="quantity" [(ngModel)]="val" min="1" name="quantity" value="1" type="number"></div></li>
+                  <li class="list-inline-item me-0"> 
+                  <button (click)="incrementCounter()"
+                    class="plus">+</button>
+                 
+               </li>
+                  </ul>
+               
+            
+     
+  
+              <p class="card-text">Sold by Anu English Academy</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" (click)="addTosCart(1,1)"><i
+                  class="fas fa-shopping-cart pr-2" ></i>Add to cart</button>
+                </div>
+                <div class="col-md-6">
+                 <button type="button" class="btn btn-warning btn-sm" style="color:purple" (click)="addTosCart(1,1)" routerLink = '/cart'>Buy Now</button>
+              </div>
+             </div>
+
+          </div>
+    
+       </div>
+    </div>
+
+  </div>
+
+
+
+ </div>
+
+ </div>
+
+
+ <my-tabs [buttonClass]="'md-pills pills-primary font-weight-bold'" >
+  <my-tab [tabTitle]="'Product Description'">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="color:purple">Product Description</h4> 
+        <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(description)"></span>
+ 
+      </div>
+     
+      </div>
+  </my-tab>
+  <my-tab tabTitle="Product Details">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="color:purple">Product Details</h4> 
+        <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(details)"></span>
+       
+      </div>
+     
+      </div>
+    
+  </my-tab>
+
+  <my-tab tabTitle="Product Reviews">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="color:purple">Reviews</h4> 
+
+      </div>
+     
+      </div>
+    
+  </my-tab>
+</my-tabs>
+
+
+
+</section>
+
+<!--Section: Block Content-->
