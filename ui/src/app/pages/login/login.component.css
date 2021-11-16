@@ -1,8 +1,32 @@
 :host ::ng-deep .ty {
-    width: 462px;
+    width: 262px; /*462*/
 
 }
 
 .test{
-    padding:0px 22px 20px 25px;
+    /*padding:0px 22px 20px 25px; */
+    padding:0px 20px 20px 25px; 
+}
+
+.login
+{
+
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+    font-size: 30px;
+}
+.btnlogin{
+   
+    
+    position:auto;
+    left: 25%;
+    text-decoration-style: solid;
+    
+    
+}
+.card-img-top{
+ width : 40%
+
+ 
+
 }
