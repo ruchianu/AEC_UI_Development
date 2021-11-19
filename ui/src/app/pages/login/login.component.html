@@ -1,91 +1,46 @@
-<section class="h-100 h-custom" style="background-color: #ffffff;">
-   <div class="container py-5 h-100">
-     <div class="row d-flex justify-content-center align-items-center h-100">
-       <div class="col-lg-8 col-xl-6">
-         <div class="card text-center rounded-3 border border-secondary shadow-0 mb-3" style="width: 33rem;">
-          
-           <!-- <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/img3.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo"> -->
-           <div class="card-body p-4 p-md-5">
-            <img
-            src ="assets/images/login.png"
-            class="card-img-top"
-            alt="..."
-          />
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 login" style="color:#6F016F;">Log-in To Your Account</h3>
-  
-             <form class="px-md-2">
-              <div class="test">
-                <label for="form1">Mobile Number</label> 
 
-
-                     <!-- <input type="text" name="mobile"  [(ngModel)]="mobile" class="form-control" (keyup)="keyPress($event)" (keydown)="keyPress($event)"   minlength=10 maxlength=10 mdbInput> -->
-                     <ngx-intl-tel-input [cssClass]="'ty'" [preferredCountries]="preferredCountries"
-                     [enableAutoCountrySelect]="true" 
-                     [enablePlaceholder]="true" 
-                     [searchCountryFlag]="true"
-                     [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-                     [selectFirstCountry]="false"
-                     [selectedCountryISO]="CountryISO.India"
-                     [phoneValidation]="true"
-                     [separateDialCode]="separateDialCode"
-                     [(ngModel)]="mobile" 
-                     (keyup)="keyPress($event)" 
-                     (keypress)="keyPress($event)" 
-                     [numberFormat]="PhoneNumberFormat.National" 
-                    
-                     
-                     name="phone" >
-                   </ngx-intl-tel-input>
-                     <!-- <label for="form1">Mobile Number</label> -->
-                     <br>
-
-                     <small *ngIf="mobileStatus" class="text-danger">{{mobileStatuss}}</small>
-                 </div>
-                 
-                  <div class="col-md-6 text-center mb-3 btnlogin">
-                    <button mdbBtn type="submit" [class]=" registerSucess ? 'amber darken-4' :' btn-secondary btn-lg btn-rounded' " (click)="onSubmit()" [disabled]="!registerSucess">Log In</button>
-                  </div>
-
-
-              <div class="row" *ngIf="mobileDiv">
-                 <div class="md-form md-outline">
-                  <input type="text" name="mobileOtp"  [(ngModel)]="mobileOtp" class="form-control" (keyup)="mobileOTP($event)" [disabled]="mobileOTPtext" minlength=6 maxlength=6 (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)"  mdbInput>
-                  <label for="form1">Mobile OTP</label>
-                  <small *ngIf="mobileotpError" class="text-danger">{{mobile_error}}</small>
-                  <br>
-                  <small *ngIf="mobileotpError" class="text-danger">Remaining User Tries : {{otpTry}}</small>
-                  <br>
-                  <div *ngIf="timer">Time left = <span>{{maxTime}} Sec</span></div>
-                  <small *ngIf="mobileotpsuccess" class="text-success">{{mobile_error}}</small>
-                </div>
-
-       
-                <!-- <div class="col-md-6 text-center mb-3">
-                   <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" [disabled]="!verifyMobile" (click) = "veryPhone()"  >Verify Mobile</button>
-                </div> -->
-
-
-
-                  <div class="col-md-6 text-center mb-3">
-                   <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" *ngIf="mobileResenddiv" (click)="resendOtp()">Resend Mobile OTP</button>
-                  </div>
-                </div>
-
-
-                <div class="col-md-12 ">
-                 <div class="form-group">
-                  <p class="text-center">Don't have account? <a  (click)="openRegister()">Sign up here</a></p>
-                </div>
-              </div>
-
-             </form>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-
-
-</section>
-
-
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Login Page</title>
+</head>
+<body>
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class="row main-content bg-success text-center">
+			<div class="col-md-4 text-center company__info">
+				<span class="company__logo"><h2><span class="fa fa-android"><img class="logo11"  src="assets/images/logo1.png"></span></h2></span>
+			
+        
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					<div class="row">
+           <br>	
+						<h3 style="color:#6F016F;position:center; ">Log In</h3>
+					</div>
+					<div class="row">
+						<form control="" class="form-group">
+							<div class="row">
+								<input type="text" name="username" id="username" class="form__input" placeholder="Mobile Number">
+							</div>
+							<div class="row">
+								<!-- <span class="fa fa-lock"></span> -->
+								<input type="password" name="password" id="password" class="form__input" placeholder="OTP">
+							</div>
+							
+							<div class="row">
+								<input type="submit" value="Submit" class="btn">
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<p>Don't have an account? <a href="#">Register Here</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
