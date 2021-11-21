@@ -283,14 +283,19 @@ button {
 }
 .keyoffers {
 	padding: 20px;
-	h4 {
+	h3 {
 		padding: 5px;
 		margin-top: 25px;
 		color: #EE9B04;
 	}
 	p {
 		color: #fff;
+		margin: 10px 0;
+		padding: 5px;
+		border: 1px solid #999;
+		font-size: large;
 	}
+	
 }
 .title_key {
 	&::before {
@@ -351,19 +356,100 @@ button {
 	background: #6F016F;
 	padding: 100px 0;
 }
-.social-icons {
-	img {
-		width: 60px;
-		transition: 0.5s;
-	}
-	a {
-		&:hover {
-			img {
-				transform: translateY(-10px);
-			}
-		}
-	}
+
+/******* Social Icons Starts************/
+
+.social-list {
+    display: inline-flex;
 }
+
+.social-list li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.maincard {
+    position: relative;
+    width: 120px;
+    height: 80px;
+}
+
+.thecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.thecard:hover {
+    transform: rotateY(180deg)
+}
+
+.thefront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hidden;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    padding: 4px;
+}
+
+.theback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: hidden;
+    color: #fff;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    border: 1px solid #eee;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    padding: 4px;
+}
+
+.social-text small {
+    font-size: 20px;
+}
+
+@media (max-width:700px) {
+    .social-list {
+        display: block
+    }
+}
+
+.facebook {
+    background: #3b5998;
+}
+
+.instagram {
+    background: #3f729b
+}
+
+.youtube {
+    background: #ff0000
+}
+
+.whatsapp {
+    background: #4dc247
+}
+
+.pinterest {
+    background: #cb2027
+}
+
+
+
+
+
+
+/******* Social Icons Ends************/
+
 .news-icons {
 	img {
 		width: 200px;
