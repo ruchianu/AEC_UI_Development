@@ -107,7 +107,7 @@ p {
 		padding: 5px;
 		margin-bottom: 5px;
 		color: #EE9B04;
-		font-sixe: 36px;
+		font-size: 36px;
 		font-weight: 600;
 		margin-bottom: 30px;
 		color: #EE9B04;
@@ -354,7 +354,9 @@ button {
 }
 #social-media {
 	background: #6F016F;
-	padding: 100px 0;
+	
+	padding:7% 7% 15% 15%;	 
+	text-align: center;
 }
 
 /******* Social Icons Starts************/
@@ -458,29 +460,70 @@ button {
 		margin-top: none;
 	}
 }
-#testimonials {
-	margin: 100px 0;
+
+/* Testimonials */
+
+#Testimonials1{
+   
+	/* background-color: blueviolet;
+	  padding: 10px 50px 30px 10px;*/
+ 
+	  padding:7% 7% 15% 15%;	 
+ text-align: center;
+
+ 
+ }
+ .carousel-item{
+    height:200px;
 }
-.testimonials {
-	border-left: 4px solid #6F016F;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	img {
-		width: 300px;
-		height: 200px;
-		margin-top: none;
-		margin: 0 10px;
-	}
+ /*
+ #demo{
+   
+
+	 color:#ccad00;
+   
+ }
+ 
+.comment{
+    
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style:italic;
+ 
+	padding: 0;
+	color:white;
+	padding: 10px 50px 20px;
+}*/
+ .test-img{
+ /*width:40%;
+ border-radius:100%;
+ margin-bottom: 20%;*/
+ width:20%;
+border-radius:100%;
+margin:50px;
+
+ 
+ }
+ .carousel-indicators{
+	padding-top: 100%;	
+	margin-top: 10%;
+  }
+  
+/*.carousel-control-prev-icon{
+
+	color:white;
 }
-.greview {
-	width: 50px;
-	height: 50px;
-	margin-top: none;
+.carousel-control-prev{
+	color:white;
 }
-.user-details {
-	display: inline-block;
-	font-size: 12px;
+.carousel-control-next{
+	color:white;
 }
+.carousel-control-next-icon{
+
+	color:white;
+}
+*/
 #footer {
 	background-image: linear-gradient(to right,#6F016F ,#6F016F);
 	color: #fff;
@@ -692,6 +735,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 30px;
     font-weight: 500;
     line-height: 40px;
+	color: #6F016F ;
 }
 .pricingTable .pricing-content{
     text-align: left;
@@ -784,6 +828,7 @@ text-decoration: none;
     font-size: 30px;
     font-weight: 500;
     line-height: 40px;
+	color: #6F016F ;
 }
 .pricingTable_hw .pricing-content_hw{
     text-align: left;
@@ -875,6 +920,7 @@ text-decoration: none;
     font-size: 30px;
     font-weight: 500;
     line-height: 40px;
+	color: #6F016F ;
 }
 .pricingTable_ll .pricing-content_ll{
     text-align: left;
