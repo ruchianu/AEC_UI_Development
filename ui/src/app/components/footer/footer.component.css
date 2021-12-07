@@ -1,9 +1,16 @@
 .ftrclass
 {
     color:
-    red;
+    white;
     
 
 }
+.foot{
+    background-color: #6F016F;
+}
 /*#6F016F;
 #ccad00;*/
+
+.lst{
+    color:white;
+}
