@@ -35,7 +35,7 @@ https://bootsnipp.com/snippets/z8l2X  */
 }
 body {
 	font-family: sans_serif;
-	background-color: #6F016F;
+	
 }
 .purple_border {
 	border: 20px solid #6F016F;
@@ -358,7 +358,30 @@ button {
 	padding:7% 7% 15% 15%;	 
 	text-align: center;
 }
-
+.social_key {
+	&::before {
+		content: '';
+		background: #fff;
+		height: 5px;
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2px;
+		display: block;
+		transform: translateY(63px);
+	}
+	&::after {
+		content: '';
+		background: #fff;
+		height: 10px;
+		width: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0px;
+		display: block;
+		transform: translateY(8px);
+	}
+}
 /******* Social Icons Starts************/
 
 .social-list {
@@ -466,15 +489,22 @@ button {
 #Testimonials1{
    
 	/* background-color: blueviolet;
-	  padding: 10px 50px 30px 10px;*/
- 
+	  padding: 10px 50px 30px 10px;
+ */
 	  padding:7% 7% 15% 15%;	 
  text-align: center;
 
  
+ 
  }
- .carousel-item{
-    height:200px;
+ 
+ .review{
+	background-color:#6F016F;
+	
+ }
+.greview{
+color: white;
+
 }
  /*
  #demo{
@@ -494,36 +524,22 @@ button {
 	color:white;
 	padding: 10px 50px 20px;
 }*/
- .test-img{
- /*width:40%;
- border-radius:100%;
- margin-bottom: 20%;*/
- width:20%;
-border-radius:100%;
-margin:50px;
-
  
+ .test-img{
+	width:100%;
+	// border-radius:100%;
+	
+	
+	}
+ .carousel-caption{
+	top: 0;
+    bottom: auto;
+	
+	color:#6F016F;
  }
- .carousel-indicators{
-	padding-top: 100%;	
-	margin-top: 10%;
-  }
   
-/*.carousel-control-prev-icon{
+ 
 
-	color:white;
-}
-.carousel-control-prev{
-	color:white;
-}
-.carousel-control-next{
-	color:white;
-}
-.carousel-control-next-icon{
-
-	color:white;
-}
-*/
 #footer {
 	background-image: linear-gradient(to right,#6F016F ,#6F016F);
 	color: #fff;

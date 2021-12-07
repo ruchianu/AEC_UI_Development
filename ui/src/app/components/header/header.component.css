@@ -2,7 +2,9 @@
     padding:2px;
     margin-left: 7px;
 } */
-
+.head{
+    background-color: #6F016F;
+}
 
 .view {
     background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;

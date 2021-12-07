@@ -183,7 +183,7 @@ One Row Two Columns
 	<section id="social-media">
         <!----S<div class="container text-center">--->
         
-			<h1 class ="title_key  text-center"> Find us on Social Media</h1>
+			<h1 class ="social_key  text-center"> Find us on Social Media</h1>
 			
 		<div class="container mt-5 mb-5 d-flex justify-content-center">
 			
@@ -262,104 +262,183 @@ One Row Two Columns
 	<!----Sec 7 -----------Carosuel----->
 	<section id="Testimonials1">
 
-		<h1 class ="courses text-center">WHAT CLIENTS SAY</h1>
-		
+		<h1 class ="courses text-center">What Learners say</h1>
+		<div class="row review">
 		<div class="container">
-	<!-- Carousel wrapper -->
-<div
-id="carouselBasicExample"
-class="carousel slide carousel-fade"
-data-mdb-ride="carousel"
->
-<!-- Indicators -->
-<div class="carousel-indicators">
-  <button
-	type="button"
-	data-mdb-target="#carouselBasicExample"
-	data-mdb-slide-to="0"
-	class="active"
-	aria-current="true"
-	aria-label="Slide 1"
-  ></button>
-  <button
-	type="button"
-	data-mdb-target="#carouselBasicExample"
-	data-mdb-slide-to="1"
-	aria-label="Slide 2"
-  ></button>
-  <button
-	type="button"
-	data-mdb-target="#carouselBasicExample"
-	data-mdb-slide-to="2"
-	aria-label="Slide 3"
-  ></button>
-</div>
+			<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+				<mdb-carousel-item>
+				  <div class="view w-100">
+					<img class=" test-img d-block w-100" src="assets/images/r1.jpg" alt="1">	
+				  </div>
+				  <!---<div class="carousel-caption">
+					<h3 class=" name h3-responsive ">Madhavi Datla</h3>
+					<p>First text</p>
+				  </div>-->
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar2.jpg" alt="Third slide"> 
+					</div>	
+				  </mdb-carousel-item>
 
-<!-- Inner -->
-<div class="carousel-inner">
-  <!-- Single item -->
-  <div class="carousel-item active">
-	<img
-	  src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-	  class="d-block w-100"
-	  alt="..."
-	/>
-	<div class="carousel-caption d-none d-md-block">
-	  <h5>First slide label</h5>
-	  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-	</div>
-  </div>
+				<mdb-carousel-item>
+				  <div class="view w-100">
+					<img class="test-img d-block w-100" src="assets/images/r3.jpg" alt="Second slide">
+				  </div>  
+				</mdb-carousel-item>
 
-  <!-- Single item -->
-  <div class="carousel-item">
-	<img
-	  src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
-	  class="d-block w-100"
-	  alt="..."
-	/>
-	<div class="carousel-caption d-none d-md-block">
-	  <h5>Second slide label</h5>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-	</div>
-  </div>
+				<mdb-carousel-item>
+				  <div class="view w-100">
+					<img class="test-img d-block w-100" src="assets/images/ar4.jpg" alt="Third slide">			
+				  </div>				 
+				</mdb-carousel-item>
 
-  <!-- Single item -->
-  <div class="carousel-item">
-	<img
-	  src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
-	  class="d-block w-100"
-	  alt="..."
-	/>
-	<div class="carousel-caption d-none d-md-block">
-	  <h5>Third slide label</h5>
-	  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-	</div>
-  </div>
-</div>
-<!-- Inner -->
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r5.jpg" alt="Third slide">					  
+					</div>					
+				</mdb-carousel-item>
 
-<!-- Controls -->
-<button
-  class="carousel-control-prev"
-  type="button"
-  data-mdb-target="#carouselBasicExample"
-  data-mdb-slide="prev"
->
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Previous</span>
-</button>
-<button
-  class="carousel-control-next"
-  type="button"
-  data-mdb-target="#carouselBasicExample"
-  data-mdb-slide="next"
->
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Next</span>
-</button>
-</div>
-<!-- Carousel wrapper -->
-			
-		</div>
-	
-	</section>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar6.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r7.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar8.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r9.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar10.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r11.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r2.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r13.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r4.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r15.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r6.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r17.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r8.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r18.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r10.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar1.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r12.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar3.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar11.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r14.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar5.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/r16.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar12.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar7.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar9.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<div class="view w-100">
+					  <img class="test-img d-block w-100" src="assets/images/ar13.jpg" alt="Third slide">					  
+					</div>
+				</mdb-carousel-item>
+			  </mdb-carousel>
+			  </div>
+			  </div>
+			</section>
