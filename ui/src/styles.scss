@@ -165,7 +165,7 @@ button {
 	padding: 8 0px 0;
 	width: auto;
 	a {
-		color: #fff;
+		color: #f8fbff;// #fff;
 		text-decoration: none;
 	}
 }
@@ -218,7 +218,7 @@ button {
 	font-style: italic;
 	font-size: 20px;
 	font-weight: 300;
-	color:#ffff;//#B91646;// #640587;// #EE9B04;
+	 color:#640587;//#ffff;//#B91646;// #640587;// #EE9B04;
 }
 .namemsg {
 	position: relative;
@@ -241,7 +241,7 @@ button {
 	height: 100px;
 }
 #about-us {
-	background-color:#fff;//#870546;// #f8fbff;// #6F016F;
+	background-color: #f8fbff;//#fff;//#870546;// #f8fbff;// #6F016F;
 	padding: 30px 30px;
 	ul {
 		li {
@@ -299,7 +299,7 @@ color:#870546;
 // }*/
 #keyoffers {
 	padding: 30px 30px;
-	background-color: #fff;//#6F016F;
+	background-color: #f8fbff;// #fff;//#6F016F;
 	
 	// .btn-primary {
 	// 	box-shadow: none;
@@ -325,7 +325,7 @@ color:#870546;
 		color:#7D0505;
 		// margin: 10px 0;
 		// padding: 5px;
-		border: 1px solid #999;
+		//border: 1px solid #999;
 		font-size: large;
 		font-style: italic;
 	}
@@ -356,7 +356,7 @@ color:#870546;
 	}
 }*/
 #courses {
-	background-color: #fff; //#6F016F;
+	background-color: #f8fbff;// #fff; //#6F016F;
 	padding: 8 0px 0;
 }
 /*.courses {
@@ -384,11 +384,11 @@ color:#870546;
 	}
 }*/
 .spokeneng-title {
-	color: #fff;
+	color: #f8fbff;// #fff;
 }
 #social-media {
 	padding: 30px 30px;
-	background:#fff;// #6F016F;
+	background: #f8fbff;//#fff;// #6F016F;
 	
 	
 	text-align: center;
@@ -459,7 +459,7 @@ color:#870546;
     width: 100%;
     height: 100%;
     background-color: hidden;
-    color: #fff;
+    color: #f8fbff;// #fff;
     border-radius: 10px;
     cursor: pointer;
     border: 1px solid #eee;
@@ -473,7 +473,7 @@ color:#870546;
     height: 100%;
     cursor: pointer;
     background-color: hidden;
-    color: #fff;
+    color: #f8fbff;// #fff;
     border-radius: 10px;
     transform: rotateY(180deg);
     border: 1px solid #eee;
@@ -542,13 +542,13 @@ color:#870546;
  }
  
  .review{
-	background-color:#fff;//#6F016F;
+	background-color: #f8fbff;//#fff;//#6F016F;
 	border-color:#870546 ;
 	border-width: thick;
 	border-style:inset;
  }
 .greview{
-color: white;
+color: #f8fbff;// white;
 
 }
  /*
@@ -624,7 +624,7 @@ color: white;
 	}
 }
 hr {
-	background-color: #fff;
+	background-color: #f8fbff;// #fff;
 }
 .Copyright {
 	margin-bottom: 0;
@@ -652,7 +652,7 @@ hr {
 	flex-direction: column;
 	width: 100%;
 	pointer-events: auto;
-	background-color: #fff;
+	background-color: #f8fbff;// #fff;
 	background-clip: padding-box;
 	border: 1px solid rgba(238,155,4,.8);
 	outline: 0;
@@ -929,7 +929,7 @@ text-decoration: none;
 .pricingTable_hw .pricing-content_hw li:before
 {
     content: "\f00c";
-    color: #fff;
+    color: #f8fbff;// #fff;
 	background: #54A445;
     font-family: "Font Awesome 5 Free";
     font-size: 12px;
@@ -945,7 +945,7 @@ text-decoration: none;
 }
 /********************************language learning ***************************************/
 .pricingTable_ll{
-    background: #fff;
+    background: #f8fbff;// #fff;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     /*padding: 20px 0 35px;*/
@@ -967,7 +967,7 @@ text-decoration: none;
     font-weight: 500;
     line-height: 65px;
     margin: 0;
-	color:#fff;
+	color: #f8fbff;//#fff;
   
  
 }
@@ -1005,7 +1005,7 @@ text-decoration: none;
     position: relative;
 }
 .pricingTable_ll .list-group_ll li{
-    color: #fff;
+    color:  #f8fbff;//#fff;
     font-size: 15px;
     font-weight: 300;
     line-height: 25px;
@@ -1020,7 +1020,7 @@ text-decoration: none;
 .pricingTable_ll .pricing-content_ll li:before
 {
     content: "\f00c";
-    color: #fff;
+    color: #f8fbff;// #fff;
     background: #F89923;
     font-family: "Font Awesome 5 Free";
     font-size: 12px;
