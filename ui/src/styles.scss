@@ -28,29 +28,14 @@
 
 https://bootsnipp.com/snippets/z8l2X  */
 /* Sign up ********************* Form*/
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+
 body {
-	font-family: sans_serif;
-	
-}
-.purple_border {
-	// border: 20px solid #6F016F;
-	border: 10px solid #6F016F;
-}
-.golden_border1 {
-	outline: 15px solid #ccad00;
-}
-.logo {
-	width: 100px;
-	height: 100px;
+	// font-family: sans_serif;
+	font-family: 'Lato', sans-serif;
 	position: relative;
-	top: 20px;
-	right: 60px;
+	background: #FFFFFF;
 }
+
 .logo-login {
 	width: 100px;
 	height: 100px;
@@ -58,75 +43,46 @@ body {
 	top: 20px;
 	right: -10px;
 }
-.navbar {
-	display: flex;
-	align-items: left;
-	padding: 10px;
-}
-nav {
-	top: 10px;
-	flex: 1;
-	text-align: right;
-	ul {
-		display: inline-block;
-		list-style-type: none;
-		li {
-			top: 10px;
-			display: inline-block;
-			margin-right: 5px;
-			color: #6F016F;
-			text-decoration: none;
-		}
-	}
-}
-a {
-	text-decoration: none !important;
-	color: #6F016F !important;
-}
 
 
+// .container {
+// 	max-width: 1300px;
+// 	margin: auto;
+// 	padding-left: 25px;
+// 	padding-right: 25px;
+// 	h1 {
+// 		padding: 5px;
+// 		margin-top: 25px;
+// 		// color: #EE9B04;
+// 		color:#6F016F;
 
-p {
-	color: #6F016F;
-}
-.container {
-	max-width: 1300px;
-	margin: auto;
-	padding-left: 25px;
-	padding-right: 25px;
-	h1 {
-		padding: 5px;
-		margin-top: 25px;
-		// color: #EE9B04;
-		color:#6F016F;
-
-		position: relative;
-		bottom: 20px;
-		padding: 5px;
-		margin-bottom: 5px;
-		// color: #EE9B04;
-		color:#6F016F;
-		position: relative;
-		bottom: 20px;
-		padding: 5px;
-		margin-bottom: 5px;
-		// color: #EE9B04;
-		color:#6F016F;
-		font-size: 36px;
-		font-weight: 600;
-		margin-bottom: 30px;
-		color:#6F016F;
-		// color: #EE9B04;
-	}
-	h2 {
-		position: relative;
-		bottom: 20px;
-		padding: 5px;
-		margin-bottom: 5px;
-		// color: #EE9B04;
-		color:#6F016F;
-	}
-}
+// 		position: relative;
+// 		bottom: 20px;
+// 		padding: 5px;
+// 		margin-bottom: 5px;
+// 		// color: #EE9B04;
+// 		color:#6F016F;
+// 		position: relative;
+// 		bottom: 20px;
+// 		padding: 5px;
+// 		margin-bottom: 5px;
+// 		// color: #EE9B04;
+// 		color:#6F016F;
+// 		font-size: 36px;
+// 		font-weight: 600;
+// 		margin-bottom: 30px;
+// 		color:#6F016F;
+// 		// color: #EE9B04;
+// 	}
+// 	h2 {
+// 		position: relative;
+// 		bottom: 20px;
+// 		padding: 5px;
+// 		margin-bottom: 5px;
+// 		// color: #EE9B04;
+// 		color:#6F016F;
+// 	}
+// }
 .menu-icon {
 	width: 28px;
 	margin-left: 10px;
@@ -551,6 +507,7 @@ color:#870546;
 color: #f8fbff;// white;
 
 }
+
  /*
  #demo{
    
