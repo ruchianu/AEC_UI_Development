@@ -38,7 +38,20 @@
         padding-left: 18px;
         padding-right: 18px;
         
-        
+      
         
         }
-        
+        .btnsignin{
+
+            background-color: #6F016F;
+            color:#fff;
+            padding: 10px 10px ;/*10px 6px;*/
+            
+    
+
+        } 
+        .sb{
+          size:10px;  
+        }
+
+       
