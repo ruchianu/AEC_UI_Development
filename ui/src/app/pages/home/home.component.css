@@ -3,80 +3,50 @@
 .intro
 {
 	font-family: 'Lato',sans-serif;
-	font-size: 15px;
-	padding: 50px 0 0 40px;
+	font-size: 20px;
+	padding: 50px 0 0 8px;
 	
 
 }
 .intro::after{
     display: inline-block;
     content: "";
-    border-top: .2rem solid black;
-    width: 5rem;
+    border-top: .3rem solid black;
+    width: 6rem;
+	margin: 3px 10px;
     /* margin: 0 2rem; */
    
-	color:purple;
+
 }
-.hline{
-	color:purple;
-    font-size: xx-large;
-	
- 
-    
-}
+
 
 .pioneer
 {
-	font-family: 'Lato',sans-serif;
-	font-size: 40px;
+	font-family: 'Lato-regular',sans-serif;
+	font-size: 55px;
 	font-weight: 800;
-	padding-left: 38px;
-	color:#6F016F;
+	color:#790666;
 }
 
 .promo-title
 {
-	font-family: 'Lato',sans-serif;
-	font-size: 25px;
+	font-family: 'Lato-regular',sans-serif;
+	font-size:40px;
 	font-weight: 300;
 	color:#000;
-	padding-top: 15px;
-	padding-left:10px;
-}
-
-.promo-title1
-{
-	font-family: 'Lato',sans-serif;
-	font-size: 20px;
-	font-weight: 300;
-	color:#000;
-	padding-top: 0px;	
-	padding-left:38px;
-}
-.owner {
-	width: 300px;
-	height: 300px;	
-	border: 5px #F6F6F6 solid;
-	background-color:  whitesmoke;
-	margin-left:38px;
-	margin-top: 40px;
 	
 }
 
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
+
+.owner {
 	width: 100%;
-	height: 100%;
-	background: rgba(226, 133, 184, 0);
-	transition: 0.5s ease;
-  }
-  
-  .container:hover .overlay {
-	display: block;
-	background: rgba(226, 133, 184, 0);
-  }
+	border: 8px #F6F6F6 solid;
+	background-color:  whitesmoke;
+	margin-top: 60px;
+	
+}
+
+
 .btnabt {
 	/* // position: absolute;
 	// width: 500px;
@@ -88,10 +58,9 @@
 	position: absolute;
 	width: 250px;
 	margin-top:00px;
-	margin-bottom:-20px;
 	left:75px;
-	right:-25px;
-	top:300px;
+	
+	top:450px;
 	text-align: center;
 	opacity: 0;
 	transition: opacity .35s ease;
@@ -103,8 +72,9 @@
 	padding: 12px 20px;
 	
 	text-align: center;
-	background-color: purple;
+	background-color: #790666;
 	color: white;
+	border-color: white;
 	font-size: 18px;
 	/* // border: solid 5px purple; */
 	z-index: 1;
@@ -119,35 +89,29 @@
 	/* // padding-top: 10px;
 	// padding-right: 10px;
 	// padding-left: 400px */
-	padding:40px 150px 20px 100px;
+	margin-top:80px;
 }
 
 .message {
 	font-family: 'Lato',sans-serif;
-	
-	padding-left:53px;
-	margin-bottom: auto;
 	font-style: italic;
-	font-size: 15px;
-	font-weight: 300;
-	 color:#B91646;
+	font-size: 18px;
+	font-weight: 200;
+	color:#B91646;
      /* //#ffff;//#B91646;// #640587;// #EE9B04; */
 }
 .namemsg {
 
-	left: 50px;
+
 	font-family: 'Lato',sans-serif;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 800px;
-	color:#640587;
-	padding-left:53px;
+	color:#790666;
+	
 }
-.lingmsg {
-	font-family: 'Lato',sans-serif;
-	position: RELATIVE;
-	font-size: 18px;
-	left: 50px;
-	bottom: 20px;
+.profilemsg {
+	font-family: 'Lato',sans-serif;	
+	font-size: 18px;	
 	font-style: italic;
 	color:#B91646;
 }
@@ -155,48 +119,52 @@
 
 
 /*****************Section 2************ Our Courses ****************************************/
-
+#ocourses{
+	margin-top:50px;
+}
 .courses {
+
 	font-family: 'Lato',sans-serif;
 	font-size: 35px;
 	font-weight: 800;
 	/* padding-left: 40px; */
-	color:#6F016F;
+	color:#790666;
 }
 .coursepic{
    width:100%;
   
-   padding-left: 0px;
-
+}
+.abottom {
+	position:relative;
+	top:-50px;
+ 	padding-top: 20px;
+	 
+    width:20%;
+    background-color: purple;
+    color:whitesmoke; 
 }
 .topleft{
 	position: absolute;
 	top: 25px;
-	left: 0px;
+	left: 15px;
 	font-size: 18px;
 	
 }
 .topleft a{
+	position:relative;
 	font-family: 'Lato',sans-serif;
 	font-size: 20px;
 	font-weight: 800;
-	width: 100px;
+	width: 100%;
 	padding: 10px 10px;
 	text-align: center;
 	background-color: whitesmoke;
 	color:purple; 
 	/* // border: solid 5px purple; */
 	z-index: 1;	
-	padding-left: 40px;
+
 }
-.abottom {
-	position:relative;
-	top:-45px;
- 	padding-top: 20px;
-    width:20%;
-    background-color: purple;
-    color:whitesmoke; 
-}
+
 /* .abottom i{
 	
     padding-left:30px;
@@ -204,70 +172,53 @@
 } */
 
 .ag{
-	position:relative;
-	bottom:10px;
-	text:center;
-	padding-left:30px;
+	/* position:relative; */
+	margin-bottom:10px;
+	/* text:center; */
+	/* padding-left:30px; */
 }
 /*****************Section 3************ Keyoffers waea****************************************/
+#okeyoffers{
+	margin-top:50px;
+}
 .icons{
-	width: 300px;
-	height: 300px;	
+	
 	background-color: white;
-	top:60px;
-	padding-left: 65px;
-
-
 }
 .gr{
-    color:purple;
+    color:#790666;
     font-size: xx-large;
 }
-.box{
-
-	width: 400px;
-	height: 350px;	
-	background-color: #790666;
-	top:60px;
-
-
-}
-
 
 .fkey{
-
-color: #000;
-padding-left:20px;
-font-size:30px;
-}
-.next_icon{
-
-	margin-left:90px;
-    color:purple;
-    font-size: xx-large;
-}
-.fkey1{
-
-	color: grey; 
-	margin-left:15px;
-	font-size:20px;
+	font-family: 'Lato',sans-serif;
+	color: #000;
+	
+	font-size:32px;
+	margin-left:20px;
 	}
-	.fkey2{
 
-		color: grey; 
-		margin-left:25px;
+	.fkey1{
+		margin-top:10px;
+		color:#9A9A9A;
+		/* margin-left:15px; */
 		font-size:20px;
 		}
-.r1{
-		
-		margin-top: 30px;
-	}
+	
 
 	
-.r2{
-		
-	margin-top: 30px;
+.box{
+
+	width:100%;
+	
+	background-color: #790666;
+	
+
+
 }
+
+
+
 
 .why
 {

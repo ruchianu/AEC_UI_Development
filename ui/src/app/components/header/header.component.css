@@ -8,7 +8,7 @@
 }
 .head{
     /* background-color: #6F016F; */
-       background-color: #fff;  
+       background-color: #E5E5E5;  
        /* #fff; */
 }
 
@@ -54,4 +54,59 @@
           size:10px;  
         }
 
+       /* --------------------------------------------------------------------backup
+        */
+
        
+
+/* .main-header{
+    border-bottom: 1px #dcdcdc solid;
+}
+.head{
+  
+       background-color: #fff;  
+       
+
+.view {
+    background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.logogif{
+  
+    
+    width: 261px;
+    height: 54px;
+
+  
+}
+.navbar{
+
+    ** padding-top:15px; **
+    color:black;
+    }
+   
+    .nav-item {
+
+        padding-left: 18px;
+        padding-right: 18px;
+        
+      
+        
+        }
+        .btnsignin{
+
+            background-color: #6F016F;
+            color:#fff;
+            padding: 10px 10px ; **10px 6px;**
+            
+    
+
+        } 
+        .sb{
+          size:10px;  
+        }
+
+        */
