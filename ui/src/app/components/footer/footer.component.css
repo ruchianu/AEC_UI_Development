@@ -1,20 +1,23 @@
-.ftrclass
-{
-    color:
-    white;
-    
 
+#footer{
+    background-color: #470E3E;
 }
-.foot{
-    background-color: #6F016F;
-}
+.footerbox{
+  
+    border-bottom: 1px #470E3E solid;
+   
 /*#6F016F;
 #ccad00;*/
-
-.lst{
-    color:white;
 }
-.icon{
-size : 5px;
-
+.foote_bottom_ul_amrc {
+    margin-top:8px;
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	/* margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto; */
 }
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#fff; margin:0 12px; font-family: 'Lora',sans-serif; font-size: 16px;}

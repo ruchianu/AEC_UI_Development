@@ -1,5 +1,4 @@
 
-
 .intro
 {
 	font-family: 'Lato',sans-serif;
@@ -14,11 +13,7 @@
     border-top: .3rem solid black;
     width: 6rem;
 	margin: 3px 10px;
-    /* margin: 0 2rem; */
-   
-
 }
-
 
 .pioneer
 {
@@ -48,13 +43,7 @@
 
 
 .btnabt {
-	/* // position: absolute;
-	// width: 500px;
-	// left:0;
-	// top: 180px;
-	// text-align: center;
-	// opacity: 0;
-	// transition: opacity .35s ease; */
+
 	position: absolute;
 	width: 250px;
 	margin-top:00px;
@@ -76,7 +65,6 @@
 	color: white;
 	border-color: white;
 	font-size: 18px;
-	/* // border: solid 5px purple; */
 	z-index: 1;
   }
   
@@ -85,10 +73,6 @@
   }
   
 .video-frame{
-
-	/* // padding-top: 10px;
-	// padding-right: 10px;
-	// padding-left: 400px */
 	margin-top:80px;
 }
 
@@ -98,11 +82,9 @@
 	font-size: 18px;
 	font-weight: 200;
 	color:#B91646;
-     /* //#ffff;//#B91646;// #640587;// #EE9B04; */
+    
 }
 .namemsg {
-
-
 	font-family: 'Lato',sans-serif;
 	font-size: 25px;
 	font-weight: 800px;
@@ -165,17 +147,10 @@
 
 }
 
-/* .abottom i{
-	
-    padding-left:30px;
-	
-} */
 
 .ag{
-	/* position:relative; */
 	margin-bottom:10px;
-	/* text:center; */
-	/* padding-left:30px; */
+
 }
 /*****************Section 3************ Keyoffers waea****************************************/
 #okeyoffers{
@@ -192,34 +167,21 @@
 
 .fkey{
 	font-family: 'Lato',sans-serif;
-	color: #000;
-	
+	color: #000;	
 	font-size:32px;
 	margin-left:20px;
 	}
 
-	.fkey1{
-		margin-top:10px;
-		color:#9A9A9A;
-		/* margin-left:15px; */
-		font-size:20px;
+.fkey1{
+	margin-top:10px;
+	color:#9A9A9A;
+	font-size:20px;
 		}
-	
 
-	
 .box{
-
 	width:100%;
-	
 	background-color: #790666;
-	
-
-
 }
-
-
-
-
 .why
 {
 	font-family: 'Lato',sans-serif;
@@ -238,7 +200,6 @@
 	color:white;
 }
 
-
 .list-text {
 	font-family: 'Lato',sans-serif;
 	color: #fff;
@@ -256,9 +217,7 @@
 .learners
 {
 	margin-bottom: 20px;
-	background-color: whitesmoke;
-	
-
+	background-color: whitesmoke;	
 }
 .parent{
 	font-family: 'Lato',sans-serif;
@@ -284,7 +243,6 @@
 	color: #790666;
 	margin-top:100px;
 	margin-left:60px;
-
 }
 .see-more{
 	font-size: 20px;
@@ -295,18 +253,6 @@
 .see-more:hover{
 	color:blue;
 }
-
-
-
- /* #test1::before,
-#test2::before {
-display: block;
-content: " ";
-margin-top: -65px;
-height: 65px;
-visibility: hidden;
-}  */
-
 .scrollbar {
 
 	float: right;
@@ -336,58 +282,38 @@ visibility: hidden;
 
 
 
-	.news{
+.news{
+margin-top:30px;
+margin-left:50px;
+		
+	
+	
+	}
+.news_pic {
+	width: 200px;
+	height: 200px;	
+	border: 2px #dcdcdc solid;
+	margin-left:10px;
+	margin-top: 20px;
+		
+}
+.newsname{
 
+	font-family: 'Lato-regular',sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	color:#000;
+	margin-left:80px;
 	margin-top:30px;
-		
-		margin-left:50px;
-		
-	
-	
-	}
-	.news_pic {
-		width: 200px;
-		height: 200px;	
-		border: 2px #dcdcdc solid;
-		margin-left:10px;
-		margin-top: 20px;
-		
-	}
-	.newsname{
 
-		font-family: 'Lato-regular',sans-serif;
-		font-size: 35px;
-		font-weight: 600;
-		color:#000;
-		margin-left:80px;
-		margin-top:30px;
+}
+.head{
+	font-family: 'Lora',sans-serif;
+	font-size: 16px;
+	color:grey;
+	margin-left:80px;	
+}
 
-	}
-	.head{
-		font-family: 'Lora',sans-serif;
-		font-size: 16px;
-		color:grey;
-		margin-left:80px;
-		
-	}
-	
-	/* #col2{
-	
-		color: #790666;
-		position:relative;
-		left:50px;
-		top: 10px;
-	
-		
-	}
-	.newscaption{
-		font-family: 'Lato bold',sans-serif;
-		
-		
-		text-align:left;
-		
-		
-	} */
 	
 	
 /*
