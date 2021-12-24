@@ -17,16 +17,16 @@
 
 .pioneer
 {
-	font-family: 'Lato-regular',sans-serif;
-	font-size: 55px;
+	font-family: 'Lora',sans-serif;
+	font-size:48px;
 	font-weight: 800;
 	color:#790666;
 }
 
 .promo-title
 {
-	font-family: 'Lato-regular',sans-serif;
-	font-size:40px;
+	font-family: 'Lora',sans-serif;
+	font-size:48px;
 	font-weight: 300;
 	color:#000;
 	
@@ -106,30 +106,56 @@
 }
 .courses {
 
-	font-family: 'Lato',sans-serif;
-	font-size: 35px;
-	font-weight: 800;
+	font-family: 'Lora';
+	font-size: 40px;
+	font-weight: 700;
 	/* padding-left: 40px; */
 	color:#790666;
 }
+.coursebox{
+
+    position:relative;
+    width:100%;
+
+} 
 .coursepic{
    width:100%;
-  
+   display: block;
+}
+
+.ag{
+	margin-bottom:5px;
+	color:#fff;
+	margin-left:20px;
+	/* position: absolute; bottom:0; left:0;  */
+
 }
 .abottom {
+	width:20%;
+	background-color:#790666;
+	border:5px solid #fff;	
 	position:relative;
+	top:-55px;
+	margin-top:5px;
+	border:5px solid #790666;
+	/* position:relative;
 	top:-50px;
- 	padding-top: 20px;
-	 
+ 	padding-top: 20px;	 
     width:20%;
     background-color: purple;
-    color:whitesmoke; 
+  
+	border:5px solid #fff; */
+}
+.abottom:hover{
+	background-color: #6F016F;
+	border:3px solid #fff;
 }
 .topleft{
+	/* font-family: 'Lato'; */
 	position: absolute;
 	top: 25px;
 	left: 15px;
-	font-size: 18px;
+	/* font-size: 20px; */
 	
 }
 .topleft a{
@@ -148,10 +174,6 @@
 }
 
 
-.ag{
-	margin-bottom:10px;
-
-}
 /*****************Section 3************ Keyoffers waea****************************************/
 #okeyoffers{
 	margin-top:50px;
@@ -166,16 +188,17 @@
 }
 
 .fkey{
-	font-family: 'Lato',sans-serif;
+	font-family: 'Lora';
 	color: #000;	
 	font-size:32px;
 	margin-left:20px;
 	}
 
 .fkey1{
+	font-family: 'Lato';
 	margin-top:10px;
 	color:#9A9A9A;
-	font-size:20px;
+	font-size:16px;
 		}
 
 .box{
@@ -186,16 +209,23 @@
 {
 	font-family: 'Lato',sans-serif;
 	font-size: 25px;
-	padding: 50px 0 0px 40px;
+	padding: 50px 0 0px 30px;
 	color:white;
 
+}
+.why::after{
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid white;
+    width: 6rem;
+	margin: 5px 10px;
 }
 
 .aea
 {
-	font-family: 'Lato',sans-serif;
+	font-family: 'Lora',sans-serif;
 	font-size: 40px;
-	font-weight: 800;
+	font-weight: 700;
 	padding-left: 28px;
 	color:white;
 }
@@ -203,12 +233,14 @@
 .list-text {
 	font-family: 'Lato',sans-serif;
 	color: #fff;
-	font-size: 15px;
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom:4px;
 	/* // #fff; */
 }
 /* ------------------------Section 4 What Learners Say ---------------------------------- */
 .rowcourse{
-	font-family: 'Lato',sans-serif;
+	font-family: 'Lora';
 	font-size: 40px;
 	font-weight: 800;
 	color: #790666;
@@ -218,18 +250,20 @@
 {
 	margin-bottom: 20px;
 	background-color: whitesmoke;	
+	height:600px;
+	overflow-y: auto;
 }
 .parent{
 	font-family: 'Lato',sans-serif;
 	font-size: 18px;
 	color:#790666;
 	font-weight:900px;
-	margin-left:10px;
-	margin-right:10px;
+	/* margin-left:10px;
+	margin-right:10px; */
 }
 .fb
 {
-	font-family: 'Lato-regular',sans-serif;
+	font-family: 'Lato-regular';
 	font-size: 16px;
 	color:#222831;
 	text-align:justify;
@@ -245,7 +279,8 @@
 	margin-left:60px;
 }
 .see-more{
-	font-size: 20px;
+	font-family: 'Lato',sans-serif;
+	font-size: 16px;
 	color: #790666;
 	margin-left:200px;
 }
@@ -253,7 +288,7 @@
 .see-more:hover{
 	color:blue;
 }
-.scrollbar {
+/* .scrollbar {
 
 	float: right;
 	height: 300px;
@@ -278,14 +313,14 @@
 	
 	.scrollbar-primary {
 	scrollbar-color: #4285F4 #F5F5F5;
-	}
+	} */
 
 
 
 .news{
-margin-top:30px;
-margin-left:50px;
-		
+ 
+height:600px;
+overflow-y: scroll
 	
 	
 	}
@@ -293,25 +328,25 @@ margin-left:50px;
 	width: 200px;
 	height: 200px;	
 	border: 2px #dcdcdc solid;
-	margin-left:10px;
-	margin-top: 20px;
+	/* margin-left:10px;
+	margin-top: 20px; */
 		
 }
 .newsname{
 
-	font-family: 'Lato-regular',sans-serif;
-	font-size: 35px;
+	font-family: 'Lora';
+	font-size: 32px;
 	font-weight: 600;
 	color:#000;
-	margin-left:80px;
+	margin-left:90px;
 	margin-top:30px;
 
 }
 .head{
-	font-family: 'Lora',sans-serif;
+	font-family: 'Lato';
 	font-size: 16px;
 	color:grey;
-	margin-left:80px;	
+	margin-left:90px;	
 }
 
 	
@@ -334,10 +369,4 @@ border-color: #ecdfea;
 	background-color: white;
 
 
-}
-.coursebox{
-
-    position:relative;
-    width:100%;
-
-} */
+}*/
