@@ -31,8 +31,24 @@
 	color:#000;
 	
 }
+#banner{
+	position: relative;
+}
 
 
+
+#banner::after{
+
+	
+	background-color: #E5E5E5;
+	position:absolute;
+	right:0px;
+	top:0px;
+	width: 62%;
+	height:100%;
+	content:"";
+	z-index:-1; 
+}
 .owner {
 	width: 100%;
 	border: 8px #F6F6F6 solid;
@@ -80,29 +96,30 @@
 	font-family: 'Lato',sans-serif;
 	font-style: italic;
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: 200px;
 	color:#B91646;
-    
+    margin:0;
 }
 .namemsg {
-	font-family: 'Lato',sans-serif;
+	font-family: 'Lora',sans-serif;
 	font-size: 25px;
 	font-weight: 800px;
 	color:#790666;
-	
+	margin:0;
 }
 .profilemsg {
 	font-family: 'Lato',sans-serif;	
 	font-size: 18px;	
 	font-style: italic;
 	color:#B91646;
+	margin:0;
 }
 
 
 
 /*****************Section 2************ Our Courses ****************************************/
 #ocourses{
-	margin-top:50px;
+	/* margin-top:70px; */
 }
 .courses {
 
@@ -154,7 +171,7 @@
 	/* font-family: 'Lato'; */
 	position: absolute;
 	top: 25px;
-	left: 15px;
+	left: 0px;
 	/* font-size: 20px; */
 	
 }
@@ -209,7 +226,7 @@
 {
 	font-family: 'Lato',sans-serif;
 	font-size: 25px;
-	padding: 50px 0 0px 30px;
+	padding: 0px 0 0px 0px;
 	color:white;
 
 }
@@ -226,7 +243,7 @@
 	font-family: 'Lora',sans-serif;
 	font-size: 40px;
 	font-weight: 700;
-	padding-left: 28px;
+	/* padding-left: 28px; */
 	color:white;
 }
 
@@ -235,7 +252,8 @@
 	color: #fff;
 	font-size: 16px;
 	line-height: 30px;
-	margin-bottom:4px;
+	padding-left:20px;
+	margin:0px;
 	/* // #fff; */
 }
 /* ------------------------Section 4 What Learners Say ---------------------------------- */
@@ -258,8 +276,8 @@
 	font-size: 18px;
 	color:#790666;
 	font-weight:900px;
-	/* margin-left:10px;
-	margin-right:10px; */
+	 /* margin-left:10px;
+	margin-right:10px;  */
 }
 .fb
 {
@@ -267,8 +285,8 @@
 	font-size: 16px;
 	color:#222831;
 	text-align:justify;
-	margin-left:10px;
-	margin-right:10px;
+	/* margin-left:10px;
+	margin-right:10px; */
 }
 .newshead{
 	font-family: 'Lato',sans-serif;

@@ -92,7 +92,7 @@
 	}
   /* .dropdown-menu:hover.submenu{ display: block; } */
   .fade-up{ top:180%;  }
-    .dropdown-menu > li:hover > .submenu{ display: block;color:#790666; }
+    .dropdown-menu > li:hover > .submenu{ display: block;color:#790666; top: 0px; }
 /* .main-header{
     border-bottom: 1px #dcdcdc solid;
 }
