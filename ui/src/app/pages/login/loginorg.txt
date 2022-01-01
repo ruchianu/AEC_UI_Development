@@ -1,94 +1,103 @@
+<!-- SECTION 1----banner section-->
 
-login
-<section class="h-100 h-custom" style="background-color: #ffffff;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-lg-8 col-xl-6">
-          <div class="card text-center rounded-3 border border-secondary shadow-0 mb-3" style="width: 33rem;">
-           
-            <!-- <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/img3.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo"> -->
-            <div class="card-body p-4 p-md-5">
-             <img
-             src ="assets/images/login.png"
-             class="card-img-top"
-             alt="..."
-           />
-             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 login" style="color:#6F016F;">Log-in To Your Account</h3>
-   
-              <form class="px-md-2">
-               <div class="test">
-                 <label for="form1">Mobile Number</label> 
- 
- 
-                      <!-- <input type="text" name="mobile"  [(ngModel)]="mobile" class="form-control" (keyup)="keyPress($event)" (keydown)="keyPress($event)"   minlength=10 maxlength=10 mdbInput> -->
-                      <ngx-intl-tel-input [cssClass]="'ty'" [preferredCountries]="preferredCountries"
-                      [enableAutoCountrySelect]="true" 
-                      [enablePlaceholder]="true" 
-                      [searchCountryFlag]="true"
-                      [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-                      [selectFirstCountry]="false"
-                      [selectedCountryISO]="CountryISO.India"
-                      [phoneValidation]="true"
-                      [separateDialCode]="separateDialCode"
-                      [(ngModel)]="mobile" 
-                      (keyup)="keyPress($event)" 
-                      (keypress)="keyPress($event)" 
-                      [numberFormat]="PhoneNumberFormat.National" 
-                     
-                      
-                      name="phone" >
-                    </ngx-intl-tel-input>
-                      <!-- <label for="form1">Mobile Number</label> -->
-                      <br>
- 
-                      <small *ngIf="mobileStatus" class="text-danger">{{mobileStatuss}}</small>
-                  </div>
-                  
-                   <div class="col-md-6 text-center mb-3 btnlogin">
-                     <button mdbBtn type="submit" [class]=" registerSucess ? 'amber darken-4' :' btn-secondary btn-lg btn-rounded' " (click)="onSubmit()" [disabled]="!registerSucess">Log In</button>
-                   </div>
- 
- 
-               <div class="row" *ngIf="mobileDiv">
-                  <div class="md-form md-outline">
-                   <input type="text" name="mobileOtp"  [(ngModel)]="mobileOtp" class="form-control" (keyup)="mobileOTP($event)" [disabled]="mobileOTPtext" minlength=6 maxlength=6 (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)"  mdbInput>
-                   <label for="form1">Mobile OTP</label>
-                   <small *ngIf="mobileotpError" class="text-danger">{{mobile_error}}</small>
-                   <br>
-                   <small *ngIf="mobileotpError" class="text-danger">Remaining User Tries : {{otpTry}}</small>
-                   <br>
-                   <div *ngIf="timer">Time left = <span>{{maxTime}} Sec</span></div>
-                   <small *ngIf="mobileotpsuccess" class="text-success">{{mobile_error}}</small>
-                 </div>
- 
-        
-                 <!-- <div class="col-md-6 text-center mb-3">
-                    <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" [disabled]="!verifyMobile" (click) = "veryPhone()"  >Verify Mobile</button>
-                 </div> -->
- 
- 
- 
-                   <div class="col-md-6 text-center mb-3">
-                    <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" *ngIf="mobileResenddiv" (click)="resendOtp()">Resend Mobile OTP</button>
-                   </div>
-                 </div>
- 
- 
-                 <div class="col-md-12 ">
-                  <div class="form-group">
-                   <p class="text-center" style="font-size:17px;">Don't have account? <a  (click)="openRegister()">Sign up here</a></p>
-                 </div>
-               </div>
- 
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- 
- 
- </section>
- 
- 
- 
+<section id="banner" class="mt-2">
+    <!-- Container starts here -->
+    <div class ="container-fluid">
+        <!-- Row Starts here -->
+        <div class="row">
+            <!--Col Starts here -->
+            <div class="col-md-5 left-Side p-0 m-0">               
+				<div class="logo-set ml-5">
+					<img class="logogif"  src="assets/images/anu-aca-logo.gif">
+				</div>
+				<div class="login-main-text ">
+					<!-- <img class="pic" src ="assets/images/gal1.jpg" > -->
+					<!-- <img class="pic" src ="assets/images/gal2.jpg" > -->
+					<!-- <img class="pic" src ="assets/images/gal3.jpg" > -->
+					<!-- <img class="pic" src ="assets/images/gal4.jpg" > -->
+					<img class="pic" src ="assets/images/gal5.jpg" >
+					
+					<h2 class="welcome mt-4 text-center">Welcome to AEA</h2>
+
+					<p class="text-center">Login or register from here to access.</p>
+					<div class="wrap mt-5 " style="display: flex;
+					align-items: center;
+					justify-content: center;">
+					<button type="submit" class="btn btn-black0 ">Explore Courses</button></div>
+				 </div>
+			</div>
+			<!--Col Starts here -->
+            <div class="col-md-7 right-Side ">               
+				<div class="row">
+					<div class="col bckbtn mt-5">
+						
+						<button class="back"><span><a href="#"><i class="ag mr-2 fas fa-angle-left"></i></a> Back </span></button>
+					</div>
+				</div>
+				<div class="login-form ">
+					
+					
+				   <form class="" >
+					<h2 class=" outext mb-5 ml-5 pl-5">Sign in</h2>
+					<div class="col formin ">
+					  <div class="form-group">
+						 <label class="outext ">Registered Mobile Number</label>
+						 <input type="text" class="form-control" placeholder="User Name">
+					  </div>
+					  <div class="wrap">
+					  <button type="button" class="btn btn-black1">Authenticate</button>
+					</div>
+					  <!-- <div class="form-group">
+						 <label class="outext">Password</label>
+						 <input type="password" class="form-control" placeholder="Password">
+					  </div> -->
+					  <div class="form-group">
+						<label class="outext">Enter 6 digit OTP</label>
+						<input type="password" class="form-control" placeholder="Enter 6 digit OTP">
+					 </div>
+					 <button type="button" class="btn btn-link1">(Resend OTP)</button>
+					 <div class="wrap">
+					  <button type="submit" class="btn btn-black1">Get OTP</button>
+					  <button type="submit" class="btn btn-black1">Submit</button>
+					</div>
+					<label class="outext mt-2">Don't have an account?</label> <button type="button" class="btn btn-link1">Register Now</button>
+					</div>
+				   </form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- 
+<div class="sidenav">
+	<div class="logo-set">
+		<img class="logogif"  src="assets/images/anu-aca-logo.gif">
+	</div>
+	<div class="login-main-text">
+		
+
+	   <h2>Application Login Page</h2>
+	   <p>Login or register from here to access.</p>
+	</div>
+ </div>
+ <div class="main mt-3 mb-3">
+	<div class="col-md-6">
+		<h2 class="mt-2 outext">Sign in</h2>
+	   <div class="login-form">
+		  <form>
+			 <div class="form-group">
+				<label class="outext">User Name</label>
+				<input type="text" class="form-control" placeholder="User Name">
+			 </div>
+			 <div class="form-group">
+				<label class="outext">Password</label>
+				<input type="password" class="form-control" placeholder="Password">
+			 </div>
+			 <button type="submit" class="btn btn-black">Login</button>
+			 <button type="submit" class="btn btn-secondary">Register</button>
+		  </form>
+	   </div>
+	</div>
+ </div> -->
