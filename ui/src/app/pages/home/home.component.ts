@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
     handstickPlayer.on('play', function() {
         console.log('played the handstick video!');
     });
+    window.scrollTo(0, 0);//Added by siddarth for making the page from top
   }  
   public myfunction(message:string){
     //onLoad();

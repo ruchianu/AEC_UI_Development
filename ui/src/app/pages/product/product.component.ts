@@ -133,7 +133,7 @@ export class ProductComponent implements OnInit {
     this.getProductsAddon()
     this.registerSucess = false
 
-
+    window.scrollTo(0, 0) //Changes made by sid
     setTimeout(() => {
       this.tabs.push( { title: 'Dynamic Tab 3', content: 'Dynamic tab content 3' });
       }, 2000);

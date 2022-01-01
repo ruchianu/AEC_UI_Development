@@ -4,6 +4,7 @@ appdirs==1.4.3
 bcrypt==3.1.5
 blinker==1.4
 Click==7.0
+flask_cors==3.0.10
 Flask==1.0.2
 Flask-Bcrypt==0.7.1
 Flask-Login==0.4.1
@@ -13,6 +14,7 @@ Flask-RESTful==0.3.7
 Flask-Script==2.0.6
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
+geopy==2.2.0
 itsdangerous==1.1.0
 Jinja2==2.10
 Mako==1.0.7
@@ -24,6 +26,8 @@ pyparsing==2.3.0
 python-dateutil==2.7.5
 python-editor==1.0.3
 pytz==2018.9
+psycopg2==2.9.2
+requests==2.26.0
 six==1.12.0
 SQLAlchemy==1.2.15
 Werkzeug==0.14.1
