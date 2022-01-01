@@ -74,7 +74,7 @@
 				<div class="abottom">
 					<a href="#"><i class="ag fas fa-angle-right fa-2x"></i> </a>
 				</div>						
-				<div class="topleft"><a href="#"> Handwriting Improvement</a></div>
+				<div class="topleft"><a [routerLink]="['/product']" [queryParams]="{ id: 6}"> Handwriting Improvement</a></div>
 			</div>
 		</div>
 
@@ -84,7 +84,8 @@
 			<div class="abottom">
 				<a href="#"><i class="ag fas fa-angle-right fa-2x"></i> </a>
 			</div>					
-			<div class="topleft"><a href="#"> Language Learning Course</a></div>
+			<!-- <div class="topleft"><a href="#"> Language Learning Course</a></div> -->
+				<div class="topleft"><a [routerLink]="['/product']" [queryParams]="{ id: 7}"> Language Learning Course</a></div>
 			</div>
 		</div>	
 
