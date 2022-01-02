@@ -20,22 +20,28 @@
                   <ul class="dropdown-menu fade-up">
                   <li><a class="dropdown-item" href="#"> English Speaking Courses &raquo;</a>
                           <ul class="submenu dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Basic </a></li>
-                              <li><a class="dropdown-item" href="#">Basic to Advance</a></li>
+                              <!-- <li><a class="dropdown-item" href="#">Basic </a></li> -->
+                              <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 2}">Basic </a></li>
+                              <!-- Added by sid on 1/1/2022 for router link to various products -->
+                              <!-- <li><a class="dropdown-item" href="#">Basic to Advance</a></li> -->
+                              <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 1}">Basic to Advance</a></li>
                           </ul>
                   </li>
                   <li><a class="dropdown-item" href="#"> Handwriting Improvement &raquo; </a>
                     <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">English</a></li>
-                      <li><a class="dropdown-item" href="#">Hindi</a></li>
-                      <li><a class="dropdown-item" href="#">Sanskrit</a></li>
-                      <li><a class="dropdown-item" href="#">Nepali</a></li>
+                      <!-- <li><a class="dropdown-item" href="#">English</a></li> -->
+                      <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 3}">English</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 6}">Hindi</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 4}">Sanskrit</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 5}">Marathi</a></li>
                   </ul>
                   </li>
                   <li><a class="dropdown-item" href="#"> Language Learning Course &raquo;</a>
                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Hindi</a></li>
-                      <li><a class="dropdown-item" href="#">English Grammar</a></li>
+                      <!-- <li><a class="dropdown-item" href="#">Hindi</a></li> -->
+                      <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 8}">Hindi</a></li>
+                      <!-- <li><a class="dropdown-item" href="#">English Grammar</a></li> -->
+                      <li><a class="dropdown-item" [routerLink]="['/product']" [queryParams]="{ id: 7}">English Grammar</a></li>
                   </ul>
                   
                   </li>
