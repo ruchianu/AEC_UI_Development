@@ -1,42 +1,48 @@
 
-.card{
- background-color:#790666;
-width:50%;
 
-margin-left: 380px;
-margin-right: 90px;
+.rleft-Side{
 
- /* height:800px; */
-}
-.logo-set{
-  width:50%;
-}
-.logogif{
+	background-color:#fff;
 	width:40%;
+
+}
+.rlogogif{
+	width:50%;
 	margin-left: 60px;
 }
-.head{
+.rlogin-main-text{
+	font-family: Lora;
 
-  font-family: Lora;
+	color: #790666;
+	font-size: medium;
+	margin-top: 5%;
+    padding: 60px;
+	/* background-image: url("gal1.jpg");
+} */
+}
+
+.rpic{
+	width:90%;
+}
+
+
+.rwelcome{
+	font-family: Lora;
 	color: #790666;
 	font-size: 25px;
-  letter-spacing: 1px;
+	/* font-size: 3rem; */
 }
-.signup{
 
-  font-family: Lora;
-	color: #fff;
-	font-size: 20px;
-  letter-spacing: 1px;
-}
-.rform-control{
-  width:100%;
-}
-.btn-black0 
-{
-	width: 30%;
-	height: 40px;
-  align-items: center;
+.rwrap {
+	height: 100%;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+  }
+
+.rbtn-black0 {
+	width: 300px;
+	height: 50px;
 	font-family: 'Lora';
 	font-size: 18px;
 	font-weight: 400px;
@@ -53,35 +59,195 @@ margin-right: 90px;
 	outline: none;
 	}
   
-  .btn-black0:hover {
+  .rbtn-black0:hover {
 	background-color:#ccad00;
 	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
 	color: #790666;
 	transform: translateY(-7px);
   }
-/* .card-registration .select-input.form-control[readonly]:not([disabled]) {
 
-    font-size: 1rem;
-    line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
+  .rright-Side{
+	background-color:#790666;
+	width:60%; 
+	 /* height:700px;  */
+
+}
+
+.h2{
+font-weight: 300;		
+}
+.bckbtn_signup{
+margin-left:28px;
+}
+.rag{
+	
+	color:#fff;
+	
+}
+.back{
+	width: 90px;
+	height: 35px;
+	font-family: 'Lato',sans-serif;	
+	font-size:16px;
+        background-color: #790666;
+        border: .5px solid rgb(226, 218, 219);
+        border-radius: 8px;
+        color: #fff;
+        padding: 12 px;
+		/* box-shadow: 0 0 30px 0 rgb(226, 218, 219),
+                    0 0 30px 0 rgb(250, 247, 247),
+                    0 0 10px 0 rgb(248, 244, 245) inset; */
+					box-shadow: 0 0 30px 0 #ccad00,
+                    0 0 30px 0 #ccad00,
+                    0 0 10px 0 #ccad00 inset;
+    
+}
+.signup-form{
+	margin-top: 5%;
+}
+.outext1{
+	color:#fff;
+	font-family: 'Lato',sans-serif;	
+	font-size: 25px;
+	font-weight: 500px;
+}
+.outext2{
+	color:#fff;
+	font-family: 'Lato',sans-serif;	
+	font-size:13px;
+	
+}
+.goutext2{
+	color:#fff;
+	font-family: 'Lato',sans-serif;	
+	font-size:15px;
+	
+}
+
+.formin
+{
+	/* align-items: center;
+	justify-content: center; */
+	/* margin-left:150px; */ 	
+}
+
+.form-control{
+	width:200px;
+	font-family: 'Lato',sans-serif;	
+	font-size:12px;
+}
+.form-control1{
+	width:100px;
+	font-family: 'Lato',sans-serif;	
+	font-size:10px;
+}
+.radio-item {
+	display: inline-block;
+	position: relative;
+	padding: 0 6px;
+	margin: 10px 0 0;
   }
-  .card-registration .select-arrow {
-    top: 13px;
+  
+  .radio-item input[type='radio'] {
+	display: none;
   }
+  
+  .radio-item label {
+	/* color: #666; */
+	color: #fff;
+	font-weight: normal;
+  }
+  
+  .radio-item label:before {
+	content: " ";
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	margin: 0 5px 0 0;
+	width: 20px;
+	height: 20px;
+	border-radius:9px;
+	border: 2px solid #ccad00;
+	background-color: transparent;
+  }
+  
+  .radio-item input[type=radio]:checked + label:after {
+	border-radius: 11px;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 9px;
+	left: 10px;
+	content: " ";
+	display: block;
+	background: #ccad00; 
+  }
+.btn{
+	color:#790666;
+	background-color: white;
+}
+.btn-link1{
+	font-family: 'Lato',sans-serif;	
+	font-style: italic;
+	font-size: 14px;
+color:#ccad00;
+background-color: #790666;
+text-decoration: underline;
 
-  .inputVal.text-success {
 
-    color: aqua!important;
-    
-    font-size: 20px;
-    
-    }
-    
-    .inputVal.text-danger {
-    
-    color: purple!important;
-    
-    font-size: 20px;
-    
-    } */
+}
+
+  .actbtn {
+	width: 122px;
+	height: 30px;
+	font-family: 'Lato';
+	font-size: 14px;
+	
+	/* text-transform: uppercase; */
+	letter-spacing: 1.0px;
+	font-weight: 800;
+	color: #790666;/*#000;*/
+	background-color: #ccad00;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+  
+  .actbtn:hover {
+	background-color:#ccad00;
+	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+	color: #790666;
+	transform: translateY(-7px);
+  }
+  
+  .otpbtn {
+	width: 90px;
+	height:30px;
+	font-family: 'Lato';
+	font-size: 14px;
+	
+	/* text-transform: uppercase; */
+	letter-spacing: 1.0px;
+	font-weight: 800;
+	color: #790666;/*#000;*/
+	background-color: #ccad00;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+  
+  .otpbtn:hover {
+	background-color:#ccad00;
+	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+	color: #790666;
+	transform: translateY(-7px);
+  }
+  
+  .height-100{height: 90vh;}
+

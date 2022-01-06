@@ -15,6 +15,8 @@ import { SearchCountryField, CountryISO, PhoneNumberFormat } from 'ngx-intl-tel-
   styleUrls: ['./register.component.css']
 })
 
+
+
 export class RegisterComponent implements OnInit {
   
   separateDialCode = false;

@@ -1,0 +1,240 @@
+
+
+.left-Side{
+
+	background-color:#fff;
+	width:40%;
+
+}
+
+.right-Side{
+	background-color:#790666;
+	width:60%; 
+	 /* height:700px;  */
+
+}
+.welcome{
+	font-family: Lora;
+	color: #790666;
+	font-size: 25px;
+	/* font-size: 3rem; */
+}
+.logogif{
+	width:50%;
+	margin-left: 60px;
+}
+.pic{
+	width:90%;
+}
+.login-main-text{
+	font-family: Lora;
+
+	color: #790666;
+	font-size: medium;
+	margin-top: 5%;
+    padding: 60px;
+	/* background-image: url("gal1.jpg");
+} */
+}
+.btn-black0 {
+	width: 300px;
+	height: 50px;
+	font-family: 'Lora';
+	font-size: 18px;
+	font-weight: 400px;
+	/* text-transform: uppercase; */
+	letter-spacing: 1.5px;
+	font-weight: 500;
+	color: #790666;/*#000;*/
+	background-color:#ccad00;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+  
+  .btn-black0:hover {
+	background-color:#ccad00;
+	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+	color: #790666;
+	transform: translateY(-7px);
+  }
+.h2{
+font-weight: 300;		
+}
+.bckbtn_signup{
+margin-left:28px;
+}
+.ag{
+	
+	color:#fff;
+	
+}
+.back{
+	width: 90px;
+	height: 35px;
+	font-family: 'Lato',sans-serif;	
+	font-size:16px;
+        background-color: #790666;
+        border: .5px solid rgb(226, 218, 219);
+        border-radius: 8px;
+        color: #fff;
+        padding: 12 px;
+		/* box-shadow: 0 0 30px 0 rgb(226, 218, 219),
+                    0 0 30px 0 rgb(250, 247, 247),
+                    0 0 10px 0 rgb(248, 244, 245) inset; */
+					box-shadow: 0 0 30px 0 #ccad00,
+                    0 0 30px 0 #ccad00,
+                    0 0 10px 0 #ccad00 inset;
+    
+}
+.signup-form{
+	margin-top: 5%;
+}
+.outext1{
+	color:#fff;
+	font-family: 'Lato',sans-serif;	
+	font-size: 25px;
+	font-weight: 500px;
+}
+.outext2{
+	color:#fff;
+	font-family: 'Lato',sans-serif;	
+	font-size:15px;
+	
+}
+
+.formin
+{
+	/* align-items: center;
+	justify-content: center; */
+	/* margin-left:150px; */ 	
+}
+
+.form-control{
+	width:200px;
+	font-family: 'Lato',sans-serif;	
+	font-size:12px;
+}
+.form-control1{
+	width:100px;
+	font-family: 'Lato',sans-serif;	
+	font-size:10px;
+}
+.radio-item {
+	display: inline-block;
+	position: relative;
+	padding: 0 6px;
+	margin: 10px 0 0;
+  }
+  
+  .radio-item input[type='radio'] {
+	display: none;
+  }
+  
+  .radio-item label {
+	/* color: #666; */
+	color: #fff;
+	font-weight: normal;
+  }
+  
+  .radio-item label:before {
+	content: " ";
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	margin: 0 5px 0 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 11px;
+	border: 2px solid #ccad00;
+	background-color: transparent;
+  }
+  
+  .radio-item input[type=radio]:checked + label:after {
+	border-radius: 11px;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 9px;
+	left: 10px;
+	content: " ";
+	display: block;
+	background: #ccad00; 
+  }
+.btn{
+	color:#790666;
+	background-color: white;
+}
+.btn-link1{
+	font-family: 'Lato',sans-serif;	
+	font-style: italic;
+	font-size: 14px;
+color:#ccad00;
+background-color: #790666;
+text-decoration: underline;
+
+
+}
+.wrap {
+	height: 100%;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+  }
+  .actbtn {
+	width: 122px;
+	height: 30px;
+	font-family: 'Lato';
+	font-size: 14px;
+	
+	/* text-transform: uppercase; */
+	letter-spacing: 1.0px;
+	font-weight: 800;
+	color: #790666;/*#000;*/
+	background-color: #ccad00;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+  
+  .actbtn:hover {
+	background-color:#ccad00;
+	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+	color: #790666;
+	transform: translateY(-7px);
+  }
+  
+  .otpbtn {
+	width: 90px;
+	height: 30px;
+	font-family: 'Lato';
+	font-size: 14px;
+	
+	/* text-transform: uppercase; */
+	letter-spacing: 1.0px;
+	font-weight: 800;
+	color: #790666;/*#000;*/
+	background-color: #ccad00;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+  
+  .otpbtn:hover {
+	background-color:#ccad00;
+	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+	color: #790666;
+	transform: translateY(-7px);
+  }
+  
+  .height-100{height: 90vh;}
+

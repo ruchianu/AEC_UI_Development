@@ -1,1168 +1,241 @@
- <section class="h-100 h-custom" style="background-color: #ffffff;">
-  <div class="py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-8 col-xl-6">
-        <div class="card rounded-3">
-          <!-- <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/img3.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo"> -->
-          <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Sign Up</h3>
-            <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
 
-              <div class="form-group row">
-                <!-- Default input -->
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Unique ID(Optional)</label>
-                <div class="col-sm-10">
-                  <input mdbInput name="uid" formControlName="uid" class="form-control" >
-                </div>
-              </div>
-             
+<!-- SECTION 1----Sign up section
 
-              <div class="form-group row">
-                <!-- Default input -->
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile Number</label>
-                <div class="col-sm-10">
-                  <ngx-intl-tel-input [cssClass]="'form-control'" 
-                  [preferredcountries]="preferredCountries"
-                  [enableAutoCountrySelect]="true" 
-                  [enablePlaceholder]="true" 
-                  [searchCountryFlag]="true"
-                  [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-                  [selectFirstCountry]="false"
-                  [selectedCountryISO]="CountryISO.India"
-                  [phoneValidation]="true"
-                  [separateDialCode]="separateDialCode"
-                  formControlName="mobile" 
-                  (keyup)="keyPress($event)" 
-                  (keypress)="keyPress($event)" 
-                  [numberFormat]="PhoneNumberFormat.National" 
-                  *ngIf="!further && !mobileDiv"
-                  name="phone" >
-                </ngx-intl-tel-input>
-                <span *ngIf="further || mobileDiv">{{formGroup.get('mobile').value.dialCode}}  {{formGroup.get('mobile').value.number}}</span>
-              </div>
-            
+Done and finalised on 04/01/2022-->
 
-                <small *ngIf="!formGroup.controls['mobile'].valid && formGroup.controls['mobile'].touched && !further" >
-                  Required Field , Please enter Phone number</small>
 
-             </div>
+<!-- SECTION 1----Sign up section-->
 
-              <div class="col-md-12 text-center mb-3" *ngIf="mobileOTPVerifi">
-                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" (click)="sendphoneOTP()" [disabled]="!registerSucess">OTP Verification</button>
-              </div>
 
-              <div class="form-group row" *ngIf="mobileDiv">
-                <!-- Default input -->
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile OTP</label>
-                <div class="col-sm-10">
-                  <input  name="mobileOtp" formControlName="mobileOtp" class="form-control" (keyup)="mobileOTP($event)" [disabled]="mobileOTPtext" minlength="6" maxlength="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbInput>
-                  <small *ngIf="mobileotpError" class="text-danger">{{mobile_error}}</small>
-                  <br>
-                  <small *ngIf="mobileotpError" class="text-danger">Number of retries remaining : {{otpTry}}</small>
-                  <br>
-                  <div *ngIf="timers">Time left = <span>{{maxTime}} Sec</span></div>
-                  <small *ngIf="mobileotpsuccess" class="text-success">{{mobile_error}}</small>
+<!-- SECTION 1----banner section-->
+
+<section id="signup" class="">
+  <!-- Container starts here -->
+  <div class ="container-fluid">
+      <!-- Row Starts here -->
+      <div class="row height-100">
+          <!--Left Col Starts here -->
+          <div class="col-md-5 left-Side ">               
+      <div class="logo-set ml-5">
+        <img class="logogif"  src="assets/images/anu-aca-logo.gif">
+      </div>
+      <div class="login-main-text ">
+       
+        <img class="pic ml-5 mb-4 " style="align-items: center;"src ="assets/images/signup1.jpg" >
+   
+        <h2 class="welcome mt-3 text-center">Welcome to AEA</h2>
+
+        <p class="text-center">Signup yourself </p>
+
+        <div class="wrap mt-3 " style="display: flex;
+        align-items: center;
+        justify-content: center;">
+        <button type="submit" class="btn btn-black0 ">Explore Courses</button></div>
+       </div>
+          </div> 
+          <!--Left Col ends here -->
+
+    <!--Right Col Starts here -->
+    <div class="col-md-7 right-Side ">     
+
+      <!-- Back Button -->
+      <div class="row">
+        <div class="col bckbtn_signup mt-5 ">
+          <button class="back"><span><a href="#"><i class="ag mr-2 fas fa-angle-left"></i></a> Back </span></button>
+        </div>
+      </div>   <!-- Back Button -->
+      
+      <!-- Signup Form -->
+      <div class="signup-form ">
+        <!-- Form Started -->
+         <form class="" >
+
+         <h2 class=" outext mb-5 ml-3 ">Register with us</h2>
+          <div class="row"> <!----Row starts-->
+         <!-- Signup Column Starts from here  -->
+
+         <div class="col formin ml-3">
+          
+          <div class="form-group mb-2">
+
+             <!-- Unique ID starts -->
+             <div class="form-group row">
+              <!-- Default input -->
+              <label  class=" rsigntext col-md-2 col-form-label">Unique ID (Optional)</label>
               
-                </div>
+              <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="User Name">
+                <!-- <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="Enter UID" > -->
               </div>
-            
-              <div class="col-md-12 text-center mb-3" *ngIf="mobileOTPVerifi">
-                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" *ngIf="mobileResenddiv"  (click)="resendOtp()">Resend OTP</button>
-              </div>
+            </div> 
+            <!-- Unique ID ends -->
+            <!-- Unique ID ends -->
+           <!-- Mobile Number starts & Get OTP -->         
+            <div class="form-group row mt-4">
+              <!-- Default input -->
+              <label class=" rsigntext col-md-2 col-form-label">Mobile Number</label>
+              <div class="col-md-3">
+                <ngx-intl-tel-input [cssClass]="'form-control'" 
+                [preferredcountries]="preferredCountries"
+                [enableAutoCountrySelect]="true" 
+                [enablePlaceholder]="true" 
+                [searchCountryFlag]="true"
+                [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
+                [selectFirstCountry]="false"
+                [selectedCountryISO]="CountryISO.India"
+                [phoneValidation]="true"
+                [separateDialCode]="separateDialCode"
+                formControlName="mobile" 
+                (keyup)="keyPress($event)" 
+                (keypress)="keyPress($event)" 
+                [numberFormat]="PhoneNumberFormat.National" 
+                *ngIf="!further && !mobileDiv"
+                name="phone" >
+              </ngx-intl-tel-input>
+              <span *ngIf="further || mobileDiv">{{formGroup.get('mobile').value.dialCode}}  {{formGroup.get('mobile').value.number}}</span>
+            </div>
+          
 
-
-              <div *ngIf="further">
-
-           
-
-                <div class="form-group row">
-
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">First Name*</label>
-                  <div class="col-sm-10">
-                    <input  name="fname" formControlName="fname"  class="form-control" maxlength="40" minlength="5" [length]="40"  (keypress)="keyPressAlphaNumeric($event)" required mdbCharCounter mdbInput>
-                    <small  class="text-danger" *ngIf="!formGroup.controls['fname'].valid && formGroup.controls['fname'].touched" >
-                      Required Field , Please enter the first name minimum 5 characters and maximum 40 characters</small>
-                  </div>
-
-                 </div>
-
-                 <div class="form-group row">
-                  
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">last Name*</label>
-                  <div class="col-sm-10">
-                    <input  name="fname" formControlName="lname"  class="form-control" maxlength="40" minlength="5" [length]="40"  (keypress)="keyPressAlphaNumeric($event)" required mdbCharCounter mdbInput>
-                    <small  class="text-danger" *ngIf="!formGroup.controls['lname'].valid && formGroup.controls['lname'].touched" >
-                      Required Field , Please enter the last name minimum 5 characters and maximum 40 characters</small>
-                   </div>
-                  </div>
-
-             
-
-                 <div class="form-group row">
-
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email*</label>
-                  <div class="col-sm-10">
-                    <input  name="fname" formControlName="email"  class="form-control" maxlength="40" minlength="5" [length]="40" required mdbCharCounter mdbInput>
-                  
-                    <div *ngIf="formGroup.controls['email'].touched && formGroup.controls['email'].invalid" class="text-danger">
-                      <small *ngIf="formGroup.controls['email'].errors.required">Required Field ,  Email is required.</small>
-                     
-                      <small *ngIf="formGroup.controls['email'].errors.email">Email seems invalid.</small>
-                    </div>
-                      
-                    </div>
-         
-                 </div>
-
-
-
-                 <div class="form-group row">                
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Gender*</label>
-                  <div class="col-sm-10">
-                    <!-- Material inline 1 -->
-                    <div class="form-check form-check-inline">
-                      <input type="radio" class="form-check-input" id="materialInline1" formControlName="gender"   [value]="0" name="inlineMaterialRadiosExample" [checked]="true" mdbInput>
-                      <label class="form-check-label" for="materialInline1">Male</label>
-                    </div>
-            
-                    <!-- Material inline 2 -->
-                    <div class="form-check form-check-inline">
-                      <input type="radio" class="form-check-input" id="materialInline2" formControlName="gender" [value]="1" name="inlineMaterialRadiosExample" mdbInput>
-                      <label class="form-check-label" for="materialInline2">Female</label>
-                    </div>
-            
-                    <!-- Material inline 3 -->
-                    <div class="form-check form-check-inline">
-                      <input type="radio" class="form-check-input" id="materialInline3" formControlName="gender" [value]="2" name="inlineMaterialRadiosExample" mdbInput>
-                      <label class="form-check-label" for="materialInline3">Others</label>
-                    </div>
-                    <small  class="text-danger" *ngIf="!formGroup.controls['gender'].valid && formGroup.controls['gender'].touched" >
-                      Required Field , Please Select the Gender</small>
-
-
-                    </div>
-                  </div>
-
-
-     
-                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Select Date of Birth*</label>
-                    <div class="col-sm-10">
-                    <mdb-date-picker name="mydate" [inline]="true" (ngModelChange)="changeDate($event)" [options]="myDatePickerOptions" readonly formControlName="dob"
-                    data-error="Valid birthdate is required" required>
-                    <small  class="text-danger" *ngIf="!formGroup.controls['dob'].valid && formGroup.controls['dob'].touched" >
-                      Required Field , Please Select the date of birth for the Age</small>
-                  </mdb-date-picker>
-                   </div> 
-                   </div>
-
-     
-                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Age*</label>
-                    <div class="col-sm-10">
-                      <input  name="fname" formControlName="age"  class="form-control" readonly [disabled]="true"  mdbInput>
-                      <small  class="text-danger" *ngIf="!formGroup.controls['age'].valid && formGroup.controls['age'].touched" >
-                        Required Field , Please Select the date of birth for the Age</small>
-                      </div>
+              <small *ngIf="!formGroup.controls['mobile'].valid && formGroup.controls['mobile'].touched && !further" >
+                Required Field , Please enter Phone number</small>
+                <div class="wrap">
+                  <button type="button" class="btn otpbtn">Get OTP</button>
                 </div>
 
-
-
-                <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Address 1*</label>
-                  <div class="col-sm-10">
-                    <input  name="sadd" formControlName="sadd"  class="form-control" maxlength="45" [length]="45" mdbCharCounter mdbInput>
-                    <small  class="text-danger" *ngIf="!formGroup.controls['sadd'].valid && formGroup.controls['sadd'].touched" >
-                      Required Field , Please Enter the Address 1</small>
-                    </div>
-               </div>
-
-               <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Address 2</label>
-                <div class="col-sm-10">
-                  <input  name="sadd" formControlName="sadd2"  class="form-control" maxlength="45" [length]="45" mdbCharCounter mdbInput>
-                </div>
-             </div>
-
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Country</label>
-                <div class="col-sm-10">
-                  <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName="country" (ngModelChange)="getState($event)">
-                    <option value="0" selected
-                    >Select Country*</option>
-                    <option *ngFor="let option of countries" [value]="option.country_id"
-                    >{{option.country_name}}</option>
-
-                    <small  class="text-danger" *ngIf="!formGroup.controls['country'].valid && formGroup.controls['country'].touched" >
-                      Required Field , Please Select the Country</small>
-                   </select>
-                </div>
-            </div>
-
-
-            <div class="form-group row">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">State</label>
-              <div class="col-sm-10">
-                <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName="state" (ngModelChange)="getcity($event)">
-                  <option value="0" selected
-                  >Select State*</option>
-                  <option *ngFor="let option of states" [value]="option.state_id"
-                  >{{option.state_name}}</option>
-
-                  <small  class="text-danger" *ngIf="!formGroup.controls['state'].valid && formGroup.controls['state'].touched" >
-                    Required Field , Please Select the State</small>
-                </select>
-              </div>
-          </div>
-
-
-          <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">City</label>
-            <div class="col-sm-10">
-              <select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName="city" >
-                <option value="0" selected
-                >Select City*</option>
-                <option *ngFor="let option of cities" [value]="option.city_id"
-                >{{option.city_name}}</option>
-
-                <small  class="text-danger" *ngIf="!formGroup.controls['city'].valid && formGroup.controls['city'].touched" >
-                  Required Field , Please Select the City</small>
-              </select>
-            </div>
-        </div>
-
-
-          <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Pincode</label>
-            <div class="col-sm-10">
-              <input  name="pcode" formControlName="pcode" class="form-control"  minlength="6" maxlength="6" [length]="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbCharCounter mdbInput>
-     
-              <small  class="text-danger" *ngIf="!formGroup.controls['pcode'].valid && formGroup.controls['pcode'].touched" >
-                Required Field , Please Select the Pincode</small>
-            </div>
-        </div>
-
-
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Profession*</label>
-                <div class="col-sm-10">
-                <select class="browser-default custom-select" name="profession" aria-placeholder="profession" formControlName="profession">
-                    <option value="0" selected
-                    >Select Profession*</option>
-                    <option *ngFor="let option of options" [value]="option.value"
-                    >{{option.label}}</option>                 
-                  <small  class="text-danger" *ngIf="!formGroup.controls['profession'].valid && formGroup.controls['profession'].touched" >
-                    Required Field , Please Select the Pincode</small>
-                </select>
-              </div>
-            </div>
-
-
-
-            <div  *ngIf="formGroup.get('profession').value=='1'">
-
-              <form [formGroup]="school">
-
-              <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Name*</label>
-                  <div class="col-sm-10">
-                    <input  name="school_name" formControlName="name"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-                     <small  class="text-danger" *ngIf="!school.controls['name'].valid && school.controls['name'].touched" >
-                      Required Field , Please Enter the School name</small>
-                  </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label"> Address*</label>
-                <div class="col-sm-10">
-                  <input  name="school_name" formControlName="address"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-                   <small  class="text-danger" *ngIf="!school.controls['address'].valid && school.controls['address'].touched" >
-                    Required Field , Please Enter the School Address</small>
-                </div>
-            </div>
-
-
-            <div class="form-group row">
-              <label for="inputEmail3" class="col-sm-2 col-form-label"> Country*</label>
-              <div class="col-sm-10">
-                <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName="country" (ngModelChange)="pgetState($event)">
-                  <option value="0" selected
-                  >Select Country*</option>
-                  <option *ngFor="let option of pcountries" [value]="option.country_id"
-                  >{{option.country_name}}</option>
-                 </select>
-                 <small  class="text-danger" *ngIf="!school.controls['country'].valid && school.controls['country'].touched" >
-                  Required Field , Please Enter the School Country</small>
-              </div>
-          </div>
-
-
-          <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"> State*</label>
-            <div class="col-sm-10">
-              <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName="state" (ngModelChange)="pgetcity($event)">
-                <option value="0" selected
-                >Select State*</option>
-                <option *ngFor="let option of pstates" [value]="option.state_id"
-                >{{option.state_name}}</option>
-               </select>
-               <small  class="text-danger" *ngIf="!school.controls['state'].valid && school.controls['state'].touched" >
-                Required Field , Please Enter the School State</small>
-            </div>
-        </div>
-
-
-
-
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label"> City*</label>
-          <div class="col-sm-10">
-            <select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName="city">
-              <option value="0" selected
-              >Select City*</option>
-              <option *ngFor="let option of pcities" [value]="option.city_id"
-              >{{option.city_name}}</option>
-             </select>
-             <small  class="text-danger" *ngIf="!school.controls['city'].valid && school.controls['city'].touched" >
-              Required Field , Please Enter the School City</small>
-          </div>
-      </div>
-
-
-
-            <div class="form-group row">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Pincode*</label>
-              <div class="col-sm-10">
-                <input  name="pincode" formControlName="pincode"  class="form-control" maxlength="6" [length]="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbCharCounter mdbInput>
-                <small  class="text-danger" *ngIf="!school.controls['pincode'].valid && school.controls['pincode'].touched" >
-                  Required Field , Please Enter the School Pincode</small>
-              </div>
-          </div>
-
-
-
-          <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Working email*</label>
-            <div class="col-sm-10">
-              <input  name="school_name" formControlName="email"  class="form-control" maxlength="45" [length]="45"  mdbCharCounter mdbInput>
-              <div *ngIf="school.controls['email'].touched && school.controls['email'].invalid" class="text-danger">
-                <small *ngIf="school.controls['email'].errors.required">Required Field ,  Email is required.</small>
-               
-                <small *ngIf="school.controls['email'].errors.email">Email seems invalid.</small>
-              </div>
                 
+
+           </div>
+           <!-- Enter 6 -digit OTP & Resend OTP  OTP -->    
+           <div class="form-group row  mt-4">
+            <label class="rsigntext col-md-2 col-form-label">Enter 6 digit OTP</label>
+              <div class="col-md-4">
+                 <input type="password" class="form-control" placeholder="Enter 6 digit OTP">
+              </div>
+ 
+           <!-- <div class="col-md-4"> -->
+                <div class="wrap">
+                  <button type="button" class="btn btn-link1 mr-5 ">( Resend  OTP )</button>
+                </div>      
+           <!-- </div> -->
+          </div>
+          <!-- <div class="form-group">
+           <label class="outext">Password</label>
+           <input type="password" class="form-control" placeholder="Password">
+          </div> -->
+         
+        <!-- Mobile Number to be displayed  -->
+          <div class="form-group row">
+          <label  class=" rsigntext col-md-2 col-form-label">Mobile Number</label>
+          <div class="col-md-4">
+          <input class="form-control" type="text" placeholder="Display Mobile Number" readonly>
+        </div>
+          </div>
+
+          <!-- First Name , Last Name  -->
+        <div class="form-group row">
+          <!-- Default input -->
+          <label  class=" rsigntext col-md-2 col-form-label">First Name*</label>
+          <div class="col-md-4">
+            <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="John" >
+          </div>
+         
+          <label  class=" rsigntext col-md-2 ml-3 col-form-label">Last Name*</label>
+          <div class="wrap1 ">
+          <div class="col-md-4">
+            <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="Doe " >
+          </div>
+          </div>
+        </div>
+        
+        <div class="form-group row">
+         <!-- Email input -->
+         <label  class="rsigntext col-md-2  col-form-label">Email address</label>
+          <!-- <input type="email" id="form5Example2" class="form-control" /> -->
+          <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="abc@xyz.com">
+            </div>
+
+            <label  class=" rsigntext col-md-2 ml-3 col-form-label">Date of Birth*</label>
+            <div class="wrap1 ">
+            <div class="col-md-4">
+              <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="19-01-1980 " >
+            </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="form-group row">
+        <label  class=" rsigntext col-md-2 col-form-label">Gender</label>
+        <div class="col-md-4">
+        <div class="radio-item ">
+          <input type="radio" id="radio1"name="ritem" value="option1" checked >
+          <label  class=" rsigntext" for="radio1">Male</label>
+        </div>
+        <div class="radio-item ">
+          <input type="radio" id="radio2" name="ritem" value="option2" >
+          <label  class=" rsigntext" for="radio2">Female</label>
+        </div>
+        <div class="radio-item ">
+          <input type="radio" id="radio3" name="ritem" value="option3" >
+          <label  class=" rsigntext" for="radio3">Others</label>
+        </div>
+        </div>
+        <!-- <div class="  radio-item form-check form-check-inline">
+          <input class="form-check-input"  type="radio" id="Radio2" value="option2">
+          <label class="form-check-label" for="Radio2">Female</label>
+        </div>
+        <div class="  radio-item form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="Radio3" value="option3">
+          <label class="form-check-label" for="Radio3">Other</label>
+        </div> -->
+      </div>
+
+      <div class="form-group row">
+        <!-- Email input -->
+        <label  class="rsigntext col-md-2  col-form-label">Profession</label>
+         <!-- <input type="email" id="form5Example2" class="form-control" /> -->
+         <div class="col-md-4">
+      <select class="custom-select custom-select-sm">
+        <option selected>Open this select menu</option>
+        <option value="1">Student</option>
+        <option value="2">Professional</option>
+        <option value="3">Housewife</option>
+      </select>
+         </div>
+
+         <label  class=" rsigntext col-md-2 ml-3 col-form-label">Age (in years)*</label>
+            <div class="wrap1" >
+            <div class="col-md-4">
+              <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="30 " >
+            </div>
             </div>
         </div>
 
 
 
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label"> Grade*</label>
-          <div class="col-sm-10">
-            <input  name="school_name" formControlName="grade"  class="form-control" minlength="2" maxlength="2" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)">
-            <small  class="text-danger" *ngIf="!school.controls['grade'].valid && school.controls['grade'].touched" >
-              Required Field , Please Enter the School Grade</small>
-          </div>
-      </div>
-
-
-
       <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Contact Person Name *</label>
-        <div class="col-sm-10">
-          <input  name="school_name" formControlName="ccname"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"   mdbCharCounter mdbInput>
-          <small  class="text-danger" *ngIf="!school.controls['ccname'].valid && school.controls['ccname'].touched" >
-            Required Field , Please Enter the School Contact Person name</small>
+        <div class="col-md-4 offset-md-2">
+         <div class="wrap  mt-4 "style="display: flex;
+         align-items: left;
+      justify-content: left;">
+           <button type="submit" class="btn actbtn ml-5 mr-2">Submit</button> 
+          <button type="submit" class="btn actbtn ml-2">Cancel</button>
+        </div>
         </div>
       </div>
 
 
-
-      <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Number*</label>
-        <div class="col-sm-10">
-          <ngx-intl-tel-input [cssClass]="'form-control'" 
-          [preferredcountries]="preferredCountries"
-          [enableAutoCountrySelect]="true" 
-          [enablePlaceholder]="true" 
-          [searchCountryFlag]="true"
-          [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-          [selectFirstCountry]="false"
-          [selectedCountryISO]="CountryISO.India"
-          [phoneValidation]="true"
-          [separateDialCode]="separateDialCode"
-          formControlName="ccnumber" 
-          (keyup)="s($event)" 
-          (keypress)="s($event)" 
-          [numberFormat]="PhoneNumberFormat.National" 
-          name="phone" >
-        </ngx-intl-tel-input>
-
- 
         </div>
-        <small  class="text-danger" *ngIf="!school.controls['ccnumber'].valid && school.controls['ccnumber'].touched" >
-          Required Field , Please Enter the School Contact Person Number</small>
-      </div>
-   </form>
-
-   <div class="col-md-12 ">
-    <div class="form-group">
-    <p class="text-center"><a (click)="openLogin()">Already have an account?</a></p>
-  </div>
-  </div>
-  <button type="submit" [disabled]="!school.valid && !formGroup.valid" class="btn btn-block mybtn btn-primary tx-tfm" >Submit</button>
-  
-  
-        
-</div>
-
-
-
-<div  *ngIf="formGroup.get('profession').value=='2'">
-
-  <form [formGroup]="private">
-
-  <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label"> Name*</label>
-      <div class="col-sm-10">
-        <input  name="school_name" formControlName="name"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-         <small  class="text-danger" *ngIf="!private.controls['name'].valid && private.controls['name'].touched" >
-          Required Field , Please Enter the Company name</small>
-      </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> Address*</label>
-    <div class="col-sm-10">
-      <input  name="company_name" formControlName="address"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-       <small  class="text-danger" *ngIf="!private.controls['address'].valid && private.controls['address'].touched" >
-        Required Field , Please Enter the Company Address</small>
-    </div>
-</div>
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Country*</label>
-  <div class="col-sm-10">
-    <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName="country" (ngModelChange)="pgetState($event)">
-      <option value="0" selected
-      >Select Country*</option>
-      <option *ngFor="let option of pcountries" [value]="option.country_id"
-      >{{option.country_name}}</option>
-     </select>
-     <small  class="text-danger" *ngIf="!private.controls['country'].valid && private.controls['country'].touched" >
-      Required Field , Please Enter the Company Country</small>
-  </div>
-</div>
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> State*</label>
-<div class="col-sm-10">
-  <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName="state" (ngModelChange)="pgetcity($event)">
-    <option value="0" selected
-    >Select State*</option>
-    <option *ngFor="let option of pstates" [value]="option.state_id"
-    >{{option.state_name}}</option>
-   </select>
-   <small  class="text-danger" *ngIf="!private.controls['state'].valid && private.controls['state'].touched" >
-    Required Field , Please Enter the Company State</small>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> City*</label>
-<div class="col-sm-10">
-<select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName="city">
-  <option value="0" selected
-  >Select City*</option>
-  <option *ngFor="let option of pcities" [value]="option.city_id"
-  >{{option.city_name}}</option>
- </select>
- <small  class="text-danger" *ngIf="!private.controls['city'].valid && private.controls['city'].touched" >
-  Required Field , Please Enter the Company Country</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label">Pincode*</label>
-  <div class="col-sm-10">
-    <input  name="pincode" formControlName="pincode"  class="form-control" maxlength="6" [length]="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbCharCounter mdbInput>
-    <small  class="text-danger" *ngIf="!private.controls['pincode'].valid && private.controls['name'].touched" >
-      Required Field , Please Enter the Company Pincode</small>
-  </div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Working email*</label>
-<div class="col-sm-10">
-  <input  name="company_name" formControlName="email"  class="form-control" maxlength="45" [length]="45"  mdbCharCounter mdbInput>
-  <div *ngIf="private.controls['email'].touched && private.controls['email'].invalid" class="text-danger">
-    <small *ngIf="private.controls['email'].errors.required">Required Field ,  Email is required.</small>
-   
-    <small *ngIf="private.controls['email'].errors.email">Email seems invalid.</small>
-  </div>
-    
-</div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Designation*</label>
-<div class="col-sm-10">
-<input  name="company_name" formControlName="designation"  class="form-control" minlength="2" maxlength="2" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)">
-<small  class="text-danger" *ngIf="!private.controls['designation'].valid && private.controls['designation'].touched" >
-  Required Field , Please Enter the Company Designation</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Name *</label>
-<div class="col-sm-10">
-<input  name="company_name" formControlName="email"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"   mdbCharCounter mdbInput>
-<small  class="text-danger" *ngIf="!private.controls['ccname'].valid && private.controls['ccname'].touched" >
-Required Field , Please Enter the Company Contact Person name</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Number*</label>
-<div class="col-sm-10">
-  <ngx-intl-tel-input [cssClass]="'form-control'" 
-  [preferredcountries]="preferredCountries"
-  [enableAutoCountrySelect]="true" 
-  [enablePlaceholder]="true" 
-  [searchCountryFlag]="true"
-  [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-  [selectFirstCountry]="false"
-  [selectedCountryISO]="CountryISO.India"
-  [phoneValidation]="true"
-  [separateDialCode]="separateDialCode"
-  formControlName="ccnumber" 
-  (keyup)="s($event)" 
-  (keypress)="s($event)" 
-  [numberFormat]="PhoneNumberFormat.National" 
-  name="phone" >
-</ngx-intl-tel-input>
-<small  class="text-danger" *ngIf="!private.controls['ccnumber'].valid && private.controls['ccnumber'].touched" >
-Required Field , Please Enter the Company Contact Person Number</small>
-</div>
-</div>
-
-<div class="col-md-12 ">
-  <div class="form-group">
-  <p class="text-center"><a (click)="openLogin()">Already have an account?</a></p>
-</div>
-</div>
-<button type="submit" [disabled]="!private.valid && !formGroup.valid " class="btn btn-block mybtn btn-primary tx-tfm" >Submit</button>
-
-
-
-</form>
-</div>
-
-
-
-<div  *ngIf="formGroup.get('profession').value=='3'">
-
-  <form [formGroup]="sefemp">
-
-  <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label"> Name*</label>
-      <div class="col-sm-10">
-        <input  name="school_name" formControlName="name"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-         <small  class="text-danger" *ngIf="!sefemp.controls['name'].valid && sefemp.controls['name'].touched" >
-          Required Field , Please Enter the Company name</small>
-      </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> Address*</label>
-    <div class="col-sm-10">
-      <input  name="company_name" formControlName="address"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-       <small  class="text-danger" *ngIf="!sefemp.controls['address'].valid && sefemp.controls['address'].touched" >
-        Required Field , Please Enter the Company Address</small>
-    </div>
-</div>
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Country*</label>
-  <div class="col-sm-10">
-    <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName="country" (ngModelChange)="pgetState($event)">
-      <option value="0" selected
-      >Select Country*</option>
-      <option *ngFor="let option of pcountries" [value]="option.country_id"
-      >{{option.country_name}}</option>
-     </select>
-     <small  class="text-danger" *ngIf="!sefemp.controls['country'].valid && sefemp.controls['country'].touched" >
-      Required Field , Please Enter the Company Country</small>
-  </div>
-</div>
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> State*</label>
-<div class="col-sm-10">
-  <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName="state" (ngModelChange)="pgetcity($event)">
-    <option value="0" selected
-    >Select State*</option>
-    <option *ngFor="let option of pstates" [value]="option.state_id"
-    >{{option.state_name}}</option>
-   </select>
-   <small  class="text-danger" *ngIf="!sefemp.controls['state'].valid && sefemp.controls['state'].touched" >
-    Required Field , Please Enter the Company State</small>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> City*</label>
-<div class="col-sm-10">
-<select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName="city">
-  <option value="0" selected
-  >Select City*</option>
-  <option *ngFor="let option of pcities" [value]="option.city_id"
-  >{{option.city_name}}</option>
- </select>
- <small  class="text-danger" *ngIf="!sefemp.controls['city'].valid && sefemp.controls['city'].touched" >
-  Required Field , Please Enter the Company Country</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Pincode*</label>
-  <div class="col-sm-10">
-    <input  name="pincode" formControlName="pincode"  class="form-control" maxlength="6" [length]="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbCharCounter mdbInput>
-    <small  class="text-danger" *ngIf="!sefemp.controls['pincode'].valid && sefemp.controls['name'].touched" >
-      Required Field , Please Enter the Company Pincode</small>
-  </div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Working email*</label>
-<div class="col-sm-10">
-  <input  name="company_name" formControlName="email"  class="form-control" maxlength="45" [length]="45"  mdbCharCounter mdbInput>
-  <div *ngIf="sefemp.controls['email'].touched && sefemp.controls['email'].invalid" class="text-danger">
-    <small *ngIf="sefemp.controls['email'].errors.required">Required Field ,  Email is required.</small>
-   
-    <small *ngIf="sefemp.controls['email'].errors.email">Email seems invalid.</small>
-  </div>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Name *</label>
-<div class="col-sm-10">
-<input  name="company_name" formControlName="email"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"   mdbCharCounter mdbInput>
-<small  class="text-danger" *ngIf="!sefemp.controls['ccname'].valid && sefemp.controls['ccname'].touched" >
-Required Field , Please Enter the Company Contact Person name</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Number*</label>
-<div class="col-sm-10">
-  <ngx-intl-tel-input [cssClass]="'form-control'" 
-  [preferredcountries]="preferredCountries"
-  [enableAutoCountrySelect]="true" 
-  [enablePlaceholder]="true" 
-  [searchCountryFlag]="true"
-  [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-  [selectFirstCountry]="false"
-  [selectedCountryISO]="CountryISO.India"
-  [phoneValidation]="true"
-  [separateDialCode]="separateDialCode"
-  formControlName="ccnumber" 
-  (keyup)="s($event)" 
-  (keypress)="s($event)" 
-  [numberFormat]="PhoneNumberFormat.National" 
-  name="phone" >
-</ngx-intl-tel-input>
-<small  class="text-danger" *ngIf="!sefemp.controls['ccnumber'].valid && sefemp.controls['ccnumber'].touched" >
-Required Field , Please Enter the Company Contact Person Number</small>
-
-
-
-</div>
-
-
-</div>
-<div class="col-md-12 ">
-  <div class="form-group">
-  <p class="text-center"><a (click)="openLogin()">Already have an account?</a></p>
-</div>
-</div>
-<button type="submit" [disabled]="!sefemp.valid && !formGroup.valid" class="btn btn-block mybtn btn-primary tx-tfm" >Submit</button>
-
-
-
-</form>
-</div>
-
-
-
-<div  *ngIf="formGroup.get('profession').value=='4'">
-
-  <form [formGroup]="college">
-
-  <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label"> School/College Name*</label>
-      <div class="col-sm-10">
-        <input  name="school_name" formControlName="name"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-         <small  class="text-danger" *ngIf="!college.controls['name'].valid && college.controls['name'].touched" >
-          Required Field , Please Enter the College name</small>
-      </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> Address*</label>
-    <div class="col-sm-10">
-      <input  name="College_name" formControlName="address"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-       <small  class="text-danger" *ngIf="!college.controls['address'].valid && college.controls['address'].touched" >
-        Required Field , Please Enter the College Address</small>
-    </div>
-</div>
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Country*</label>
-  <div class="col-sm-10">
-    <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName="country" (ngModelChange)="pgetState($event)">
-      <option value="0" selected
-      >Select Country*</option>
-      <option *ngFor="let option of pcountries" [value]="option.country_id"
-      >{{option.country_name}}</option>
-     </select>
-     <small  class="text-danger" *ngIf="!college.controls['country'].valid && college.controls['country'].touched" >
-      Required Field , Please Enter the College Country</small>
-  </div>
-</div>
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> State*</label>
-<div class="col-sm-10">
-  <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName="state" (ngModelChange)="pgetcity($event)">
-    <option value="0" selected
-    >Select State*</option>
-    <option *ngFor="let option of pstates" [value]="option.state_id"
-    >{{option.state_name}}</option>
-   </select>
-   <small  class="text-danger" *ngIf="!college.controls['state'].valid && college.controls['state'].touched" >
-    Required Field , Please Enter the College State</small>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> City*</label>
-<div class="col-sm-10">
-<select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName="city">
-  <option value="0" selected
-  >Select City*</option>
-  <option *ngFor="let option of pcities" [value]="option.city_id"
-  >{{option.city_name}}</option>
- </select>
- <small  class="text-danger" *ngIf="!college.controls['city'].valid && college.controls['city'].touched" >
-  Required Field , Please Enter the College Country</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Pincode*</label>
-  <div class="col-sm-10">
-    <input  name="pincode" formControlName="pincode"  class="form-control" maxlength="6" [length]="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbCharCounter mdbInput>
-    <small  class="text-danger" *ngIf="!college.controls['pincode'].valid && college.controls['name'].touched" >
-      Required Field , Please Enter the College Pincode</small>
-  </div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Working email*</label>
-<div class="col-sm-10">
-  <input  name="College_name" formControlName="email"  class="form-control" maxlength="45" [length]="45"  mdbCharCounter mdbInput>
-  <div *ngIf="college.controls['email'].touched && college.controls['email'].invalid" class="text-danger">
-    <small *ngIf="college.controls['email'].errors.required">Required Field ,  Email is required.</small>
-   
-    <small *ngIf="college.controls['email'].errors.email">Email seems invalid.</small>
-  </div>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Name *</label>
-<div class="col-sm-10">
-<input  name="College_name" formControlName="email"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"   mdbCharCounter mdbInput>
-<small  class="text-danger" *ngIf="!college.controls['ccname'].valid && college.controls['ccname'].touched" >
-Required Field , Please Enter the College Contact Person name</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Number*</label>
-<div class="col-sm-10">
-  <ngx-intl-tel-input [cssClass]="'form-control'" 
-  [preferredcountries]="preferredCountries"
-  [enableAutoCountrySelect]="true" 
-  [enablePlaceholder]="true" 
-  [searchCountryFlag]="true"
-  [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-  [selectFirstCountry]="false"
-  [selectedCountryISO]="CountryISO.India"
-  [phoneValidation]="true"
-  [separateDialCode]="separateDialCode"
-  formControlName="ccnumber" 
-  (keyup)="s($event)" 
-  (keypress)="s($event)" 
-  [numberFormat]="PhoneNumberFormat.National" 
-  name="phone" >
-</ngx-intl-tel-input>
-<small  class="text-danger" *ngIf="!college.controls['ccnumber'].valid && college.controls['ccnumber'].touched" >
-Required Field , Please Enter the College Contact Person Number</small>
-</div>
-</div>
-
-<div class="col-md-12 ">
-  <div class="form-group">
-  <p class="text-center"><a (click)="openLogin()">Already have an account?</a></p>
-</div>
-</div>
-<button type="submit" [disabled]="!college.valid && !formGroup.valid" class="btn btn-block mybtn btn-primary tx-tfm" >Submit</button>
-
-
-
-</form>
-
-</div>
-
-
-
-<div  *ngIf="formGroup.get('profession').value=='5'">
-
-  <form [formGroup]="hf">
-
-  <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label"> Name*</label>
-      <div class="col-sm-10">
-        <input  name="school_name" formControlName="name"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-         <small  class="text-danger" *ngIf="!hf.controls['name'].valid && hf.controls['name'].touched" >
-          Required Field , Please Enter the HouseWife name</small>
-      </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> Address*</label>
-    <div class="col-sm-10">
-      <input  name="HouseWife_name" formControlName="address"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-       <small  class="text-danger" *ngIf="!hf.controls['address'].valid && hf.controls['address'].touched" >
-        Required Field , Please Enter the HouseWife Address</small>
-    </div>
-</div>
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Country*</label>
-  <div class="col-sm-10">
-    <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName="country" (ngModelChange)="pgetState($event)">
-      <option value="0" selected
-      >Select Country*</option>
-      <option *ngFor="let option of pcountries" [value]="option.country_id"
-      >{{option.country_name}}</option>
-     </select>
-     <small  class="text-danger" *ngIf="!hf.controls['country'].valid && hf.controls['country'].touched" >
-      Required Field , Please Enter the HouseWife Country</small>
-  </div>
-</div>
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> State*</label>
-<div class="col-sm-10">
-  <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName="state" (ngModelChange)="pgetcity($event)">
-    <option value="0" selected
-    >Select State*</option>
-    <option *ngFor="let option of pstates" [value]="option.state_id"
-    >{{option.state_name}}</option>
-   </select>
-   <small  class="text-danger" *ngIf="!hf.controls['state'].valid && hf.controls['state'].touched" >
-    Required Field , Please Enter the HouseWife State</small>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> City*</label>
-<div class="col-sm-10">
-<select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName="city">
-  <option value="0" selected
-  >Select City*</option>
-  <option *ngFor="let option of pcities" [value]="option.city_id"
-  >{{option.city_name}}</option>
- </select>
- <small  class="text-danger" *ngIf="!hf.controls['city'].valid && hf.controls['city'].touched" >
-  Required Field , Please Enter the HouseWife Country</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Pincode*</label>
-  <div class="col-sm-10">
-    <input  name="pincode" formControlName="pincode"  class="form-control" maxlength="6" [length]="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbCharCounter mdbInput>
-    <small  class="text-danger" *ngIf="!hf.controls['pincode'].valid && hf.controls['name'].touched" >
-      Required Field , Please Enter the HouseWife Pincode</small>
-  </div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Working email*</label>
-<div class="col-sm-10">
-  <input  name="HouseWife_name" formControlName="email"  class="form-control" maxlength="45" [length]="45"  mdbCharCounter mdbInput>
-  <div *ngIf="hf.controls['email'].touched && hf.controls['email'].invalid" class="text-danger">
-    <small *ngIf="hf.controls['email'].errors.required">Required Field ,  Email is required.</small>
-   
-    <small *ngIf="hf.controls['email'].errors.email">Email seems invalid.</small>
-  </div>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Name *</label>
-<div class="col-sm-10">
-<input  name="HouseWife_name" formControlName="email"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"   mdbCharCounter mdbInput>
-<small  class="text-danger" *ngIf="!hf.controls['ccname'].valid && hf.controls['ccname'].touched" >
-Required Field , Please Enter the HouseWife Contact Person name</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Number*</label>
-<div class="col-sm-10">
-<input  name="ccnumber" formControlName="ccnumber"  class="form-control" maxlength="10" [length]="10"  (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)"  mdbCharCounter mdbInput>
-<small  class="text-danger" *ngIf="!hf.controls['ccnumber'].valid && hf.controls['ccnumber'].touched" >
-Required Field , Please Enter the HouseWife Contact Person Number</small>
-</div>
-</div>
-
-<div class="col-md-12 ">
-  <div class="form-group">
-  <p class="text-center"><a (click)="openLogin()">Already have an account?</a></p>
-</div>
-</div>
-<button type="submit" [disabled]="!hf.valid && !formGroup.valid" class="btn btn-block mybtn btn-primary tx-tfm" >Submit</button>
-
-
-</form>
-
-</div>
-
-<div  *ngIf="formGroup.get('profession').value=='6'">
-
-  <form [formGroup]="pub">
-
-  <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label"> Government Deptt*</label>
-      <div class="col-sm-10">
-        <input  name="school_name" formControlName="name"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-         <small  class="text-danger" *ngIf="!pub.controls['name'].valid && pub.controls['name'].touched" >
-          Required Field , Please Enter the Government name</small>
-      </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label"> Address*</label>
-    <div class="col-sm-10">
-      <input  name="Government_name" formControlName="address"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"  mdbCharCounter mdbInput>
-       <small  class="text-danger" *ngIf="!pub.controls['address'].valid && pub.controls['address'].touched" >
-        Required Field , Please Enter the Government Address</small>
-    </div>
-</div>
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Country*</label>
-  <div class="col-sm-10">
-    <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName="country" (ngModelChange)="pgetState($event)">
-      <option value="0" selected
-      >Select Country*</option>
-      <option *ngFor="let option of pcountries" [value]="option.country_id"
-      >{{option.country_name}}</option>
-     </select>
-     <small  class="text-danger" *ngIf="!pub.controls['country'].valid && pub.controls['country'].touched" >
-      Required Field , Please Enter the Government Country</small>
-  </div>
-</div>
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> State*</label>
-<div class="col-sm-10">
-  <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName="state" (ngModelChange)="pgetcity($event)">
-    <option value="0" selected
-    >Select State*</option>
-    <option *ngFor="let option of pstates" [value]="option.state_id"
-    >{{option.state_name}}</option>
-   </select>
-   <small  class="text-danger" *ngIf="!pub.controls['state'].valid && pub.controls['state'].touched" >
-    Required Field , Please Enter the Government State</small>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> City*</label>
-<div class="col-sm-10">
-<select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName="city">
-  <option value="0" selected
-  >Select City*</option>
-  <option *ngFor="let option of pcities" [value]="option.city_id"
-  >{{option.city_name}}</option>
- </select>
- <small  class="text-danger" *ngIf="!pub.controls['city'].valid && pub.controls['city'].touched" >
-  Required Field , Please Enter the Government Country</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-  <label for="inputEmail3" class="col-sm-2 col-form-label"> Pincode*</label>
-  <div class="col-sm-10">
-    <input  name="pincode" formControlName="pincode"  class="form-control" maxlength="6" [length]="6" (keyup)="checkcontactMobile($event)" (keydown)="checkcontactMobile($event)" mdbCharCounter mdbInput>
-    <small  class="text-danger" *ngIf="!pub.controls['pincode'].valid && pub.controls['name'].touched" >
-      Required Field , Please Enter the Government Pincode</small>
-  </div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Working email*</label>
-<div class="col-sm-10">
-  <input  name="Government_name" formControlName="email"  class="form-control" maxlength="45" [length]="45"  mdbCharCounter mdbInput>
-  <div *ngIf="pub.controls['email'].touched && pub.controls['email'].invalid" class="text-danger">
-    <small *ngIf="pub.controls['email'].errors.required">Required Field ,  Email is required.</small>
-   
-    <small *ngIf="pub.controls['email'].errors.email">Email seems invalid.</small>
-  </div>
-</div>
-</div>
-
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Name *</label>
-<div class="col-sm-10">
-<input  name="Government_name" formControlName="email"  class="form-control" maxlength="45" [length]="45" (keypress)="keyPressAlphaNumeric($event)"   mdbCharCounter mdbInput>
-<small  class="text-danger" *ngIf="!pub.controls['ccname'].valid && pub.controls['ccname'].touched" >
-Required Field , Please Enter the Government Contact Person name</small>
-</div>
-</div>
-
-
-
-<div class="form-group row">
-<label for="inputEmail3" class="col-sm-2 col-form-label"> Contact Person Number*</label>
-<div class="col-sm-10">
-
-         <ngx-intl-tel-input [cssClass]="'form-control'" 
-          [preferredcountries]="preferredCountries"
-          [enableAutoCountrySelect]="true" 
-          [enablePlaceholder]="true" 
-          [searchCountryFlag]="true"
-          [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-          [selectFirstCountry]="false"
-          [selectedCountryISO]="CountryISO.India"
-          [phoneValidation]="true"
-          [separateDialCode]="separateDialCode"
-          formControlName="ccnumber" 
-          (keyup)="s($event)" 
-          (keypress)="s($event)" 
-          [numberFormat]="PhoneNumberFormat.National" 
-          name="phone" >
-        </ngx-intl-tel-input>
-
-<small  class="text-danger" *ngIf="!pub.controls['ccnumber'].valid && pub.controls['ccnumber'].touched" >
-Required Field , Please Enter the Government Contact Person Number</small>
-</div>
-</div>
-
-
-<div class="col-md-12 ">
-  <div class="form-group">
-  <p class="text-center"><a (click)="openLogin()">Already have an account?</a></p>
-</div>
-</div>
-<button type="submit" [disabled]="!pub.valid && !formGroup.valid" class="btn btn-block mybtn btn-primary tx-tfm" >Submit</button>
-
-
-
-</form>
-</div>
-
-</div>
-</form>
-
-           
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-</section>
-
-<div toastContainer></div>
+      </div>  <!-- Signup Column ends here  -->
+    </div> <!----Row ends-->
+         </form> <!---Form ended-->
+         <!-- Form Ended -->
+      </div>  <!-- Signup Form ends -->
+    </div>   <!--Right Col ends here -->
+  </div> <!----Row ends here-->
+</div> <!---container fluid ends -->
+</section> <!---section ends -->
 
 
