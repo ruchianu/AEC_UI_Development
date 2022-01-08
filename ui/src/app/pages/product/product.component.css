@@ -8,3 +8,191 @@
     @media (min-width: 960px) {
       .tabsdemoCenterTabs md-tab-item {
         min-width: 160px; } }
+
+
+        .escheader{
+          color:#6F016F;
+
+        }
+        .nav-pills {
+          border-bottom: 1px solid #ddd;
+      }
+      .nav-pills li a {
+          background: #1f4e79;
+          color: #fff;
+          display: block;
+          line-height: 2em;
+          padding: 7px 15px;
+          border-radius: 0;
+          font-size: 14px;
+          border: none;
+          margin: 30px 2px 0;
+      }
+      ul li a {
+          text-decoration: none;
+      }
+      .nav-pills li a.active {
+          background: #3482ca;
+          border: none;
+          color: #FFF;
+      }
+
+      /* .navsimple li a{
+        color: #6F016F;
+
+
+      } */
+      .mat-tab-group {
+        margin-bottom: 48px;
+      }
+
+
+      /*     Image starts  */
+      .mec{
+
+       
+      }
+
+
+      /* [1] The container */
+.pro_img-hover-zoom {
+  /* height: 400px; /* [1.1] Set it as per your need */
+ /* width:100%; */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+ 
+}
+
+/* [2] Transition property for smooth transformation of images */
+.pro_img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.pro_img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+.pro_mesc_head{
+  font-family: 'Lora';
+  font-size: 30px;
+  font-weight: 700;
+  color: #790666;
+ }
+ .pro_mesc_author{
+  font-family: 'Lato',sans-serif;
+  font-size: 16px;
+  color: #790666;
+ }
+ /* Make the image fully responsive */
+ .monospaced{
+  font-family: 'Lato',sans-serif;
+  font-size: 14px;
+  color: black;
+ }
+ .pro_star{
+   color: #FFD814;
+
+ }
+ .card{
+  font-family: 'Lato',sans-serif;
+  font-size: 14px;
+  color: black;
+ }
+ 
+ .card-title{
+  font-size: 20px;
+  color:red;
+  font-weight:200px;
+
+ }
+ .ap{
+  font-size: 14px;
+  color:#6F016F;
+ }
+ .attr2{cursor:pointer;margin-right:5px;height:20px;font-size:10px;padding:2px;border:5px solid #6F016F;border-radius:2px;}
+.attr2.active{ border:5px solid orange;}
+.chip{
+  
+  background-color: white; border-color:#6F016F;color:#6F016F;padding: 5px; align:center;border:2px solid#6F016F;border-radius:20px;
+}
+.chiptext{
+  font-family: 'Lato',sans-serif;
+  font-size: 13px;
+  text-align:center;
+}
+.chip:hover{
+ color: white; border-color:#6F016F; background-color:#6F016F;padding: 5px; align:center;border:2px solid orange;border-radius:2px;
+
+}
+.quantity .type{
+  font-family: 'Lato',sans-serif;
+  font-size: 12px;
+
+}
+
+.qty-form-control{
+ width : 100px;
+
+}
+.btn-secondary1{
+  background-color: white;
+  color:#6f016f;
+  
+}
+.btn-secondary1:hover{
+  background-color:#6F016F;
+  color:#fff;
+}
+
+.addtocart{
+	width: 20%;
+	height:30px;
+	font-family: 'Lato';
+	font-size: 14px;
+	
+	/* text-transform: uppercase; */
+	letter-spacing: 1.0px;
+	font-weight: 800;
+	color: #790666;/*#000;*/
+	background-color: #FFD814;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+  
+	}
+  
+  .addtocart:hover {
+	background-color:#F7CA00;
+	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+	color: #790666;
+	transform: translateY(-7px);
+  }
+  .buynow {
+    width: 20%;
+    height:30px;
+    font-family: 'Lato';
+    font-size: 14px;
+    
+    /* text-transform: uppercase; */
+    letter-spacing: 1.0px;
+    font-weight: 800;
+    color: #0a0209;/*#000;*/
+    background-color: #FFA41C; 
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+   
+    }
+    
+    .buynow:hover {
+    background-color:#FA8900;
+    box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+    color: #0a0209;
+    transform: translateY(-7px);
+    }

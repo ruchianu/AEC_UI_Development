@@ -1,136 +1,258 @@
-<!--Section: Block Content---->
-<section class="mb-5" style="background-color: #ffffff;">
- <div class="container-fluid  py-5 h-100">
-  <div class="small-container">
-   <div class="row">
-    <div class="col-md-6">
-     <div><ng-image-slider [images]="mainpic"  [imageSize]="{width: '70%', height: 330}" #nav></ng-image-slider></div>
-     <div><ng-image-slider #nav [images]="test" [infinite]="true" [imageSize]="{width: '25%', height: 200}"></ng-image-slider></div>
-    </div>
 
-    <div class="col-md-6">
+
+<!--------- Product Page 
+  DOS : 06/01/2022
+  Time : 19.12
+  Reference Sites:
+
+https://www.practicalecommerce.com/Create-Responsive-Ecommerce-Product-Pages-with-Bootstrap
+
+
+
+--->
+
+
+<!-- <section id="product" class="h-100">
+
+  <div class="container" id="product-section">
+    <div class="row">
+     <div class="col-md-6">
+      … [this is the product image]
+     </div>
+     <div class="col-md-6">
+      …[this is the product information]
+     </div>
+    </div>
+   </div> 
+
+
+</section>--->
+
+
+    
+ <section id="product" class="h-100">
+
+  <div class="container" id="product-section">
       
-      <span style="color:purple;" [innerHTML]="toHTML(name)"></span>
-         <ul class="list-unstyled list-inline mb-2">
-                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"> </i></li>
-                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
-                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
-                  <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
-                  <li class="list-inline-item"><i class="fa fa-star-half-alt fa-xs"></i></li>
-          </ul>
-
-          <div class="card">
-            <div class="card-body">
-
-              <h5 class="card-title">Rs.{{price}}</h5> 
-              <h6 class="card-subtitle mb-2 text-muted"><s>Rs.{{mrp}}</s><i> |  Save 85%   <p class="card-text">   Inclusive of all taxes  (Note, 1 piece)</p>  </i></h6>  
-              <p class="card-text">In-Stock</p>
-                           
-              <h6>  {{selectAddonName}}  </h6>
-
-                          
-              <div class="chip" style="background-color: purple; color:whitesmoke;padding: 5px; align:center" *ngFor="let addonDatasss of addonData" (click) = "selectAddon(addonDatasss.id,addonDatasss.name,addonDatasss.priority)">
-                <h6>  {{addonDatasss.name}}  </h6>
-              </div>
-            
-<!--             
-              <div class="chip" style="background-color: purple; color:whitesmoke;padding: 5px; align:center; cursor: default;">
-                <h6>  Video  </h6>
-              </div>
-              <div class="chip" style="background-color: purple; color:whitesmoke; padding: 5px; align:center;cursor: default;">
-                  <h6>  e-book  </h6>
-              </div>
-              <div class="chip" style="background-color: purple; color:whitesmoke;padding: 5px; align:center;cursor: default; ">
-                  <h6>  Paperback + Video  </h6>
-              </div>
-              <div class="chip" style="background-color: purple; color:whitesmoke; padding: 5px; align:center;cursor: default;">
-                    <h6>  Video+e-book  </h6>
-              </div>    -->
-
-              <ul class="list-unstyled list-inline mb-2">
-              
-              <li class="list-inline-item me-0"> 
-                <div class="def-number-input number-input safari_only mb-0">
-                  <button (click)="decrementCounter()"
-                    class="minus">-</button>
-                  </div>
-                  </li>
-                    
-                    <li class="list-inline-item me-0">    
-                      <div class="def-number-input number-input safari_only mb-0"> 
-                  <input class="quantity" [(ngModel)]="val" min="1" name="quantity" value="1" type="number"></div></li>
-                  <li class="list-inline-item me-0"> 
-                  <button (click)="incrementCounter()"
-                    class="plus">+</button>
-                 
-               </li>
-                  </ul>
-               
-            
-     
-  
-              <p class="card-text">Sold by Anu English Academy</p>
-              <div class="row">
-                <div class="col-md-6">
-                  <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" (click)="addTosCart(1,1)"><i
-                  class="fas fa-shopping-cart pr-2" ></i>Add to cart</button>
-                </div>
-                <div class="col-md-6">
-                 <button type="button" class="btn btn-warning btn-sm" style="color:purple" (click)="addTosCart(1,1)" routerLink = '/cart'>Buy Now</button>
-              </div>
-             </div>
-
-          </div>
+  <h3 class="mt-2 escheader">English Speaking Courses 
+  <span><div class="btn-group ml-4" role="group" aria-label="Basic example">
     
-       </div>
-    </div>
-
   </div>
+</span>
+</h3>
+ <!----------------------------------------------------------->
+  <!-- <ul class="nav navsimple">
+    <li class="nav-item">
+      <a class="nav-link active" href="#!">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#!">Disabled</a>
+    </li>
+  </ul>
+   -->
+<!----------------------------------------------------------->
+  <!-- <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#!">Basic</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!">Advance</a>
+    </li>
+  </ul> -->
+
+  
+  <!---------------------------------------------
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="First">Content 11</mat-tab>
+  <mat-tab label="Second">Content 22</mat-tab>
+  <mat-tab label="Third">Content 33</mat-tab>
+</mat-tab-group>
+
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="First">Content 1</mat-tab>
+  <mat-tab label="Second">Content 2</mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
+
+<mat-tab-group mat-align-tabs="end">
+  <mat-tab label="First">Content 1</mat-tab>
+  <mat-tab label="Second">Content 2</mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>-------------->
 
 
+  <!-------------------------Row Starts---------------------------------->
+    <div class="row">
+     <!-------------------------Ist Col starts---------------------------------->
+     <div class="col-md-5 mt-4 ">
 
- </div>
+      <!-- <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div> -->
 
- </div>
+       <!-- Image div starts   -->
+       <div class="row">
+        <div class="col-md-12">
+        <div class="pro_img-hover-zoom text-center">
+          <!-- <div class="view zoom overlay z-depth-2 rounded"> -->
+                <img class=" img-fluid w-50  img-thumbnail img-rounded" src ="/assets/images/MEC.jpg" >
+        <!-- </div> -->
+          </div>
+          
+          </div>
+       </div>
+           
+               <!-- Image Div ends  -->
 
+               <mdb-carousel [animation]="'slide'">
+                <mdb-carousel-item>
+                  <img class="d-block w-50" src="/assets/images/MEC.jpg" alt="First slide">
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                  <img class="d-block w-50" src="/assets/images/MECHART.jpg" alt="Second slide">
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                  <img class="d-block w-50" src="/assets/images/MEF_Back.jpg" alt="Third slide">
+                </mdb-carousel-item>
+              </mdb-carousel>
 
- <my-tabs [buttonClass]="'md-pills pills-primary font-weight-bold'" >
-  <my-tab [tabTitle]="'Product Description'">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title" style="color:purple">Product Description</h4> 
-        <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(description)"></span>
+               <!-- <div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22900%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20900%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17e35ba11aa%20text%20%7B%20fill%3A%23FFFFFF%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A45pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17e35ba11aa%22%3E%3Crect%20width%3D%22900%22%20height%3D%22400%22%20fill%3D%22%233a5a97%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22333.203125%22%20y%3D%22220.165625%22%3E900x400%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/900x400?theme=social" alt="900x400" data-holder-rendered="true" style="width: 900px; height: 400px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22900%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20900%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17e35ba11b2%20text%20%7B%20fill%3A%23C2F200%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A45pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17e35ba11b2%22%3E%3Crect%20width%3D%22900%22%20height%3D%22400%22%20fill%3D%22%23434A52%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22333.203125%22%20y%3D%22220.165625%22%3E900x400%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/900x400?theme=industrial" alt="900x400" data-holder-rendered="true" style="width: 900px; height: 400px;">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselFadeExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselFadeExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div> -->
+              
+      </div>
+     <!-------------------------Ist Col ends---------------------------------->
+     <!------------------------2nd Column-starts---------------------------------->
+     <div class="col-md-7 mt-4 ">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="#" class="mr-3">Basic</a>
+          <a href="#">Advance</a>
+          <hr>
+          <h3 class="pro_mesc_head"> Magic English Speaking Course</h3>
+          <h6 class ="pro_mesc_author">  <i> by Devender Kumar Sharma alias Anu Sharma (Author)</i></h6>
+       </div>
+      </div>
+
+      <!-- /Rating -->
+        <div class="row">
+         <div class="col-md-3">
+        <span>
+        <ul class="list-unstyled list-inline mb-2 pro_star">
+          <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"> </i></li>
+          <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+          <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+          <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+          <li class="list-inline-item"><i class="fa fa-star-half-alt fa-xs"></i></li>
+        </ul>
+      </span>
+    </div> 
+    <div class="col-md-3">
+      <span class="monospaced">Write a Review</span>
+     </div>
+    </div>
  
-      </div>
-     
-      </div>
-  </my-tab>
-  <my-tab tabTitle="Product Details">
-    <div class="card">
+    <!-------------CARD for price------------------------------------------------->
+
+    <!-- <div class="card" ">style="width: 35rem; margin:left; padding-left:20px; -->
+      <div class="card">
       <div class="card-body">
-        <h4 class="card-title" style="color:purple">Product Details</h4> 
-        <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(details)"></span>
-       
+
+        <h5 class="card-title">Rs.2570</h5> 
+        <!-- <h6 class="card-subtitle mb-2 text-muted"><s>Rs.3000</s><i> |  Save 85%     </i></h6> -->
+        <h6 class="card-subtitle  text-muted"><s class="ap">Rs.3000</s> <i> You save : Rs.430  |  (85%) </i></h6>
+            
+        <p class="card-text"><i>Inclusive of all taxes </i></p>
+        
+        <h6>  In-Stock </h6>
+        <div class="chip">
+          <h6 class="type chiptext">Paperback</h6>
+         
+        </div>
+        <div class="chip">
+          <h6 class="type chiptext">Video</h6>
+         
+        </div>
+        <div class="chip">
+          <h6 class="type chiptext">e-book</h6>
+         
+        </div>
+        <div class="chip">
+          <h6 class="type chiptext">Paperback + Video</h6>
+         
+        </div>
+        <div class="chip">
+          <h6 class="type chiptext">Video+e-book</h6>
+         
+        </div>
+
+
+           
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="quantity" class="qty mr-2">Quantity:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="1000" step="1" value="30">
+  
+          </div>
+          
+          
+        </form>
+              <!-- <form>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder=" Quantity">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                      <button type="submit" class="btn actbtn ml-5 mr-2">Submit</button> 
+                    </button>
+                  </div>
+                </div>
+              </form> -->
+              <hr>
+              <div class="row">
+                <div class="col-md-12 ml-5 align-items-center">
+                  <button type="submit" class="btn addtocart  ml-5 mr-2">Add to Cart</button> 
+                  <button type="submit" class="btn buynow ">Buy Now</button> 
+                
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                
+                </div>
+              </div>
+              
       </div>
-     
-      </div>
+    </div>
+<!--------------------------Card finish------------------->
+
+     </div>
+ <!------------------------2nd Column-ends---------------------------------->
     
-  </my-tab>
-
-  <my-tab tabTitle="Product Reviews">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title" style="color:purple">Reviews</h4> 
-
-      </div>
-     
-      </div>
-    
-  </my-tab>
-</my-tabs>
-
-
-
+   </div> 
+   <!-------------------------Row Ends--------------------------------->
+   </div>
 </section>
 
-<!--Section: Block Content-->
+    
+
+ 

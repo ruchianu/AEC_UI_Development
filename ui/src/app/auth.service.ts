@@ -13,8 +13,8 @@ import { retry, catchError } from 'rxjs/operators';
 export class AuthService {
   
   // Define API
-  apiURL = 'http://api.clickbulb.com';
-  //piURL = 'http://localhost:5000';
+  //apiURL = 'http://api.clickbulb.com';
+  apiURL = 'http://localhost:5000';
 
   constructor(private http: HttpClient) { }
 
