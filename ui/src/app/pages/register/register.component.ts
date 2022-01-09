@@ -100,7 +100,7 @@ options =[
   });
 
 
-
+ 
 
   this.school = this.formBuilder.group({
     'name': [null, Validators.required],
@@ -188,7 +188,7 @@ this.pub= this.formBuilder.group({
 
 
  }
-
+ 
  openLogin(){
   this.router.navigate(['/login']);
   }

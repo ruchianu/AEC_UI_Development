@@ -187,3 +187,15 @@ margin-left:28px;
 	transform: translateY(-7px);
   }
   .height-100{height: 100vh;}
+
+  .alert {
+	width: 18em;
+	font-family: 'Lato',sans-serif;
+	font-size: 15px;
+	font-weight: 500px;
+	color:#fff;
+  	/* border: 1px solid #333; */
+  	/* box-shadow: 8px 8px 5px #444; */
+  	padding: 6px 10px;
+  	/* background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc); */
+}

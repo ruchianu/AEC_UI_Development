@@ -84,11 +84,11 @@ import { SideBarService } from './pages/video/side-bar/side-bar.service';
     AccordionModule,
     SidebarModule.forRoot(),
     ToastrModule.forRoot({
-      timeOut: 5000,
-      positionClass: 'toast-bottom-center',
-      preventDuplicates: true,
-      closeButton: false,
-      progressBar: true,
+      closeButton: true,
+      timeOut: 3000,
+      positionClass: 'toast-top-right',//'toast-bottom-full-width',//'toast-top-right', //'toast-top-full-width'toast-bottom-full-width
+      preventDuplicates: true,      
+      progressBar: false,
       maxOpened: 1,
       autoDismiss: true,
       enableHtml: true

@@ -722,8 +722,60 @@ def detail_user():
         db.session.commit()
         return "User updated Successfully"
 
+#Added by sid on 7/1/2022 -----------
+#Authenticate the user's mobile number
+@user_blueprint.route("/authenticateuser",methods=['GET','POST','OPTIONS'])
+def authenticate_user():
+    print(" Inside authenticate user function")
+    if request.method == "OPTIONS":
+        return _build_cors_prelight_response()
+    elif request.method == "POST":
+        content = request.json
+        print("content".format(content))
+        x = datetime.now()
+        phone = content['phone']
+        last_item =  db.session.query(Lead).filter(Lead.phone==phone).all()         
+        if len(last_item) > 0 :
+            phoneOTP = 0
+            db.session.query(Lead).filter(Lead.phone==phone).update({Lead.login_otp:str(phoneOTP)},synchronize_session = False)
+            db.session.commit()
+            otp_array = {"otp":"","statusCode":200}
+            return _corsify_actual_response(jsonify(otp_array))
+        else:
+            otp_array = {"otp":"","statusCode":401,"status":"This mobile number is not registered with us."}
+            return _corsify_actual_response(jsonify(otp_array))
 
 
+#--------
+"""
+@user_blueprint.route("/getotp1",methods=['GET','POST'])
+def getotp()
+    return "Hello world"
+"""
+
+@user_blueprint.route("/getotp",methods=['GET','POST','OPTIONS'])
+def get_otp():
+    if request.method == "OPTIONS":
+        return _build_cors_prelight_response()
+    elif request.method == "POST":
+        content = request.json
+        date_time = datetime.now()
+        phone = content['phone']  
+        last_item =  db.session.query(Lead).filter(Lead.phone==phone).all()                 
+        if len(last_item) > 0 :
+          for user in last_item:
+              phoneOTP = random.randrange(1, 10**6)
+              print(" User id is: ",user.id)
+              if user.id > 0:
+                  if user.lock_status == 0:
+                      db.session.query(Lead).filter(Lead.phone==phone).update({Lead.login_otp:str(phoneOTP)},synchronize_session = False)
+                      db.session.commit()
+                      otp_array = {"otp":str(phoneOTP),"statusCode":200}
+                      print(otp_array)
+                      return _corsify_actual_response(jsonify(otp_array))
+              else:
+                  otp_array = {"otp":str(phoneOTP),"statusCode":401}
+                  return _corsify_actual_response(jsonify(otp_array))
 
 ## Generate OTP Info Start ##
 @user_blueprint.route("/userlogin", methods=['GET', 'POST','OPTIONS'])
@@ -736,6 +788,7 @@ def user_login():
         phone = content['phone']
   
         last_item =  db.session.query(Lead).filter(Lead.phone==phone).all() 
+        print("data from db: ".format(content))
         if len(last_item) > 0 :
           for user in last_item: 
              phoneOTP = random.randrange(1, 10**6)
@@ -756,10 +809,10 @@ def user_login():
                       category_array = {"status":"lead update sucessfully","phone_otp":str(phoneOTP),"statusCode":201}
                       return _corsify_actual_response(jsonify(category_array))
                else :
-                    otp_array = {"otp":"","statusCode":401,"status":"user is not found with phone number"}
+                    otp_array = {"otp":"","statusCode":401,"status":"This mobile number is not registered with us."}
                     return _corsify_actual_response(jsonify(otp_array)) 
         else :
-              otp_array = {"otp":"","statusCode":401,"status":"user is not found with phone number"}
+              otp_array = {"otp":"","statusCode":401,"status":"This mobile number is not registered with us."}
               return _corsify_actual_response(jsonify(otp_array)) 
     else :
          raise RuntimeError("Weird - don't know how to handle method {}".format(request.method))

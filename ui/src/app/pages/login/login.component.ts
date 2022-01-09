@@ -7,6 +7,10 @@ import { NotificationType } from '../../notification.message';
 import { SearchCountryField, CountryISO, PhoneNumberFormat } from 'ngx-intl-tel-input';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Location } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
+import { select } from '@ngrx/store';
+
 
 @Component({
   selector: 'app-login',
@@ -58,17 +62,69 @@ export class LoginComponent implements OnInit {
   constructor(public restApi: AuthService,   
               private route: ActivatedRoute,
               private notificationService: NotificationService,
+              private location:Location,
+              private toastrService: ToastrService,
               private router: Router) {
      this.registerSucess = false
      if(localStorage.getItem('currentUser') === null || localStorage.getItem('currentUser') === undefined ){
       this.router.navigate(['/login']);
     }
    }
+   
+  mobileFormControl = new FormControl('',[
+    Validators.required,
+  ]);
 
-  ngOnInit(): void {
-    this.registerSucess = false
+  //Boolean variables
+   public isAuthenticated:Boolean = false;
+   public isMobileNumber: Boolean = false;
+   public isVisible: boolean = false;
+   public varMobileNumber;
+   public isOtpValid: boolean = false;
+   public isButtonDisabled: boolean = false;
+   public isOtpEntered: boolean = false;
+     
+   public showSuccess(message:string): void {
+    this.toastrService.success(message, 'Success!');
   }
 
+  public showInfo(message:string): void {
+    this.toastrService.info(message, 'Information');
+  }
+
+  public showWarning(message:string): void {
+    this.toastrService.warning(message, 'Warning!');
+  }
+
+  public showError(message:string): void {
+    console.log(" Show Error")
+    // this.toastrService.error('The mobile number which you have entered is not registered with us.!', 'Error!');
+    this.toastrService.error(message, 'Error!');
+  }
+  
+  ngOnInit(): void {
+    this.registerSucess = false
+    
+  }
+  
+ 
+
+  routeWithQueryParams($event:any) {
+    console.log(" login: Inside the function")
+    const selectedRoute = $event.target.innerHTML;
+    if (selectedRoute == 'Back') {                
+          console.log(" login: backbutton activated")
+          this.router.navigate(['/home']);                                
+        }
+    if (selectedRoute == 'Register Now') {                
+          console.log(" login: register now activated")
+          this.router.navigate(['/register']);                      
+        }
+    if (selectedRoute == 'Login'){
+      console.log(" Login: Submit router is called")
+      this.router.navigate(['/home'])//just for testing once we will have user panel we will rout it
+    }
+  }
   onOpen(event: any) {
     console.log(event);
   }
@@ -128,7 +184,6 @@ export class LoginComponent implements OnInit {
 	}
 
   resendOtp(){
-
     let url= '/user/resendloginPhoneOtp'
     let data = {phone:this.mobile,userType:1}
      this.restApi.POST(url,data).subscribe(data => {
@@ -151,11 +206,112 @@ export class LoginComponent implements OnInit {
 
   }
 
+onAuthenticate(){
+  console.log(" Inside onAuthenticate")  
+  if(this.mobileFormControl.valid) {
+    this.isMobileNumber=true;
+    console.log(this.isMobileNumber)
+    this.isAuthenticated = true;
+    this.varMobileNumber = {phone:parseInt(this.mobile.number)};
+    console.log(" Mobile number entered: ",this.varMobileNumber);
+    let apiURL = '/user/authenticateuser';
+    this.restApi.POST(apiURL,this.varMobileNumber).subscribe(data=> {
+      this.responsephoneData = data
+      console.log(this.responsephoneData)
+      if(this.responsephoneData.statusCode == 401) {
+        //this.myfunction(" The mobile number is not registered with us")
+        this.showError('The mobile number is not registered with us.')
+        this.isOtpValid = false;
+        //location.reload();
+        this.mobileFormControl.reset()
+      }
+      else if(this.responsephoneData.statusCode == 200) {
+        this.showSuccess(' Authenticated successfully ')
+        this.isOtpValid = true;
+        this.isButtonDisabled = true;
+        this.isAuthenticated = false
+      }
+    })    
+  }
+  else {
+    this.showError(" Enter registered mobile number")        
+  }
+  
+  
+  // setTimeout(()=> {
+  //   this.isMobileNumber = false
+  //   console.log(this.isMobileNumber)
+  // },2500)  
+  // console.log(this.isMobileNumber)  
+  
+}
+formatPhone(phoneNumber:any):string {
+  //911234567890
+  //012345678901
+  //911XXXXXX
+  return phoneNumber.substr(0,3)+'XXXXXX'+phoneNumber.substr(8,11)
+}
 
+onGetOtp() {
+  var InfoMessage1 = 'Sent otp to '
+  var InfoMessage2 = ' mobile number'
+  console.log(" Inside onGetOtp")
+  console.log(" status of iOtpValid: ",this.isOtpValid)
+  if(this.isOtpValid == true) {    
+    let varMobileNumber={phone:parseInt(this.mobile.number)};
+    //console.log(varMobileNumber);  
+   
+    let mobileNumber = this.formatPhone(this.mobile.internationalNumber)
+    console.log(mobileNumber)
+    var InfoMessage = InfoMessage1 + mobileNumber + InfoMessage2
+    console.log(InfoMessage)
+    this.showInfo(InfoMessage)
+    let url='/user/getotp';
+    this.restApi.POST(url,varMobileNumber).subscribe(data => {
+      this.responsephoneData = data
+      if( this.responsephoneData.statusCode=== 200){
+        this.mobileDiv=true
+        this.registerSucess=false
+        this.isOtpValid = false
+      }      
+    });
+  }
+  else {
+    this.showError('Mobile number is not authenticated')
+  }  
+}
+
+keyPressNumbers(event:any) {
+  var charCode = (event.which) ? event.which : event.keyCode;
+  // Only Numbers 0-9
+  if ((charCode < 48 || charCode > 57)) {
+    event.preventDefault();
+    console.log(" keypressnumber: false statement")    
+    return false;
+  } else {
+    console.log(" keypressnumber: true statement")
+    this.isOtpEntered = true;
+    return true;
+  }
+}
+
+onLogin() {
+  console.log(" Inside onLogin")
+  console.log("onLogin: Status of isOTPEntered: ",this.isOtpEntered)
+  if(this.isOtpEntered == true) {
+    console.log(" onLogin: true statement")
+    this.veryPhone()
+  } else {
+    this.showError(' Invalid OTP digits')
+    console.log(" onLogin: False statement")
+    
+  }
+}
 
 onSubmit (){
 
- let data={phone:parseInt(this.mobile.number)};
+let data={phone:parseInt(this.mobile.number)};
+console.log(data);
 
 let url='/user/userlogin';
 this.restApi.POST(url,data).subscribe(datas => {
@@ -221,15 +377,15 @@ this.restApi.POST(url,data).subscribe(datas => {
    }
 })
   }
- 
-  
-
-   
+    
  keyPress(event: any) {
+    console.log(" Inside keypress event")
     let mobile = event.target.value
+    console.log("Keypress: mobile number: ",mobile)
     let mobilelength = mobile.length
     var palce= event.target.placeholder;
     var string = palce.replace(/[-&\/\\#,+()$~%.'":*?<>_{} ]/g, '');
+    // console.log(" keypress: Number entered: ",string)
     var palceT= parseInt(string)
     var pl= palceT.toString()
     if(mobilelength === pl.length){
@@ -288,7 +444,10 @@ this.restApi.POST(url,data).subscribe(datas => {
 veryPhone(){
 
   let url='/user/verifyloginphoneOTP';
-  let data={otp: this.mobileOtp,phone:this.mobile};
+  
+  console.log(" Inside veryPhone: mobile number: ",this.mobile)
+  //let data={otp: this.mobileOtp,phone:this.mobile};
+  let data = {otp: this.mobileOtp,phone:this.mobile.number}  
   this.verifyMobile = false
   this.mobileOTPtext = true
   this.mobileotpsuccess = false
@@ -303,12 +462,10 @@ veryPhone(){
     this.mobileotpsuccess = true
     this.mobileotpError = false
     this.mobile_error = this.mobileOTPStatus.status
-    this.notificationService.sendMessage({
-      message: 'OTP Verified',
-      type: NotificationType.success
-    });
-    location.reload();
+    this.showSuccess(' OTP verified successfully')    
+    this.openRegister()
   } else {
+      this.showError(' Invalid OTP entered')
      this.verifyMobile = false
      this.mobileOTPtext = false
      this.mobileotpError = true
@@ -328,7 +485,7 @@ veryPhone(){
   }
 
   openRegister(){
-    this.router.navigate(['/register']);
+    this.router.navigate(['/home']);//currently for testing purpose 
   }
 
   ngDoCheck(): void {
@@ -337,8 +494,8 @@ veryPhone(){
     this.mobileOTPtext = true
   }
   }
-
-  
-   
- 
+  public myfunction(message:string){
+    //onLoad();
+    alert(message);    
+  }
 }
