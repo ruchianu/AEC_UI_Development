@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: "dashboard", component: DashboardComponent},
 
   {path: "test", component: Mefv1Component},
-  {path: "product", component: ProductComponent},
+  {path: "product", pathMatch: 'full', component: ProductComponent},
   {path: "video", component: VideoComponent},
   {path: "cart", component: CartComponent},
   {path: "contactus",component:ContactusComponent},

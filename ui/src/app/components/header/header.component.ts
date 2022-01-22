@@ -49,6 +49,41 @@ export class HeaderComponent{
       this.LoginButton=true
      }
     }
+    ngOnDestory() {
+      alert("ngOnDestroy fire");
+    }
+    routeWithQueryParams($event) {
+      console.log(" header: Inside the function")
+      const selectedRoute = $event.target.innerHTML;
+      if (selectedRoute == 'Basic') {                
+        console.log(" header: handwriting->english")
+        this.router.navigate(['/product'], { queryParams: { id: '2' }});            
+      }
+      if (selectedRoute == 'Basic to Advance') {                
+        console.log(" header: handwriting->english")
+        this.router.navigate(['/product'], { queryParams: { id: '1' }});            
+      }
+      if (selectedRoute == 'English') {                
+            console.log(" header: handwriting->english")
+            this.router.navigate(['/product'], { queryParams: { id: '3' }});            
+          }
+      if( selectedRoute == 'Hindi') {
+        console.log(" header: handwriting->hindi")
+            this.router.navigate(['/product'], { queryParams: { id: '6' }});
+      }
+      if( selectedRoute == 'Sanskrit') {
+        console.log(" header: handwriting->Sanskrit")
+            this.router.navigate(['/product'], { queryParams: { id: '4' }});
+      }
+      if( selectedRoute == 'Marathi') {
+        console.log(" header: handwriting->Marathi")
+            this.router.navigate(['/product'], { queryParams: { id: '5' }});
+      }
+      if( selectedRoute == 'Log in') {
+        console.log(" header: Login")
+            this.router.navigate(['/login']);
+      }
+    }
 
    login(){
 

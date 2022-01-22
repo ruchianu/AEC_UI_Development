@@ -106,8 +106,7 @@ export class ProductComponent implements OnInit {
     { value: '4', label: '+24 months: 1200$' },
   ];
 
-  constructor(public restApi: AuthService,   
-              private route: ActivatedRoute,
+  constructor(public restApi: AuthService,                 
               private notificationService: NotificationService,
               private _lightbox: Lightbox,
            
@@ -116,19 +115,28 @@ export class ProductComponent implements OnInit {
               private store: Store<fromApp.AppState>,
               public storage: StorageService,
               public cart: CartService,
-              private router: Router) {
-              this.registerSucess = false
-
-              this.route.queryParams.subscribe(params => {
-                this.product_id = params['id'];
-             
-            });
-   }
+              private router: Router, private route: ActivatedRoute) {
+                this.registerSucess = false                         
+                
+               }
 
    @Output() refresh:EventEmitter<string> = new EventEmitter(); 
 
-  ngOnInit(): void {
-    this.getProducts()
+  ngOnInit(): void {    
+    console.log(" Calling ngOnInit()")    
+    this.route.queryParams.subscribe(params=> {
+      console.log(params)
+      this.product_id = params['id'];
+       console.log("Product: ngOnInit-> " +this.product_id)
+       this.getProducts()
+    })
+    // this.route.queryParamMap.subscribe(params => { 
+    //          this.product_id = +params.get('id');
+    //          console.log('Query params ',this.product_id)                  
+    // });
+    console.log(" Calling API's")
+    // this.router.navigate(['/product'],{queryParams:{}})
+    //this.getProducts()
     this.getProduct()
     this.getProductsAddon()
     this.registerSucess = false
@@ -142,6 +150,13 @@ export class ProductComponent implements OnInit {
     }
 
 
+    
+//     update() {
+//       this.ngOnInit();
+// } 
+ngOnDestory() {
+    console.log('ngOnDestroy fire');
+  }
   toHTML(input : any) {
     return new DOMParser().parseFromString(input, "text/html").documentElement.textContent;
 }
@@ -149,7 +164,9 @@ export class ProductComponent implements OnInit {
 
 
   getProducts(){
+    console.log(" Inside getProducts()")
      var url="/user/getProduct?productid="+this.product_id+"&priority="+this.priority
+     console.log(" Inside getProducts()->url: " + url)
      this.restApi.QGET(url).subscribe((data) => {
        this.productdata = data
        this.name = this.productdata.name
@@ -175,7 +192,9 @@ export class ProductComponent implements OnInit {
 
 
      getProductsAddon(){
+       console.log("Inside getProductsAddon")
       var url="/user/getAddon?productid="+this.product_id
+      console.log(url)
       this.restApi.QGET(url).subscribe((data) => {
         this.addonData = data
       

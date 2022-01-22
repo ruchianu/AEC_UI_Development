@@ -1,9 +1,8 @@
 <meta charset="utf-8">
-    <app-header *ngIf="!LoginButton"></app-header>
-
+    <!-- <app-header *ngIf="!LoginButton"></app-header>     -->
     <app-user-header *ngIf="LoginButton"></app-user-header>
-
-
+    <app-header *ngIf="router.url !== '/login' && router.url !== '/register'"> // or maybe only 'login'</app-header>
+    <!-- <app-footer *ngIf="router.url !== '/login' && router.url !== '/signup'"> // or maybe only 'login'</app-footer> -->
 <router-outlet></router-outlet>
-
-<app-footer></app-footer>
+<app-footer *ngIf="router.url !== '/login' && router.url !== '/register'"> // or maybe only 'login'</app-footer>
+<!-- <app-footer></app-footer> -->

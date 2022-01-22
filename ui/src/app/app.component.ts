@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd  } from '@angular/router';
 
 
 @Component({
@@ -13,12 +13,10 @@ export class AppComponent {
   userData:any
   LoginButton:Boolean=false
   // public userImage = "assets/img/users/default-user.jpg";
-
-  constructor(
-    private router: Router,
-
-  ) {
- 
+  hideHeader: boolean = false;
+  hideFooter: boolean = false;
+  constructor (public router:Router) {     
+  }
   //   var current = localStorage.getItem('currentUser') 
     
   // if(current == null || current == undefined ){
@@ -30,7 +28,7 @@ export class AppComponent {
   //     this.userName= this.userData.name
   //     this.LoginButton=true
   //    }
-    }
+  //  }
 
     OnInit(){
       // var current = localStorage.getItem('currentUser') 
