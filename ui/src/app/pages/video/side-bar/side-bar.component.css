@@ -1,4 +1,4 @@
-:host {
+/* :host {
   box-sizing: border-box;
   display: none;
   position: absolute;
@@ -7,17 +7,167 @@
   width: 100%;
   height: 55%;
   float:right;
-  background: #ccc;
+  /* background: #ccc; 
 }
 
-:host.is-open {
+/* :host.is-open {
   display: block;
-}
-
+} */ 
 
 .Content
 {
-  height: 399px;
-  overflow:auto;
+  width:340px;
+  height: 350px;
+  /* overflow:auto; */
   background:#fff;
+ 
 }
+.icon{
+  float: right;
+}
+
+.subhead-panel{
+    font-family: 'Lato',sans-serif;
+    font-size: 13px;
+    font-weight: 400px;
+    color: #790666;
+    background-color:   #fff; 
+    /* width: max-content;
+    height: max-content; */
+    /* text-align: center; */
+}
+   
+    
+
+.active, .subhead-panel:hover {
+  background-color: #790666;
+   /* #ccc; */
+   color:#fff;
+   width:100%;
+   height:100%;
+   cursor:pointer;
+   /* display: block; */
+   
+}
+.accordionhead{
+    font-family: 'Lora';
+    font-size: 16px;  
+    transition: 0.4s;
+    /* padding: 5px,10px,5px,10px; */
+    border-radius: 0px;
+
+}
+#accordion-heading{
+  radius:0px;
+  padding:0px;
+}
+
+
+.duration{
+    font-family: 'Lato',sans-serif;
+    font-size: 12px;
+    color:#bcbcbc;
+}
+.panelheading{
+
+}
+
+/******************************/
+/* #main {
+    margin: 50px 0;
+  }
+  
+  #main #faq .card {
+    margin-bottom: 30px;
+    border: 0;
+  }
+  
+  #main #faq .card .card-header {
+    border: 0;
+    -webkit-box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+            box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+    border-radius: 2px;
+    padding: 0;
+  }
+  
+  #main #faq .card .card-header .btn-header-link {
+    color: #fff;
+    display: block;
+    text-align: left;
+    background: #FFE472;
+    color: #222;
+    padding: 20px;
+  }
+  
+  #main #faq .card .card-header .btn-header-link:after {
+    content: "\f107";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    float: right;
+  }
+  
+  #main #faq .card .card-header .btn-header-link.collapsed {
+    background: #A541BB;
+    color: #fff;
+  }
+  
+  #main #faq .card .card-header .btn-header-link.collapsed:after {
+    content: "\f106";
+  }
+  
+  #main #faq .card .collapsing {
+    background: #FFE472;
+    line-height: 30px;
+  }
+  
+  #main #faq .card .collapse {
+    border: 0;
+  }
+  
+  #main #faq .card .collapse.show {
+    background: #FFE472;
+    line-height: 30px;
+    color: #222;
+  } */
+
+  /*******************3***********************/
+  /* Style the buttons that are used to open and close the accordion panel */
+/* .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+   */
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* .active, .accordion:hover {
+    background-color: #ccc;
+  } */
+  
+  /* Style the accordion panel. Note: hidden by default */
+  
+
+  /* .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  } */
+  /* .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  } */
+  
+  /* .active:after {
+    content: "\2212";
+  }
+   */ 

@@ -10,6 +10,7 @@ import { Mefv1Component } from './pages/mefv1/mefv1.component';
 import { ProductComponent } from './pages/product/product.component';
 import { VideoComponent } from './pages/video/video.component';
 import { CartComponent } from './pages/cart/cart.component';
+import{ ContactusComponent } from './pages/contactus/contactus.component';
 
 const routes: Routes = [
   {path:  "", pathMatch:"full",redirectTo:  "home"},
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path: "product", component: ProductComponent},
   {path: "video", component: VideoComponent},
   {path: "cart", component: CartComponent},
-  
+  {path: "contactus",component:ContactusComponent},
 ];
 
 @NgModule({

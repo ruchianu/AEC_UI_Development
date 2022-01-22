@@ -47,6 +47,7 @@ import { SideBarComponent } from './pages/video/side-bar/side-bar.component';
 import { SideBarToggleComponent } from './pages/video/side-bar-toggle/side-bar-toggle.component';
 
 import { SideBarService } from './pages/video/side-bar/side-bar.service';
+import { ContactusComponent } from './pages/contactus/contactus.component';
 @NgModule({
   declarations: [
 
@@ -65,7 +66,8 @@ import { SideBarService } from './pages/video/side-bar/side-bar.service';
     VideoComponent,
     SideBarToggleComponent,
     SideBarComponent,
-    CartComponent
+    CartComponent,
+    ContactusComponent,
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],

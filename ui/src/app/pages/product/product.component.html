@@ -42,67 +42,31 @@ Thumbnails carousel  https://mdbootstrap.com/docs/angular/advanced/carousel/#thu
 </span>
 </h3>
 
-
+<hr>
 
   <!-------------------------Row Starts---------------------------------->
-    <div class="row">
-     <!-------------------------Ist Col starts---------------------------------->
-     <div class="col-md-5 mt-5 ">
+    <div class="row ">
+     <!------------------------left Col starts---------------------------------->
+     <div class="col-md-5 pr-2 ">
+     <!-- Images-->
+     <div><ng-image-slider [images]="mainpic"  [imageSize]="{width: '100%', height: 500}" #nav></ng-image-slider></div>
+     <div><ng-image-slider #nav [images]="test" [infinite]="true" [imageSize]="{width: '100px', height: '100px'}"></ng-image-slider></div>
+ <!----- Image div starts------->
 
-      <!-- <div class="row">
-        <div class="col-md-12">
-        </div>
-      </div> -->
 
-       <!-- Image div starts   -->
-       <div class="row">
-          <div class="col-md-12">
-              <div class="pro_img-hover-zoom text-center">
-          <!-- <div class="view zoom overlay z-depth-2 rounded"> -->
-                <!-- <img class=" img-fluid w-50  img-thumbnail img-rounded" src ="/assets/images/MEC.jpg" > -->
-                <mdb-carousel class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'" style="background-color: #eee;">
-                  <mdb-carousel-item>
-                    <!-- <img class="d-block w-75" src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).webp" alt="First slide"> -->
-                    <img class="d-block w-75" src="/assets/images/mesc33.jpg" alt="Thumbnail image">
-                  </mdb-carousel-item>
-                  <mdb-carousel-item>
-                    <img class="d-block w-75" src="/assets/images/mesc2.jpg" alt="Second slide">
-                  </mdb-carousel-item>
-                  <mdb-carousel-item>
-                    <img class="d-block w-75" src="/assets/images/mesc11.jpg" alt="Third slide">
-                  </mdb-carousel-item>
-                  <mdb-carousel-item>
-                    <img class="d-block w-75" src="/assets/images/mesc4.jpg" alt="Third slide">
-                  </mdb-carousel-item>
-                  <mdb-carousel-item>
-                    <img class="d-block w-75" src="/assets/images/mesc5.jpg" alt="Third slide">
-                  </mdb-carousel-item>
-                  <mdb-carousel-item>
-                    <img class="d-block w-75" src="/assets/images/mesc6.jpeg" alt="Third slide">
-                  </mdb-carousel-item>
-                  
-                </mdb-carousel>
-        <!-- </div> -->
-             </div>     
-          </div>
-       </div>
-           
-               <!-- Image Div ends  -->
-         <hr>
-        
-             
-              
-              
-      </div>
-     <!-------------------------Ist Col ends---------------------------------->
-     <!------------------------2nd Column-starts---------------------------------->
-     <div class="col-md-7 mt-4 ">
+     </div>
+
+ <!----- Image Div ends------->
+
+<!-------------------------Ist Col ends---------------------------------->
+<!------------------------2nd Column-starts---------------------------------->
+<div class="col-md-7 mt-4 ">
       <div class="row">
         <div class="col-md-12">
           <a href="#" class="mr-3">Basic</a>
           <a href="#">Advance</a>
-          <hr>
-          <h3 class="pro_mesc_head"> Magic English Speaking Course</h3>
+          <hr>  
+          <h3 class="pro_mesc_head"> My English Friend</h3>
           <h6 class ="pro_mesc_author">  <i> by Devender Kumar Sharma alias Anu Sharma (Author)</i></h6>
        </div>
       </div>
@@ -112,6 +76,7 @@ Thumbnails carousel  https://mdbootstrap.com/docs/angular/advanced/carousel/#thu
          <div class="col-md-3">
         <span>
         <ul class="list-unstyled list-inline mb-2 pro_star">
+        
           <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"> </i></li>
           <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
           <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
@@ -121,7 +86,7 @@ Thumbnails carousel  https://mdbootstrap.com/docs/angular/advanced/carousel/#thu
       </span>
     </div> 
     <div class="col-md-3">
-      <span class="monospaced">Write a Review</span>
+      <span class="monospaced"><a>Write a Review </a></span>
      </div>
     </div>
  
@@ -195,35 +160,6 @@ Thumbnails carousel  https://mdbootstrap.com/docs/angular/advanced/carousel/#thu
     </div>
 <!--------------------------Card finish------------------->
 <hr>
-<div class="container"><h1>Bootstrap  tab panel example (using nav-pills)  </h1></div>
-<div id="exTab1" class="container">	
-<ul  class="nav nav-pills">
-			<li class="active">
-        <a  href="#ha" data-toggle="tab">Overview</a>
-			</li>
-			<li><a href="#pa" data-toggle="tab">Using nav-pills</a>
-			</li>
-			<li><a href="#ca" data-toggle="tab">Applying clearfix</a>
-			</li>
-  		<li><a href="#da" data-toggle="tab">Background color</a>
-			</li>
-		</ul>
-
-			<div class="tab-content clearfix">
-			  <div class="tab-pane active" id="ha">
-          <h3>Content's background color is the same for the tab</h3>
-				</div>
-				<div class="tab-pane" id="pa">
-          <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
-				</div>
-        <div class="tab-pane" id="ca">
-          <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-				</div>
-          <div class="tab-pane" id="da">
-          <h3>We use css to change the background color of the content to be equal to the tab</h3>
-				</div>
-			</div>
-  </div>
 
 
 
@@ -231,69 +167,6 @@ Thumbnails carousel  https://mdbootstrap.com/docs/angular/advanced/carousel/#thu
 
 <div class="row">
   <div class="col-md-12 mt-4">
-  
-<!--     
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-      </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
-    </div> -->
-    <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pdes-tab" data-bs-toggle="tab" data-bs-target="#ProductDescription" type="button" role="tab" aria-controls="ProductDescription" aria-selected="true">Product Description</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="productdetail-tab" data-bs-toggle="tab" data-bs-target="#ProductDetails" type="button" role="tab" aria-controls="Product Details" aria-selected="false">Product Details</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#Reviews" type="button" role="tab" aria-controls="Reviews" aria-selected="false">Reviews</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#Videos" type="button" role="tab" aria-controls="Videos" aria-selected="false">Videos</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="ProductDescription" role="tabpanel" aria-labelledby="pdes-tab">
-        
-        Mr Anu Sharma (author) has taught thousands of students in last 20 years and he has developed very easy method to learn spoken English
-        This book is very much useful for English/Hindi medium schools for students as well as teachers.
-SET OF 1 BOOK + I VCD + I MEMORY / REVISION CHART 
-
-In this book you will learn
- TYT (Twist Your Tongue method to Speak English Fluently)
- Direct-Method i.e. situational method (No need to learn Translation) Tense = Tension. New Three Pillar system
- All lessons with complete conversational practice and Exercise
-Three Imperative sentences in each lesson. So total 180 sentences. (a book) 
- Define every difficult word More than 1000 words which use in daily life situation
- Learn with fun puzzles to enrich Vocabulary
- Covered mostly topics of Spoken & Written English
-A special topic on Hesitation during Spoken English
-Real life conversation....& many more
-Watch free videos & learn spoken English on our Youtube channel anu english academy & subscribe it
-      
-      
-      </div>
-      <div class="tab-pane fade" id="ProductDetails" role="tabpanel" aria-labelledby="productdetail-tab">
-        Publisher ‏ : ‎ ANU"S ENGLISH ACADEMY; 2nd edition (1 January 2012); ANU"S ENGLISH ACADEMY Agra 282001 Utter Pradesh India
-Language ‏ : ‎ English
-Paperback ‏ : ‎ 336 pages
-ISBN-10 ‏ : ‎ 8192755622
-ISBN-13 ‏ : ‎ 978-8192755625
-Reading age ‏ : ‎ 10 years and up
-Item Weight ‏ : ‎ 400 g
-Country of Origin ‏ : ‎ India
-
-      </div>
-      <div class="tab-pane fade" id="Reviews" role="tabpanel" aria-labelledby="review-tab">...</div>
-      <div class="tab-pane fade" id="Videos" role="tabpanel" aria-labelledby="video-tab">...</div>
-    </div> -->
 
   </div>
 </div>   
@@ -306,6 +179,79 @@ Country of Origin ‏ : ‎ India
    </div>
 </section>
 
+
+<!------------------------------------------------------------------------------------------>
+
+<!-- Bootstrap CSS -->
+<!-- jQuery first, then Bootstrap JS. -->
+<!-- Nav tabs -->
+<!-- 
+<section id="pdetail" class="h-100">
+
+<div class="container" id="detail-section">
+
+<div class="row">
+<div class="col-12">
+
     
 
+</div>
+</div>
+</div>
+</section>   -->
+<section id="pdetail" class="h-100">
+
+<div class="container" id="detail-section">
+
  
+<!-- <tabset>
+  <tab heading="Home1">Home1</tab>
+  
+  <tab *ngFor="let tabz of tabs"
+     [heading]="tabz.title"
+     [active]="tabz.active"
+     (selectTab)="tabz.active = true"        
+     [disabled]="tabz.disabled">
+     {{tabz?.content}}
+  </tab>
+</tabset> -->
+
+<my-tabs [buttonClass]="'md-pills pills-primary font-weight-bold'" >
+  <my-tab [tabTitle]="'Product Description'">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="color:purple">Product Description</h4> 
+        <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(description)"></span>
+ 
+      </div>
+     
+      </div>
+  </my-tab>
+  <my-tab tabTitle="Product Details">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="color:purple">Product Details</h4> 
+        <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(details)"></span>
+       
+      </div>
+     
+      </div>
+    
+  </my-tab>
+
+  <my-tab tabTitle="Product Reviews">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="color:purple">Reviews</h4> 
+
+      </div>
+     
+      </div>
+    
+  </my-tab>
+</my-tabs>
+ </div>
+</section> 
+<!--------------------------------------------------------------------------------------------->
+<!---- Product Component CSS------------------->
+

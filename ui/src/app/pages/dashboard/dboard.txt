@@ -1,0 +1,191 @@
+
+<!-----Contact Us  section--
+    
+    
+    Copied from register component.
+    Replace in css:
+    r to cu e.g. 
+    rleft-Side to cu 
+
+---->
+
+<section id="contactus" class="">
+    <!-- Container starts here -->
+    <div class="container">
+        <!-- Row Starts here -->
+        <div class="row height-100">
+            <!--Left Col Starts here -->
+            <div class="col-md-5 culeft-Side ">
+                <div class="contact-form ml-5">
+                    <!-- <img class="rlogogif"  src="assets/images/anu-aca-logo.gif"> -->
+                </div>
+                <div class="culogin-main-text ">
+
+                    <img class="cupic mt-4 ml-5 mb-4 " style="align-items: center;" src="assets/images/contact.jpg">
+
+                    <h2 class="cuwelcome mt-3 text-left">Locations</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4> Agra Office </h4>
+                            <h5> Company Headoffice</h5>
+                            <h6> Raja Mandi , Agra </h6>
+
+                        </div>
+                        <div class="col-md-6">
+                            <h4> Delhi-NCR Office </h4>
+                            <h5> Zonal Office</h5>
+                            <h6> Vasundhara,Ghaziabad </h6>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4> Noida </h4>
+                            <h5> Franchise</h5>
+                            <h6> TechZone-IV Greater Noida (West) </h6>
+
+                        </div>
+                        <div class="col-md-6">
+                            <h4> Ghaziabad </h4>
+                            <h5> Franchise</h5>
+                            <h6> Indirapuram </h6>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4> Delhi </h4>
+                            <h5> Franchise </h5>
+                            <h6> Kalkaji,Delhi </h6>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4> Haryana </h4>
+                            <h5> Franchise </h5>
+                            <h6> DLF Ph-3 ,Gurgaon</h6>
+
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4> South India </h4>
+                            <h5> Franchise </h5>
+                            <h6> Hyderabad (Telangana)</h6>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4> South India </h4>
+                            <h5> Franchise </h5>
+                            <h6> Vishakhapatnam (A.P)</h6>
+
+                        </div>
+                    </div>
+
+                    <div class="Contact_email_fb">
+                        <div class="col-md-6">
+                                <span class="label"Telephone> +91-9557777553</span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <!--Left Col ends here -->
+            <!--Right Col Starts here -->
+            <div class="col-md-7 curight-Side ">
+                <!-- Back Button -->
+                <div class="row">
+                </div> <!-- Back Button -->
+                <!-- contact Form -->
+                <div class="contact-form ">
+                    <!-- Form Started -->
+                    <form class="">
+                        <h2 class=" cuoutext1 mb-5 ml-4 pl-1">Contact Us</h2>
+                        <!----Row starts-->
+                        <div class="row">
+                            <!-- Signup Column Starts from here  -->
+                            <div class="col-md-8 formin ml-4">
+                                
+                                <div class="form-group ">
+                                    <!-- Unique ID starts -->
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+
+                                <div class="form-group ">
+                                    <input class="form-control" type="text" placeholder="Enter Mobile Number">
+                                </div>
+                                <!-- Unique ID ends -->
+                                <div class="form-group ">
+                                    <input type="text" class="form-control" placeholder="emailaddress">
+                                </div>
+                                
+                                <div class="form-group ">
+                                    <!-- Email input -->
+                                    <label class="goutext2 col-form-label mb-2">Profession</label>
+                                    <!-- <input type="email" id="form5Example2" class="form-control" /> -->
+                                    <div class="row">
+                                        <div class="col ">
+                                            <select class="custom-select custom-select-sm menu align-items-md-start">
+                                                <option selected>Open this select menu</option>
+                                                <option value="1">Student</option>
+                                                <option value="2">Professional</option>
+                                                <option value="3">Housewife</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <input mdbInput name="uid" formControlName="uid" class="form-control"
+                                        placeholder="Location">
+                                </div>
+                                <textarea cols="40" name="comments" rows="5">Comment</textarea><br />
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <div class="rwrap  mt-4">
+                                            <button type="submit" class="btn actbtn  mr-2">Submit</button>
+                                            <button type="submit" class="btn actbtn ml-2">Cancel</button>
+    
+                                        </div>
+    
+                                    </div>
+                                </div>
+    
+                            </div>
+
+
+
+                          
+
+
+                        </div> <!-- Signup Column ends here  -->
+
+
+                        
+
+
+
+                    </form>
+                    <!---Form ended-->
+
+                </div> <!-- Signup Column ends here  -->
+
+
+
+
+
+                <!-- Form Ended -->
+            </div>
+
+            <!-- Signup Form ends -->
+
+            <!--Right Col ends here -->
+        </div>
+        <!----Row ends here-->
+    </div>
+    <!---container fluid ends -->
+</section>
+<!---section ends -->
