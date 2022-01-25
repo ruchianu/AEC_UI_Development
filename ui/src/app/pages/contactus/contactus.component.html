@@ -1,4 +1,4 @@
-<p>contactus works!</p>
+
 <!-----Contact Us  section--
     
     
@@ -13,83 +13,98 @@
 <!----------SECTION 2-----banner section------------
 One Row Two Columns 
 --->
+ <!-- <div class="hero-image">
+   <img class="cupic" src="assets/images/contact1.jpg">
+    <div class="hero-text">
+
+      <h1>I am John Doe</h1>
+      <p>And I'm a Photographer</p>
+      <button>Hire me</button>
+    </div>
+  </div> -->
+
 <section id="banner">
 	
 	<div class ="container">
 	<div class = "row">
     
     <div class="col-md-12 ">
-      <h2 class=" cuoutext mt-4 ">Contact Us</h2> <br>
+      <h2 class="  cuoutext mt-3 pt-3 ">Contact Us</h2> <br>
 
-      <img class="bannerimg" src="assets/images/contact1.jpg">  
+      <img class="bannerimg" src="assets/images/contact.jpg"> 
+     
     </div>
-    
-
+    <h2 class="  cuoutext mt-3 pt-3 ">Personal Details</h2> <br>
+ 
 	</div>
   </div>
 
 	</section>
+   
   <section id="input">
-	
-    <div class = "container cinput">
-    <div class = "row">
+    <div class = "container mb-4 cinput">
   
+    <div class = "row">
       <div class="col-md-12 mt-4">
         <div class="contact-form ">
           <!-- Form Started -->
-          <form class="">
-              
+          <form class="">     
+      
               <!----Row starts-->
-              <div class="row">
+              <div class="row align-center">
                   <!-- Signup Column Starts from here  -->
-                  <div class="col-md-8 formin ">
-                      
+                  <div class="col-md-6 formin "> 
                       <div class="form-group ">
                           <!-- Unique ID starts -->
                           <input type="text" class="form-control" placeholder="Name">
                       </div>
-
-                      <div class="form-group ">
-                          <input class="form-control" type="text" placeholder="Enter Mobile Number">
-                      </div>
+                     
                       <!-- Unique ID ends -->
                       <div class="form-group ">
                           <input type="text" class="form-control" placeholder="emailaddress">
                       </div>
-                      
                       <div class="form-group ">
-                          <!-- Email input -->
-                          <label class="goutext2 col-form-label mb-2">Profession</label>
-                          <!-- <input type="email" id="form5Example2" class="form-control" /> -->
-                          <div class="row">
-                              <div class="col ">
-                                  <select class="custom-select custom-select-sm menu align-items-md-start">
-                                      <option selected>Open this select menu</option>
-                                      <option value="1">Student</option>
-                                      <option value="2">Professional</option>
-                                      <option value="3">Housewife</option>
-                                  </select>
-                              </div>
-                          </div>
-                      </div>
+                        <input mdbInput name="uid" formControlName="uid" class="form-control"
+                            placeholder="Country">
+                    </div>
+                     
                       <div class="form-group ">
-                          <input mdbInput name="uid" formControlName="uid" class="form-control"
-                              placeholder="Location">
-                      </div>
-                      <textarea cols="60" name="comments" rows="5">How can we help you?</textarea><br />
-                      <div class="form-group row">
-                          <div class="col-md-12">
-                              <div class="rwrap  mt-4">
-                                  <button type="submit" class="btn actbtn  mr-2">Submit</button>
-                                  <button type="submit" class="btn actbtn ml-2">Cancel</button>
-
-                              </div>
-
-                          </div>
-                      </div>
-
+                        <input mdbInput name="uid" formControlName="uid" class="form-control"
+                            placeholder="State">
+                    </div>
+                      <textarea class="help" cols="60" name="comments" rows="5">How can we help you?</textarea><br />
+                     
                   </div>
+                  <div class="col-md-6 formin "> 
+                   
+                    <div class="form-group ">
+                        <input class="form-control" type="text" placeholder="Enter Mobile Number">
+                    </div>
+                    <div class="form-group ">
+                        <label class="cgoutext2 col-form-label ">Profession</label>
+                    </div>
+                    <div class="form-group ">
+                        <!-- Email input -->
+                      
+                        <!-- <input type="email" id="form5Example2" class="form-control" /> -->
+                        <div class="row">
+                            <div class="col "> 
+                                <select class=" form-control custom-select custom-select-sm menu align-items-md-start">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">Student</option>
+                                    <option value="2">Professional</option>
+                                    <option value="3">Housewife</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Unique ID ends -->
+                    <div class="form-group ">
+                        <input type="text" class="form-control" placeholder="Place">
+                    </div>
+                    
 
+                </div>
 
 
                 
@@ -104,6 +119,16 @@ One Row Two Columns
 
           </form>
           <!---Form ended-->
+          <div class="form-group row">
+            <div class="col-md-12 text-center">
+                <div class="cuwrap  mt-4">
+                    <button type="submit" class="cubtn cuactbtn  mr-2">Submit</button>
+                    <button type="submit" class="cubtn cuactbtn ml-2">Cancel</button>
+
+                </div>
+
+            </div>
+        </div>
 
       </div> <!-- Signup Column ends here  -->
 
@@ -119,13 +144,106 @@ One Row Two Columns
 	
       <div class = "container clocation">
       <div class = "row">
-    
         <div class="col-md-12 ">
-    <div class="culogin-main-text ">
+    <!-- <div class="culogin-main-text "> -->
 
-      <img class="cupic mt-4 ml-5 mb-4 " style="align-items: center;" src="assets/images/contact.jpg">
+      <!-- <img class="cupic mt-4 ml-5 mb-4 " style="align-items: center;" src="assets/images/contact.jpg"> -->
+      <h2 class="cuoutext mt-3 mb-4 text-left">Contact Details</h2>
+      <!-- <div class="container d-flex justify-content-center mt-100">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body text-center"> <img src="https://img.icons8.com/bubbles/100/000000/laptop.png">
+                        <h4>Contact us</h4>
+                        <p>Drop us a mail or use our online online chat feature and we will try to answer your query as soon as possible</p> <button class="btn btn-out btn-square"> CONTACT NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+      </div>
+        </div>
+    <!-- <div class="container mb-4"> -->
+        <div class="row mb-4">
+            
+               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              
+                   <div class="box-part text-center">
+                       <!-- <i class="fas fa-user-graduate fa-3x"></i> -->
+                      
+                       <i class="fas fa-phone-alt"></i>
+                       
+                       <div class="title">
+                           <h4>Call us</h4>
+                       </div>
+                       
+                       <div class="text">
+                           <span>+91-9582340510</span>
+                       </div>              
+                    </div>
+               </div>	 
+               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              
+                   <div class="box-part text-center">
+                       
+                       <i class="fas fa-envelope" aria-hidden="true"></i>
+                   
+                       <div class="title">
+                           <h4>Mail drop us</h4>
+                       </div>
+                       
+                       <div class="text">
+                           <span>anuenglishacademy@gmail.com</span>
+                       </div>
+                       
+                      
+                       
+                    </div>
+               </div>	 
+               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              
+                   <div class="box-part text-center">
+                       
+                       <i class="fas fa-location-arrow" aria-hidden="true"></i>
+                       
+                       <div class="title">
+                           <h4>Location</h4>
+                       </div>
+                       
+                       <div class="text">
+                           <span>Agra - Company Headoffice</span>
+                       </div>
+                       
+                       <!-- <a href="#">Learn More</a> -->
+                       
+                    </div>
+               </div>	 
+    </div>  
+    <!-- </div>          -->
+      <!-- <div class="row">
+          <div class="col-md-4">
+              <h4> Agra Office </h4>
+              <h5> Company Headoffice</h5>
+              <h6> Raja Mandi , Agra </h6>
 
-      <h2 class="cuwelcome mt-3 text-left">Locations</h2>
+          </div>
+          <div class="col-md-4">
+              <h4> Delhi-NCR Office </h4>
+              <h5> Zonal Office</h5>
+              <h6> Vasundhara,Ghaziabad </h6>
+
+          </div>
+          <div class="col-md-4">
+            <h4> Delhi-NCR Office </h4>
+            <h5> Zonal Office</h5>
+            <h6> Vasundhara,Ghaziabad </h6>
+
+        </div>
+      </div> -->
+     
+      <h2 class="cuoutext mt-3 text-left">Locations</h2>
       <div class="row">
           <div class="col-md-6">
               <h4> Agra Office </h4>
@@ -139,18 +257,19 @@ One Row Two Columns
               <h6> Vasundhara,Ghaziabad </h6>
 
           </div>
+          
       </div>
       <hr>
       <div class="row">
           <div class="col-md-6">
               <h4> Noida </h4>
-              <h5> Franchise</h5>
+              <h5> Franchise Unit</h5>
               <h6> TechZone-IV Greater Noida (West) </h6>
 
           </div>
           <div class="col-md-6">
               <h4> Ghaziabad </h4>
-              <h5> Franchise</h5>
+              <h5> Franchise Unit</h5>
               <h6> Indirapuram </h6>
 
           </div>
@@ -159,14 +278,14 @@ One Row Two Columns
       <div class="row">
           <div class="col-md-6">
               <h4> Delhi </h4>
-              <h5> Franchise </h5>
+              <h5> Franchise Unit </h5>
               <h6> Kalkaji,Delhi </h6>
 
           </div>
 
           <div class="col-md-6">
               <h4> Haryana </h4>
-              <h5> Franchise </h5>
+              <h5> Franchise Unit</h5>
               <h6> DLF Ph-3 ,Gurgaon</h6>
 
           </div>
@@ -176,27 +295,26 @@ One Row Two Columns
       <div class="row">
           <div class="col-md-6">
               <h4> South India </h4>
-              <h5> Franchise </h5>
+              <h5> Franchise Unit </h5>
               <h6> Hyderabad (Telangana)</h6>
 
           </div>
 
           <div class="col-md-6">
               <h4> South India </h4>
-              <h5> Franchise </h5>
+              <h5> Franchise Unit </h5>
               <h6> Vishakhapatnam (A.P)</h6>
 
           </div>
       </div>
 
-      <div class="Contact_email_fb">
+      <!-- <div class="Contact_email_fb">
           <div class="col-md-6">
                   <span class="label"Telephone> +91-9557777553</span>
            </div>
-      </div>
-  </div>
-        </div>
-        </div>
+      </div> -->
+  <!-- </div> -->
+      
         </div>
         </section>
 <!-- <div class="jumbotron jumbotron-fluid">

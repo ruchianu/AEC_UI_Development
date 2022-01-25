@@ -48,6 +48,8 @@ import { SideBarToggleComponent } from './pages/video/side-bar-toggle/side-bar-t
 
 import { SideBarService } from './pages/video/side-bar/side-bar.service';
 import { ContactusComponent } from './pages/contactus/contactus.component';
+import { SessionComponent } from './pages/session/session.component';
+
 @NgModule({
   declarations: [
 
@@ -68,6 +70,7 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
     SideBarComponent,
     CartComponent,
     ContactusComponent,
+    SessionComponent,
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],

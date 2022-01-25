@@ -11,6 +11,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { VideoComponent } from './pages/video/video.component';
 import { CartComponent } from './pages/cart/cart.component';
 import{ ContactusComponent } from './pages/contactus/contactus.component';
+import { SessionComponent } from './pages/session/session.component';
 
 const routes: Routes = [
   {path:  "", pathMatch:"full",redirectTo:  "home"},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: "video", component: VideoComponent},
   {path: "cart", component: CartComponent},
   {path: "contactus",component:ContactusComponent},
+  {path: "session",component:SessionComponent},
 ];
 
 @NgModule({
