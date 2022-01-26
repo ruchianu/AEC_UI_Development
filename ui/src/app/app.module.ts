@@ -49,6 +49,7 @@ import { SideBarToggleComponent } from './pages/video/side-bar-toggle/side-bar-t
 import { SideBarService } from './pages/video/side-bar/side-bar.service';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { SessionComponent } from './pages/session/session.component';
+import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { SessionComponent } from './pages/session/session.component';
     CartComponent,
     ContactusComponent,
     SessionComponent,
+    UserprofileComponent,
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
