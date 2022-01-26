@@ -17,19 +17,25 @@
     
 }
 .upform-control{
-	width:475px;
-    height:auto;
+	width:375px;
+    height:35px;
 	font-family: 'Lato',sans-serif;	
 	font-size:12px;
 }
 .upform-control1{
-	width:350px;
+	width:250px;
 	font-family: 'Lato',sans-serif;	
-	font-size:10px;
+	font-size:12px;
+    height:35px;
 }
+
 .input-group-text{
     font-family: 'Lato',sans-serif;	
 	font-size:12px;
+}
+.uprofile-form {
+/* align-items: center; */
+align-content: center;
 }
 .upwrap {
 	height: 100%;
