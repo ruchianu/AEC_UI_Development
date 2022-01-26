@@ -13,7 +13,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import{ ContactusComponent } from './pages/contactus/contactus.component';
 import { SessionComponent } from './pages/session/session.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
-
+import { DevicesComponent } from './pages/devices/devices.component';
 const routes: Routes = [
   {path:  "", pathMatch:"full",redirectTo:  "home"},
   {path: "home", component: HomeComponent},
@@ -28,6 +28,7 @@ const routes: Routes = [
   {path: "contactus",component:ContactusComponent},
   {path: "session",component:SessionComponent},
   {path:"userprofile",component:UserprofileComponent},
+  {path:" devices",component:DevicesComponent},
 ];
 
 @NgModule({

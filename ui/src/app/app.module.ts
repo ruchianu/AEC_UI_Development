@@ -50,6 +50,7 @@ import { SideBarService } from './pages/video/side-bar/side-bar.service';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { SessionComponent } from './pages/session/session.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
+import { DevicesComponent } from './pages/devices/devices.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { UserprofileComponent } from './pages/userprofile/userprofile.component'
     ContactusComponent,
     SessionComponent,
     UserprofileComponent,
+    DevicesComponent,
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
