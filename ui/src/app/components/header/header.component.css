@@ -36,8 +36,8 @@
    
     .nav-item {
 
-        padding-left: 18px;
-        padding-right: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
         color:#790666;
       
         
@@ -55,8 +55,7 @@
           size:10px;  
         }
 
-       /* --------------------------------------------------------------------backup
-        */
+       /* ---------------------backup-------------------    */
 /* 
    .nav-item:hover{
       

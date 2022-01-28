@@ -51,6 +51,7 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { SessionComponent } from './pages/session/session.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 import { DevicesComponent } from './pages/devices/devices.component';
+import { LearnersComponent } from './pages/learners/learners.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { DevicesComponent } from './pages/devices/devices.component';
     SessionComponent,
     UserprofileComponent,
     DevicesComponent,
+    LearnersComponent,
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],

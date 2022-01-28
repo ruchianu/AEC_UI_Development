@@ -1,24 +1,209 @@
+<section id="currentdevice">
 
+  <div class="container currd mt-4">
+    <div class="row">
+
+      <div class="col-md-12 ">
+        <h2 class="  dcoutext1 mt-3 pt-3 ">Current Device Information</h2> <br>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<section id="devicebanner">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12">
+        <h2 class="  dcoutext mt-4 pt-4">Device Selection - Add another device</h2> <br>
+      </div>
+
+    </div>
+  </div>
+
+</section>
 
 <section id="devices">
 
-    <div class="container dinput mt-5">
-        <div class="row">
+  <div class="container dinput mt-2">
+    <div class="row">
 
-            <div class="col-md-12  ">
+      <div class="col-md-4 ">
+        <div class="card">
+          <img class="card-img-top" src="assets/images/laptop.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Personal Computer</h4>
+            <p class="card-text">
+              Select and Activate content on PC.
+            </p>
+            <a href="#!" class="btn btn-warning">Activate</a>
+          </div>
+        </div>
 
-                <h4 class="dprofile mt-2 mb-2">Device Selection - Select your devices</h4>
+        <!-- <h4 class="dprofile mt-2 mb-2"></h4>
 
                 <div class="btn-group-vertical" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary">Left</button>
-                    <button type="button" class="btn btn-secondary">Middle</button>
-                    <button type="button" class="btn btn-secondary">Right</button>
-                  </div>
-                  
+                    <button type="button" class="dbtn btn-secondary1">Left</button>
+                    <button type="button" class="dbtn btn-secondary1">Middle</button>
+                    <button type="button" class="dbtn btn-secondary1">Right</button><hr>
+                  </div> -->
 
 
-            </div>
+
+      </div>
+
+      <div class="col-md-4  ">
+        <div class="card">
+          <img class="card-img-top1" src="assets/images/mob11.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Mobile</h4>
+            <p class="card-text">
+
+              Select and Activate content on Mobile.
+            </p>
+            <a href="#!" class="btn btn-warning">Activate</a>
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="col-md-4 ">
+        <div class="card">
+          <img class="card-img-top" src="assets/images/tab3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Tablet</h4>
+            <p class="card-text">
+              Select and Activate content on Tablet.
+            </p>
+            <a href="#!" class="btn btn-warning">Activate</a>
+          </div>
+        </div>
+      </div>
 
+
+    </div>
+  </div>
+
+</section>
+<hr>
+<section id="adddevice">
+
+  <div class="container currd ">
+   
+    <form class=" ">
+      <h2 class="dcoutext1  ml-5"> New Device Information</h2> <br> 
+      <div class="row">
+
+
+
+        <div class="col-md-4 formin ml-5 ">
+ 
+          <!-- If PC / tab -->
+          <div class="form-group ">
+            <!-- Email input -->
+            <input type="text" class="dform-control" placeholder="Enter new emailaddress">
+
+
+          </div>
+          <!-- Enter 6 -digit OTP & Resend OTP  OTP -->
+          <div class="form-group">
+            <input type="password" class="dform-control" placeholder="Enter 6 digit OTP">
+           
+          </div>
+
+          <!-- If Mobile -->
+          <div class="form-group ">
+            <!-- Email input -->
+            <input type="text" class="dform-control" placeholder="Enter unregistered Mobile Number">
+
+
+          </div>
+          <!-- Enter 6 -digit OTP & Resend OTP  OTP -->
+          <div class="form-group">
+            <input type="password" class="dform-control" placeholder="Enter 6 digit OTP">
+
+          </div>
+
+
+
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+          <div class="col dwrap">
+          <div class="form-group">
+            <button type="button" class="dbtn dotpbtn">Get OTP</button>
+          </div>
+          <div class="form-group">
+            <button type="button" class="dbtn dbtn-link1">( Resend OTP )</button>
+          </div>
+        </div>
+         </div>
+         <!-- <div class="row">
+          <div class="col dwrap">
+         
+          <div class="form-group">
+            <button type="button" class="dbtn dotpbtn">Get OTP</button>
+          </div>
+          
+          <div class="form-group">
+            <button type="button" class="dbtn dbtn-link1">( Resend OTP )</button>
+          </div>
+          </div>
+          </div> -->
+        </div>
+        <div class="col-md-3 formin ">
+          
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-12">
+         <div class="dwrap  ml-5 mb-3">
+           <button type="submit" class="dbtn dactbtn  mr-2 ">Submit</button> 
+          <button type="submit" class="dbtn dactbtn ml-2 ">Cancel</button>
+         
+        </div>
+       
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="modal1">
+  <div class="container">
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Open modal
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
 </section>
