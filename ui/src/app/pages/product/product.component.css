@@ -193,6 +193,13 @@
  color: white; border-color:#6F016F; background-color:#6F016F;padding: 5px; align:center;border:2px solid orange;border-radius:2px;
 
 }
+.bas:hover{
+  color: white; border-color:#6F016F; background-color:#6F016F;padding: 5px; align:center;border:2px solid orange;border-radius:2px;
+
+}
+.adv:hover{
+  color: white; border-color:#6F016F; background-color:#6F016F;padding: 5px; align:center;border:2px solid orange;border-radius:2px;
+}
 .quantity .type{
   font-family: 'Lato',sans-serif;
   font-size: 12px;
