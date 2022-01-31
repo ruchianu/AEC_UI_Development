@@ -8,11 +8,25 @@
           width: 100%;
         }
         iframe {
-          border: 1px solid rgb(180, 178, 178);
+          border: 5px solid #790666;
           width: 100%;
       }
-      
-
+      .note{
+        color:#790666;
+        font-weight:bold;
+      }
+      .qa{
+        font-family: Lato;
+        font-size: 14px;
+        color:#790666;
+        font-weight:bold;
+      }
+      .aq{
+        font-family: Lato;
+        font-size: 14px;
+        color: #5f5e5e;
+        
+      }
         .tabsdemoCenterTabs {
           /*
          * Style tab width to align with the MD spec:

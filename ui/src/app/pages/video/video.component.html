@@ -1,26 +1,265 @@
-<!--Section: Block Content---->
-<section style="background-color: #ffffff;" padding-bottom="85px;">
+<!--Section: Block Content---  padding-bottom="85px;-->
+<section style="background-color: #ffffff;">
   <div class="container">
     <!--------Video on-------->
     <!------<section class="mb-5" style="background-color:grey;">----->
 
-    <div class="row mt-2">
+    <div class="row mt-5">
 
       <div class="col-md-8">
 
         <!-- <iframe src="https://player.vimeo.com/video/592941870?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=0e76ef5951" frameborder="1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Demo1"></iframe></div>
            -->
-        <iframe  style="overflow: hidden;" [src]="safeSrc" width="800" height="400" frameborder="0" webkitallowfullscreen
+        <iframe style="overflow: hidden;" [src]="safeSrc" width="800" height="400" frameborder="0" webkitallowfullscreen
           mozallowfullscreen allowfullscreen></iframe>
 
-      </div>
-      <!--<video controls controlsList="nodownload" disablePictureInPicture allowfullscreen width="870" height="480" muted> 
+
+        <!--<video controls controlsList="nodownload" disablePictureInPicture allowfullscreen width="870" height="480" muted> 
            
           
             <source  src=" https://vimeo.com/592941870" type= https://vimeo.com/592941870> 
           
           </video>-->
+        <!-- <section id="pdetail" class="h-75">
 
+            <div class="container" id="detail-section">
+              <div class="row mt-5">
+                <div class="col-md-8">
+             -->
+        <hr>
+
+        <my-tabs [buttonClass]="'md-pills pills-primary font-weight-bold'">
+          <my-tab [tabTitle]="'Course Overview'">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" style="color:purple"> Product Detail</h4>
+                <pre>
+            Book Name          :  My English Friend
+            Publisher          :  ANU"S ENGLISH ACADEMY; 3rd edition (1 January 2009); 
+            Language           :  English
+            Paperback          :  428 pages
+            ISBN-10            :  935126257X
+            ISBN-13            :  978-9351262572
+            Reading age        :  6 years and up
+            Item Weight        :  840 g
+            Country of Origin  :  India
+            
+            Book Name          :  Magic English Speaking Course
+            Publisher          :  ANU"S ENGLISH ACADEMY; 2nd edition (1 January 2012);
+            Language           :  English
+            Paperback          :  336 pages
+            ISBN-10            :  8192755622
+            ISBN-13            :  978-8192755625
+            Reading age        :  10 years and up
+            Item Weight        :  400 g
+            Country of Origin  :  India
+            </pre>
+
+
+                <p> This is primary to advance level course to learn spoken & written English
+                  in this you will learn:
+
+                <ul>
+                  <li>TYT (Twist /Train Your Tongue method to Speak English Fluently)</li>
+                  <li>Direct-Method i.e. situational method. (No need to learn Translation).</li>
+                  <li>Tense = Tension.</li>
+                  <li>Game of five. Five points system (To learn spoken English easily) </li>
+                  <li>Complete list of Short form for Spoken & Written English.</li>
+                  <li>Phonetics of Short forms for fluency.</li>
+                  <li>Complete list of Negative Short forms for Spoken & Written English.</li>
+                  <li>List of Short words which Speaks & write oftenly e.g. want to, wannna, don’t know.</li>
+                  <li>All lessons with complete conversational practice and Exercise.</li>
+                  <li>Three Imperative sentences in each lesson. So total 180 sentences. (a book)</li>
+                  <li>Define every difficult word.</li>
+
+
+
+
+
+                  <li>More than 1000 words which use in daily life situation.</li>
+                  <li>Learn with fun puzzles to enrich Vocabulary.</li>
+                  <li>Special attention to improve Pronunciation (Phonetics).</li>
+                  <li>Covered all topics of Spoken & Written English.</li>
+                  <li>A special topic on Hesitation during Spoken English.</li>
+                  <li>A special topic on ‘Divide & Rule’ method which can be applied in Spoken English to speak fluently
+                    and confidently.</li>
+                  <li>Some very practical tips to be Master in Spoken & Written English.</li>
+                  <li>More than hundred Vocabulary figures to understand easily.</li>
+                  <li>topic ‘Don’t speak it’ </li>
+                  <li>Medium of learning is Hindi</li>
+                </ul>
+
+                <p class="note">
+                  Share free videos & learn spoken English on our Youtube channel Anu English Academy & subscribe it
+
+                </p>
+                <!-- <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(description)"></span>
+                -->
+              </div>
+
+            </div>
+          </my-tab>
+          <my-tab tabTitle="FAQ">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" style="color:purple">Frequently Asked Questions</h4>
+                <!-- <span style="color:rgba(0, 0, 0, 0.753);" [innerHTML]="toHTML(details)"></span> -->
+
+                <p class="qa  text-justify ">
+                  Q1 : I have done high school from Hindi medium & belong to village and my English is very poor but I
+                  want to learn English & want to speak English fluently. What should I do? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A : It doesn’t make any difference that what is your medium of education or where do you belong to?
+                  You should buy MY ENGLISH FRIEND to learn basic to advance level written & spoken English. Mr. Anu
+                  Sharma has developed very easy & effective method to learn English in this course.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q2 : How My English Friend is different than other courses or books? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A : Due to teaching methodology. In this course we have taught by a practical way and apply new five
+                  point system & game of five. In this method you no need to learn tense or typical grammar. We have
+                  applied this easy & effective method on thousands of students in our classroom since last 18 years.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q3 : No need to learn tense to speak English? How this is possible?
+                </p>
+                <p class="aq  text-justify">
+                  A : Yes this is possible even we say that Tense = Tension. Most of students get confuse by tense. We
+                  teach by direct method in this course.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q4 : But how it is possible that without grammar or tense we can speak English? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Actually we have taught a practical grammar which used to spoken and written English. In other
+                  books you learn tense noun, pronoun, etc. but in this course we have not taught all this.
+                </p>
+
+
+                <p class="qa  text-justify ">
+                  Q5 : Can you explain it more? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Yes, for example you can speak your mother tongue without knowing the much grammar of mother
+                  tongue. Similarly you can speak English.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q6 : Will I speak or write grammatically wrong?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Not at all. You will speak & write correct English language.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q7 : Will I speak or write grammatically wrong?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Not at all. You will speak & write correct English language.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q8 : I have given up study before long? Will it make any difference?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Not of all. We have used very-very easy method to learn spoken & written English.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q9 : I am from Hindi medium school/ back ground. Can I understand this course easily?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Definitely. It is very easy.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q10 : I am not much educated. Can I learn & speak English by this course?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Yes, It does not make any difference.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q11 : I am from English medium school. Will this book help me to speak English fluently? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Surely because we have taught many tricks & methods which you do not learn in school generally but you need it to speak English fluently.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q12 : I am doing job in a big company & I have to face problems while I write e-mail, give presentation or social get to gather. Will this help me ?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Yes sure actually in this course you do not cram English. You learn system & technique of English language so you can speak and write what you wish after this course.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q13 : I am a house wife and I have given up study. I have to attend PTM (parent teacher meeting) in school and sometime I have to teach my children. Will this course help me?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Yes surely. We have taught by very easy & effective method so you may understand easily even you teach your children with the help of this course.
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q14 : What is medium of teaching in this course? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Surely because we have taught many tricks & methods which you do not learn in school generally but you need it to speak English fluently.
+                </p>
+               
+                
+                <p class="qa  text-justify ">
+                  Q15 :  What material I will get in this course? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A: There is two edition of this course paperback edition & digital edition.
+                  In paperback edition you will get two books + one revision/memory chart (colored) in a box packing.
+                 In digital edition you will get two books + one revision/memory chart (colored) in a box packing and lesson based 71 recorded videos online (till validity) 
+                 
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q16 :  We have a school / Institute / collage & want to train students in spoken English. How will this course will help us? <br>
+                </p>
+                <p class="aq  text-justify">
+                  A: Yes, this program will definitely help the students. We will give a book every  student & we will give recorded video of lecture based on book (lesson wise).School will play video through smart class or T.V. so students will watch & read the book. The teacher will help the students in conversations , practice etc. 
+                 
+                </p>
+
+                <p class="qa  text-justify ">
+                  Q17 :  Will all students get same book ?<br>
+                </p>
+                <p class="aq  text-justify">
+                  A: We suggest ‘Magic English Speaking Course’ upto eighth class/standard &  ‘My English Friend’for above. Student will not need to buy book every year.
+                 
+                </p>
+              </div>
+
+            </div>
+
+          </my-tab>
+
+          <my-tab tabTitle="Product Reviews">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" style="color:purple">Reviews</h4>
+                <p> Submit your review : <a href="https://forms.gle/rYKYzxmBJU3A7R1w5">Review Now</a></p>
+              </div>
+
+            </div>
+
+          </my-tab>
+        </my-tabs>
+        <!-- </div>
+              </div>
+               </div>
+              </section>  -->
+      </div>
 
       <div class="col-md-4 ">
         <app-side-bar-toggle></app-side-bar-toggle>
@@ -43,4 +282,3 @@
     </div>
   </div>
 </section> -->
-

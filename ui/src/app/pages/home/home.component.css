@@ -26,10 +26,10 @@
 .promo-title
 {
 	font-family: 'Lora',sans-serif;
-	font-size:48px;
-	font-weight: 300;
+	font-size:40px;
+	font-weight: 200;
 	color:#000;
-	
+	letter-spacing: -1px;
 }
 #banner{
 	position: relative;
@@ -289,7 +289,7 @@
 	margin-right:10px; */
 }
 .newshead{
-	font-family: 'Lato',sans-serif;
+	font-family: 'Lora',sans-serif;
 	font-size: 40px;
 	font-weight: 800;
 	color: #790666;

@@ -2,12 +2,12 @@
   <div class="container">
 
   <!-- Nav Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0">
+  <nav class="navbar  navbar-expand-lg navbar-light pl-0 pr-0">
     <span class="navbar-brand"><img class="logogif"  src="assets/images/anu-aca-logo.gif"></span>
      
       <div class="collapse navbar-collapse shift" id="navbarTogglerDemo02">
 
-      <ul class="navbar navbar-nav ml-auto ">
+      <ul class="navbar navbar-nav ml-auto  ">
          
           
           <li class="nav-item active home">
@@ -65,11 +65,20 @@
               <!-- <a class="nav-link" href="">Contact us</a> -->
               <a class="nav-link" [routerLink]="['/footer']">Contact us</a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item dropdown">
             <!-- <a class="nav-link" href="">My Learning</a> -->
+            <a class="nav-link dropdown-toggle cc" data-bs-toggle="dropdown"> <i class="nav-link sb fas fa-graduation-cap fa-1x mt-4 "></i></a>
             
+            <ul class="dropdown-menu fade-up  ml-auto">
+            <li><a class="dropdown-item" > Basic</a> </li>
+            <li><a class="dropdown-item" >Basic to Advance</a> </li>
+            </ul>
             <!-- <i class="nav-link sb fab fa-accusoft"></i> -->
+            <!-- <div class="myDIV">
             <i class="nav-link sb fas fa-graduation-cap fa-1x "></i>
+            </div>
+            <div class="hide">My Learning</div> -->
+
            </li>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Hover me  </a>

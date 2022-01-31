@@ -32,6 +32,8 @@
 
     /* padding-top:15px; */
     color:black;
+    /* width: 90% !important;
+    flex: 1 1 90% !important; */
     }
    
     .nav-item {
@@ -39,7 +41,8 @@
         padding-left: 10px;
         padding-right: 10px;
         color:#790666;
-      
+        /* white-space: nowrap !important;
+        flex-wrap: nowrap; */
         
         }
         .btnsignin{
@@ -93,6 +96,17 @@
   /* .dropdown-menu:hover.submenu{ display: block; } */
   .fade-up{ top:180%;  }
     .dropdown-menu > li:hover > .submenu{ display: block;color:#790666; top: 0px; }
+    .hide {
+        display: none;
+      }
+          
+      .myDIV:hover + .hide {
+        display: block;
+        color: #790666;
+        font-size: 15px;
+        font-family: 'Lato',sans-serif;
+	
+      }
 /* .main-header{
     border-bottom: 1px #dcdcdc solid;
 }
