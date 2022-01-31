@@ -40,9 +40,14 @@
 
         padding-left: 10px;
         padding-right: 10px;
-        color:#790666;
+        
         /* white-space: nowrap !important;
         flex-wrap: nowrap; */
+        color:#222831;
+  
+        font-size: 16px;
+        font-family: 'Lato',sans-serif;
+        font-weight: 400px;
         
         }
         .btnsignin{
@@ -73,19 +78,28 @@
    .home{
        color:#790666;
        text-decoration: underline;
+       font-size: 16px;
+       font-family: 'Lato',sans-serif;
+       font-weight: 700px;
+
    }
+   .home1{
+   
+
+}
    /* .nav-item .a:hover{ display:block; color:rgb(230, 20, 20); } */
 
     .nav-item .submenu{ 
 		display: none;
 		position: absolute;
 		left:100%; top:-0px;
+        font-size: 14px;
+        font-family: 'Lato',sans-serif;
+        font-weight: 400px;
 	}
     
     .fade-up{ top:180%;  }
 	.nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); color:#790666;}
-   
-
     .dropdown-menu li{ position: relative; top:0px;	}
     .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
     .dropdown-item .submenu{ 
@@ -107,54 +121,3 @@
         font-family: 'Lato',sans-serif;
 	
       }
-/* .main-header{
-    border-bottom: 1px #dcdcdc solid;
-}
-.head{
-  
-       background-color: #fff;  
-       
-
-.view {
-    background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-}
-
-
-.logogif{
-  
-    
-    width: 261px;
-    height: 54px;
-
-  
-}
-.navbar{
-
-    ** padding-top:15px; **
-    color:black;
-    }
-   
-    .nav-item {
-
-        padding-left: 18px;
-        padding-right: 18px;
-        
-      
-        
-        }
-        .btnsignin{
-
-            background-color: #6F016F;
-            color:#fff;
-            padding: 10px 10px ; **10px 6px;**
-            
-    
-
-        } 
-        .sb{
-          size:10px;  
-        }
-
-        */

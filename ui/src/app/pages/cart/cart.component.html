@@ -1,28 +1,26 @@
-<div class="container my-5" style="background-color: #ffffff;">
-  <!-- Section: Design block -->
-  <section class="" style="background-color: #ffffff;">
-    <div class="row gx-lg-5">
-      <div class="col-lg-8 mb-4 mb-md-0">
-        <span style="display:block;border:5px solid rgb(255, 255 255);width:400px;"></span>
-        <span style="display:block;border:5px solid rgb(255, 255 255);width:400px;"></span>
+<section id="cart">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-8 mt-4">
         <!-- Section: Product list -->
-        <section class="mb-5">
-          
+        <section class="shadow-4 p-4 rounded-5 mb-4">
           
           <!-- Single item -->
           <!----cartsumm start
-          <div class="row border-bottom mb-4 ">
-            <h2 style="text-color:purple;font-size:30px;"><b>CART SUMMARY</b></h2>-->
-             <!-- Single item -->
-          <div class="col-md-12">
+              <div class="row border-bottom mb-4 ">
+                <h2 style="text-color:purple;font-size:30px;"><b>CART SUMMARY</b></h2>-->
+          <!-- Single item -->
+          <div class="col-md-12 ">
             <div class="z-depth-1 m-2">
+           
               <div class="div p-4">
+                <h4 class="csum "> Cart Summary</h4>
                 <mdb-stepper #stepper [vertical]="true">
-                  <mdb-step name="Step 1" label="CART SUMMARY" [stepForm]="firstFormGroup">
+                  <mdb-step name="Step 1" label="" [stepForm]="firstFormGroup">
                     <form [formGroup]="firstFormGroup">
                       <table class="table">
                         <thead>
-                          <tr>      
+                          <tr>
                             <th scope="col">Product</th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
@@ -31,17 +29,19 @@
                         </thead>
                         <tbody>
                           <tr>
-                          
+
                           </tr>
-                          <tr *ngFor="let itm of cartItemsList ">      
-                            <td class="text-left">  <span style="color:purple;" [innerHTML]="toHTML(itm.name)"></span></td>
+                          <tr *ngFor="let itm of cartItemsList ">
+                            <td class="text-left"> <span style="color:purple;" [innerHTML]="toHTML(itm.name)"></span>
+                            </td>
                             <td>{{itm.price/itm.qty}}</td>
                             <td class="w30">
                               <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
                                   <button class="btn" type="button" (click)="changeQty(itm.pid,1,'')">+</button>
                                 </div>
-                                <input type="text" class="form-control text-center" value="{{itm.qty}}" #qtyRef (keyup)="changeQty(itm.pid,qtyRef.value,'replace')" readonly>
+                                <input type="text" class="form-control text-center" value="{{itm.qty}}" #qtyRef
+                                  (keyup)="changeQty(itm.pid,qtyRef.value,'replace')" readonly>
                                 <div class="input-group-append">
                                   <button class="btn" type="button" (click)="changeQty(itm.pid,-1,'')">-</button>
                                 </div>
@@ -49,22 +49,22 @@
                             </td>
                             <td>{{itm.price}}</td>
                           </tr>
-                          </tbody>
+                        </tbody>
                       </table>
 
-      
 
-      <!-- Single item -->
-                   
-                    <button mdbBtn size="sm" color="primary" (click)="stepper.next()">CONTINUE</button>
-                  </form>
+
+                      <!-- Single item -->
+
+                      <button mdbBtn size="sm" color="primary" (click)="stepper.next()">CONTINUE</button>
+                    </form>
                   </mdb-step>
                   <mdb-step name="Step 2" [stepForm]="secondFormGroup">
-                    <form [formGroup]="secondFormGroup" (ngSubmit) = "send()">
-                                              
-                        <!-- Section Description -->
-                        <div class="step-content lighten-3">
-                          <!-- Extended material form grid -->
+                    <form [formGroup]="secondFormGroup" (ngSubmit)="send()">
+
+                      <!-- Section Description -->
+                      <div class="step-content lighten-3">
+                        <!-- Extended material form grid -->
 
 
 
@@ -74,10 +74,13 @@
                           <div class="col-md-6">
                             <!-- Material input -->
                             <div class="md-form">
-                              <input   type="text" class="form-control" placeholder="Enter your name"  minlength="5" maxlength="40"  formControlName = "fname" mdbInput [mdbValidate]="true">
+                              <input type="text" class="form-control" placeholder="Enter your name" minlength="5"
+                                maxlength="40" formControlName="fname" mdbInput [mdbValidate]="true">
                               <label>Full Name </label>
-                              <mdb-error *ngIf="!secondFormGroup.controls['fname'].valid && secondFormGroup.controls['fname'].touched" >
-                                Required Field , Please enter the full name minimum 5 characters and maximum 40 characters</mdb-error>
+                              <mdb-error
+                                *ngIf="!secondFormGroup.controls['fname'].valid && secondFormGroup.controls['fname'].touched">
+                                Required Field , Please enter the full name minimum 5 characters and maximum 40
+                                characters</mdb-error>
                             </div>
                           </div>
 
@@ -85,9 +88,11 @@
                           <div class="col-md-6">
                             <!-- Material input -->
                             <div class="md-form form-group">
-                              <input mdbInput type="number" class="form-control" id="formGroupExampleInput2MD" placeholder="Enter 10-digit Mobile Number" formControlName = "phone">
+                              <input mdbInput type="number" class="form-control" id="formGroupExampleInput2MD"
+                                placeholder="Enter 10-digit Mobile Number" formControlName="phone">
                               <label for="formGroupExampleInput2MD">Mobile No</label>
-                              <mdb-error *ngIf="!secondFormGroup.controls['phone'].valid && secondFormGroup.controls['phone'].touched" >
+                              <mdb-error
+                                *ngIf="!secondFormGroup.controls['phone'].valid && secondFormGroup.controls['phone'].touched">
                                 Required Field , Please enter the Phone number</mdb-error>
                             </div>
                           </div>
@@ -101,22 +106,27 @@
                           <div class="col-md-12">
                             <!-- Material input -->
                             <div class="md-form form-group">
-                              <input mdbInput type="text" class="form-control" id="inputAddressMD" placeholder="Enter your Address" minlength="5" maxlength="40" formControlName = "address1">
+                              <input mdbInput type="text" class="form-control" id="inputAddressMD"
+                                placeholder="Enter your Address" minlength="5" maxlength="40"
+                                formControlName="address1">
                               <label for="inputAddressMD">Address</label>
 
-                              <mdb-error *ngIf="!secondFormGroup.controls['address1'].valid && secondFormGroup.controls['address1'].touched" >
-                                Required Field , Please enter the address1 with minimum 5 characters and maximum 40 characters</mdb-error>
+                              <mdb-error
+                                *ngIf="!secondFormGroup.controls['address1'].valid && secondFormGroup.controls['address1'].touched">
+                                Required Field , Please enter the address1 with minimum 5 characters and maximum 40
+                                characters</mdb-error>
 
 
                             </div>
                           </div>
-                          
+
 
                           <!-- Grid column -->
                           <div class="col-md-12">
                             <!-- Material input -->
                             <div class="md-form form-group">
-                              <input mdbInput type="text" class="form-control" id="inputAddress2MD" placeholder="Apartment, studio, or floor"  formControlName = "address2">
+                              <input mdbInput type="text" class="form-control" id="inputAddress2MD"
+                                placeholder="Apartment, studio, or floor" formControlName="address2">
                               <label for="inputAddress2MD">Address 2</label>
                             </div>
                           </div>
@@ -133,180 +143,181 @@
                             <div class="md-form form-group">
 
 
-                              <select class="browser-default custom-select" name="country" aria-placeholder="country" formControlName = "country" (ngModelChange)="getState($event)">
-                                <option value="0" selected
-                                >Select Country*</option>
-                                <option *ngFor="let option of countries" [value]="option.country_id"
-                                >{{option.country_name}}</option>
+                              <select class="browser-default custom-select" name="country" aria-placeholder="country"
+                                formControlName="country" (ngModelChange)="getState($event)">
+                                <option value="0" selected>Select Country*</option>
+                                <option *ngFor="let option of countries" [value]="option.country_id">
+                                  {{option.country_name}}</option>
                               </select>
-                         
-                              <mdb-error *ngIf="!secondFormGroup.controls['country'].valid && secondFormGroup.controls['country'].touched" >
+
+                              <mdb-error
+                                *ngIf="!secondFormGroup.controls['country'].valid && secondFormGroup.controls['country'].touched">
                                 Required Field , Please select the Country </mdb-error>
                             </div>
                           </div>
 
-                            <div class="col-md-6">
-                              <!-- Material input -->
-                              <div class="md-form form-group">
-                                <select class="browser-default custom-select" name="state" aria-placeholder="state" formControlName = "state" (ngModelChange)="getcity($event)">
-                                  <option value="0" selected
-                                  >Select State*</option>
-                                  <option *ngFor="let option of states" [value]="option.state_id"
-                                  >{{option.state_name}}</option>
-                                </select>
-                           
-                                <mdb-error *ngIf="!secondFormGroup.controls['state'].valid && secondFormGroup.controls['state'].touched" >
-                                  Required Field , Please select the State </mdb-error>
-                              </div>
+                          <div class="col-md-6">
+                            <!-- Material input -->
+                            <div class="md-form form-group">
+                              <select class="browser-default custom-select" name="state" aria-placeholder="state"
+                                formControlName="state" (ngModelChange)="getcity($event)">
+                                <option value="0" selected>Select State*</option>
+                                <option *ngFor="let option of states" [value]="option.state_id">{{option.state_name}}
+                                </option>
+                              </select>
+
+                              <mdb-error
+                                *ngIf="!secondFormGroup.controls['state'].valid && secondFormGroup.controls['state'].touched">
+                                Required Field , Please select the State </mdb-error>
+                            </div>
                           </div>
                         </div>
 
                         <!-- Grid row -->
                         <div class="form-row">
-                        <!-- Grid column --> 
-                        <div class="col-md-6">
-                          <!-- Material input -->
-                          <div class="md-form form-group">
-
-
-                            <div class="md-form form-group">
-                              <select class="browser-default custom-select" name="city" aria-placeholder="city" formControlName = "city" >
-                                <option value="0" selected
-                                >Select City*</option>
-                                <option *ngFor="let option of cities" [value]="option.city_id"
-                                >{{option.city_name}}</option>
-                              </select>
-                           
-                              <mdb-error *ngIf="!secondFormGroup.controls['city'].valid && secondFormGroup.controls['city'].touched" >
-                                Required Field , Please select the city </mdb-error>
-                            </div>
-
-                        </div>
-
+                          <!-- Grid column -->
                           <div class="col-md-6">
                             <!-- Material input -->
                             <div class="md-form form-group">
-                              <input mdbInput type="text" class="form-control" id="inputZipMD" placeholder="201201" minlength="6" maxlength="6"  formControlName = "zipcode">
-                              <label for="inputZipMD">Zip</label>
-                              <mdb-error *ngIf="!secondFormGroup.controls['zipcode'].valid && secondFormGroup.controls['zipcode'].touched" >
-                                Required Field , Please select the zipcode </mdb-error>
-                            </div>
-                          </div>
 
+
+                              <div class="md-form form-group">
+                                <select class="browser-default custom-select" name="city" aria-placeholder="city"
+                                  formControlName="city">
+                                  <option value="0" selected>Select City*</option>
+                                  <option *ngFor="let option of cities" [value]="option.city_id">{{option.city_name}}
+                                  </option>
+                                </select>
+
+                                <mdb-error
+                                  *ngIf="!secondFormGroup.controls['city'].valid && secondFormGroup.controls['city'].touched">
+                                  Required Field , Please select the city </mdb-error>
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                              <!-- Material input -->
+                              <div class="md-form form-group">
+                                <input mdbInput type="text" class="form-control" id="inputZipMD" placeholder="201201"
+                                  minlength="6" maxlength="6" formControlName="zipcode">
+                                <label for="inputZipMD">Zip</label>
+                                <mdb-error
+                                  *ngIf="!secondFormGroup.controls['zipcode'].valid && secondFormGroup.controls['zipcode'].touched">
+                                  Required Field , Please select the zipcode </mdb-error>
+                              </div>
+                            </div>
+
+                          </div>
                         </div>
-                        </div>
-                        </div>
+                      </div>
 
 
                     </form>
-                    <button mdbBtn size="sm" color="primary" [disabled]="!secondFormGroup.valid" (click)="stepper.next();payuSubmit();">CONTINUE</button>
+                    <button mdbBtn size="sm" color="primary" [disabled]="!secondFormGroup.valid"
+                      (click)="stepper.next();payuSubmit();">CONTINUE</button>
                     <button mdbBtn size="sm" color="secondary" (click)="stepper.previous()">BACK</button>
                   </mdb-step>
 
 
 
 
-                  <mdb-step name="Step 3" label="Step 3 label">
-                      <!--Section Title -->
-  <a href="#!">
-    <span class="circle" style="background-color :purple ;color:white;font-weight:bold">3</span>  
-    <span class="label" style= "font-size:20px; color:purple;">Payment</span>
-  </a>
+                  <!-- <mdb-step name="Step 3" label="Step 3 label"> -->
+                    <mdb-step name="Step 3" label="">
+                    <!--Section Title -->
+                    <a href="#!">
+                      <span class="circle" style="background-color :purple ;color:white;font-weight:bold">3</span>
+                      <span class="label" style="font-size:20px; color:purple;">Payment</span>
+                    </a>
 
 
 
-<div>
-  <h5 class="mb-4">We accept</h5>
+                    <div>
+                      <h5 class="mb-4">We accept</h5>
 
-  <img
-       class="mr-2"
-       width="45px"
-       src="../../../assets/images/gpay.png"
-       alt="gpay"
-       />
-  <img
-       class="mr-2"
-       width="45px"
-       src="../../../assets/images/neft.jfif"
-       alt="Neft"
-       />
-  
-</div>
+                      <img class="mr-2" width="45px" src="../../../assets/images/gpay.png" alt="gpay" />
+                      <img class="mr-2" width="45px" src="../../../assets/images/neft.jfif" alt="Neft" />
 
-<form ngNoForm action="https://sandboxsecure.payu.in/_payment" name="payuform" method="POST" target="payment_popup"  onsubmit="window.open('about:blank','payment_popup','width=900,height=500');">
- <input type="hidden" class="form-control" id="productInfo" name="productinfo" [(ngModel)]="productinfo">
- <input type="hidden" class="form-control" id="firstname" name="firstname" [(ngModel)]="firstnames">
- <input type="hidden" class="form-control" id="email" name="email" [(ngModel)]="emails">
- <input type="hidden" class="form-control" id="phone" name="phone" [(ngModel)]="phones">
- <input type="hidden" class="form-control" id="amount" name="amount" [(ngModel)]="amounts">
-  <input type="hidden" name="surl" id="surl" ng-model="surl" [(ngModel)]="surl">
-  <input type="hidden" name="furl" id="furl" ng-model="furl" [(ngModel)]="furl">
-  <input type="hidden" name="key" id="key" ng-model="key" value="pV95epxu">
-  <input type="hidden" name="salt" id="salt" ng-model="salt" value="otBf9G9Tr7">
-  <input type="hidden" name="hash" id="hash" ng-model="hash" [(ngModel)]="hash">
-  <input type="hidden" name="hash_string" id="hash_string" ng-model="hash_string"[(ngModel)]="hash_string">
-  <input type="hidden" name="txnid" id="txnid" ng-model="txnid" [(ngModel)]="trasnx">
-  <input type="hidden" name="service_provider" id="service_provider"  value="payu_paisa">
-  <button  type="submit" style="background-color: purple" class="btn btn-primary btn-rounded w-10">
-    Pay Now
-  </button>
-              
-  
-</form>
-<!-- Grid row -->
-      </mdb-step>
+                    </div>
+
+                    <form ngNoForm action="https://sandboxsecure.payu.in/_payment" name="payuform" method="POST"
+                      target="payment_popup"
+                      onsubmit="window.open('about:blank','payment_popup','width=900,height=500');">
+                      <input type="hidden" class="form-control" id="productInfo" name="productinfo"
+                        [(ngModel)]="productinfo">
+                      <input type="hidden" class="form-control" id="firstname" name="firstname"
+                        [(ngModel)]="firstnames">
+                      <input type="hidden" class="form-control" id="email" name="email" [(ngModel)]="emails">
+                      <input type="hidden" class="form-control" id="phone" name="phone" [(ngModel)]="phones">
+                      <input type="hidden" class="form-control" id="amount" name="amount" [(ngModel)]="amounts">
+                      <input type="hidden" name="surl" id="surl" ng-model="surl" [(ngModel)]="surl">
+                      <input type="hidden" name="furl" id="furl" ng-model="furl" [(ngModel)]="furl">
+                      <input type="hidden" name="key" id="key" ng-model="key" value="pV95epxu">
+                      <input type="hidden" name="salt" id="salt" ng-model="salt" value="otBf9G9Tr7">
+                      <input type="hidden" name="hash" id="hash" ng-model="hash" [(ngModel)]="hash">
+                      <input type="hidden" name="hash_string" id="hash_string" ng-model="hash_string"
+                        [(ngModel)]="hash_string">
+                      <input type="hidden" name="txnid" id="txnid" ng-model="txnid" [(ngModel)]="trasnx">
+                      <input type="hidden" name="service_provider" id="service_provider" value="payu_paisa">
+                      <button type="submit" style="background-color: purple" class="btn btn-primary btn-rounded w-10">
+                        Pay Now
+                      </button>
+
+
+                    </form>
+                    <!-- Grid row -->
+                  </mdb-step>
                 </mdb-stepper>
               </div>
             </div>
           </div>
 
-<!---------------------------END-------------------------------->
+          <!---------------------------END-------------------------------->
 
 
 
 
 
-<!----------------------------2nd Step -------------------------------->
+          <!----------------------------2nd Step -------------------------------->
 
           <!-- Single item -->
-          
+
           <!-- Single item -->
         </section>
-       
+
         <!-- Section: Details -->
       </div>
+      <div class="col-md-4 mt-4">
 
-      <div class="col-lg-4 mb-4 mb-md-0">
-        
         <!-- Section: Summary -->
         <section class="shadow-4 p-4 rounded-5 mb-4">
           <div class="z-depth-1 m-2">
             <div class="div p-4">
-          <h5 class="mb-5" style="margin-top:175px;">Total amount </h5>
+              <h5 class="mb-5" style="margin-top:175px;">Total amount </h5>
 
-          <div class="d-flex justify-content-between mb-3">
-            <span>Total Price </span>
-            <span>Rs.{{totalPrice}}</span>
+              <div class="d-flex justify-content-between mb-3">
+                <span>Total Price </span>
+                <span>Rs.{{totalPrice}}</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>GST(18%) </span>
+                <span>Rs.100</span>
+              </div>
+              <hr class="my-4" />
+              <div class="d-flex justify-content-between fw-bold mb-5">
+                <span>Grand Total(including VAT) </span>
+                <span>Rs.{{totalPrice + 100}}</span>
+              </div>
+            </div>
           </div>
-          <div class="d-flex justify-content-between">
-            <span>GST(18%) </span>
-            <span>Rs.100</span>
-          </div>
-          <hr class="my-4" />
-          <div class="d-flex justify-content-between fw-bold mb-5">
-            <span>Grand Total(including VAT) </span>
-            <span>Rs.{{totalPrice + 100}}</span>
-          </div>
-          </div>
-          </div>
-      </section>
+        </section>
         <!-- Section: Summary -->
 
         <!-- Section: Summary -->
-       
+
         <!-- Section: Summary -->
       </div>
     </div>
-  </section>
-  <!-- Section: Design block -->
-</div>
+  </div>
+</section>
+
