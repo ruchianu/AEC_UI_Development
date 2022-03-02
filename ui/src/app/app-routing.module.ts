@@ -1,7 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -15,6 +13,8 @@ import { SessionComponent } from './pages/session/session.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 import { DevicesComponent } from './pages/devices/devices.component';
 import { LearnersComponent } from './pages/learners/learners.component';
+import { ReferComponent } from './pages/refer/refer.component';
+import { PartnerComponent } from './pages/partner/partner.component';
 const routes: Routes = [
   {path:  "", pathMatch:"full",redirectTo:  "home"},
   {path: "home", component: HomeComponent},
@@ -31,6 +31,8 @@ const routes: Routes = [
   {path:"userprofile",component:UserprofileComponent},
   {path:"devices",component:DevicesComponent},
   {path:"learners",component:LearnersComponent},
+  {path:"refer",component:ReferComponent},
+  {path:"partner",component:PartnerComponent}
 ];
 
 @NgModule({

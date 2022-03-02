@@ -1,0 +1,281 @@
+<!-----as 12:34 Row with two divisions -->
+<!---- backup as 06/01/2022 -->
+<!-- SECTION 1----Sign up section
+
+Done and finalised on 04/01/2022-->
+
+
+<!-- SECTION 1----Sign up section-->
+
+
+<!-- SECTION 1----banner section-->
+
+<section class="signup min-height-cover-partner">
+  <!-- Container starts here -->
+  <div class="container-fluid">
+    <!-- Row Starts here -->
+    <div class="row ">
+      <!--Left Col Starts here -->
+      <div class="col-md-5 pleft-Side ">
+        <!-- <div class="logo-set ml-5">
+          <img class="rlogogif"  src="assets/images/anu-aca-logo.gif">
+        </div> -->
+        <div class="plogin-main-text ">
+          <!-- <img class="imgs" src=""> -->
+          <img class="ppic ml-5 mb-4 " style="align-items: center;" src="assets/images/team.jpg">
+          <h2 class="pwelcome mt-3 text-center">Associate with us</h2>
+
+          <p class="text-center1  ml-4 mt-3" 
+             style="display: flex;     
+          text-align:justify;
+          margin-left: 90px;">
+         Coming together is a beginning, staying together is progress, and working together is success.
+         There is immense power when a group of people with similar interests gets together to work toward the same goals.
+             </p>
+
+          <!-- <div class="wrap mt-3 " style="display: flex;
+          align-items: center;
+          justify-content: center;">
+            <button type="submit" class="btn pbtn-black0 ">Explore Courses</button>
+          </div> -->
+        </div>
+      </div>
+      <!--Left Col ends here -->
+
+      <!--Right Col Starts here -->
+      <div class="col-md-7 pright-Side ">
+        <!-- Back Button -->
+        <div class="row">
+          <div class="col pbckbtn_signup mt-5 ">
+            <button class="pback"><span><a [routerLink]="['/home']"><i class="rag mr-2 fas fa-angle-left"></i></a> Back
+              </span></button>
+          </div>
+        </div> <!-- Back Button -->
+
+        <!-- Signup Form -->
+        <div class="psignup-form ">
+          <!-- Form Started -->
+          <form class="">
+            <h2 class=" poutext1 mb-5 ml-4 pl-1">Become our Partner</h2>
+            <!----Row starts-->
+            <div class="row">
+              <!-- Signup Column Starts from here  -->
+              <!---- Options as-->
+              <div class="col-md-5 formin ml-4">
+                <div class="form-group ">
+                  <!-- Email input -->
+                  <label class="gpoutext2 col-form-label mb-2">How do you want to collaborate with us</label>
+                  <!-- <input type="email" id="form5Example2" class="form-control" /> -->
+                  <div class="row">
+                    <div class="col ">
+                      <select class="custom-select custom-select-sm menu align-items-md-start">
+                        <option selected>Education Counsellor </option>                     
+                        <option value="1"> Handwriting Center </option>
+                        <option value="2"> Language Training Center </option>
+                        <option value="3"> Playgroup </option>
+                        <option value="4"> Investor </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+            
+                <h2 class="gpoutext2 col-form-label mb-2">Personal Information</h2>
+
+                <div class="form-group ">
+                  <input type="text" class="form-control" placeholder="First Name ">
+                </div>
+
+                <!-- <div class="form-group ">
+                  <input type="text" class="form-control" placeholder="Last Name ">
+                </div> -->
+
+                <div class="form-group ">
+
+                  <input class="form-control" type="text" placeholder="Enter Mobile Number">
+
+                </div>
+                <!-- <div class="form-group ">
+                 
+                  <input type="text" class="form-control" placeholder="emailaddress">
+                </div> -->
+                <hr>
+                <!-- <h2 class=" outext1 mb-5 ml-4 pl-1">Address Information</h2> -->
+                <h2 class="gpoutext2 col-form-label mt-3 mb-2">Address details</h2>
+                <div class="form-group ">
+                  <input type="text" class="form-control" placeholder="Address 1 ">
+                </div>
+
+                <div class="form-group ">
+                  <input type="text" class="form-control" placeholder="Address 2">
+                </div>
+
+                <div class="form-group ">
+
+                  <input class="form-control" type="text" placeholder="City">
+
+                </div>
+                <div class="form-group ">
+
+                  <input class="form-control" type="text" placeholder="State">
+
+                </div>
+                             <div class="form-group ">
+                <input class="form-control" type="text" placeholder="PinCode">
+              </div>
+
+                <div class="form-group ">
+
+                  <input class="form-control" type="text" placeholder="Country">
+
+                </div>
+                <h2 class="gpoutext2 col-form-label mt-3 mb-2">Investment Capacity</h2>
+                <div class="row">
+                  <div class="col ">
+                    <!--- For Handwriting Center & Lang Training -->
+                    <!-- <select class="custom-select custom-select-sm menu align-items-md-start">
+                      <option selected>  upto Rs.50,000 </option>                     
+                      <option value="1"> upto Rs. 2 lac </option>
+                      <option value="2"> upto Rs. 5 lac </option>
+                      <option value="3"> > Rs.5 lac </option>
+                    
+                    </select> -->
+                    <!--- For PlayGroup-->
+                    <!-- <select class="custom-select custom-select-sm menu align-items-md-start">
+                      <option selected > upto Rs. 5 lac</option>                                         
+                      <option value="1"> more than Rs.5 lac </option>                    
+                    </select> -->
+                     <!--- For Investor-->
+                     <select class="custom-select custom-select-sm menu align-items-md-start">
+                      <option selected>  upto Rs.10 lac </option>                     
+                      <option value="1"> upto Rs. 50 lac </option>
+                      <option value="2"> upto Rs. 1 Cr </option>
+                      <option value="3"> > Rs.1 Cr </option>                   
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <h2 class="gpoutext2 col-form-label mt-3 mb-2">Comments (Word limit:100)</h2>
+                  <textarea class="form-control" rows="5"  maxlength="100" id="comment"> </textarea>
+                </div>
+
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <div class="pwrap  mt-4">
+                    <button type="submit" class="btn actbtn  mr-2">Submit</button>
+                    <button type="submit" class="btn actbtn ml-2">Cancel</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 formin1">           
+              <!-- <div class="form-group "> -->
+                <!-- Email input -->
+                <!-- <label class="gpoutext2 col-form-label mb-2">Level</label>
+                <div class="row">
+                  <div class="col ">
+                    <select class="custom-select custom-select-sm menu align-items-md-start">
+                      <option selected>Unit </option>
+                    
+                      <option value="1">State</option>
+                      <option value="2">District</option>
+
+                    </select>
+                  </div>
+                </div> -->
+            
+                <!-- <h2 class="goutext2 col-form-label mb-2">Personal Information</h2> -->
+                  <!-- <h2 class="gpoutext2 col-form-label mt-2 mb-2">Where do you want to work</h2> -->
+              <!-- <label class="goutext2 col-form-label">Where do you want to work</label> -->
+  
+              <!-- <div class="row">
+                <div class="col ">
+                  <select class="custom-select custom-select-sm menu align-items-md-start">
+                    <option selected>Institute </option>             
+                    <option value="1">Company</option>
+                    <option value="2"> </option>
+
+                  </select>
+                </div>
+              </div> -->
+            <!-- </div> -->
+              <!--- Last Name  -->
+              <!-- <div class="form-group">
+                <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="Contact Person">
+              </div>
+              <div class="form-group ">
+
+                <input class="form-control" type="text" placeholder="Enter Mobile Number">
+
+              </div>
+              <div class="form-group ">
+                
+                <input type="text" class="form-control" placeholder="emailaddress">
+              </div>
+              <hr> -->
+              <div class="form-group ">
+                <input type="text" class="form-control" placeholder="Last Name ">
+              </div>
+              <div class="form-group ">
+                <!-- Email input -->
+                <input type="text" class="form-control mb-2" placeholder="emailaddress">
+              </div>
+
+              <h2 class="gpoutext22 col-form-label mb-1">Where do you want to work</h2>
+              <!-- <h2 class="gpoutext2 col-form-label mt-3 mb-2">Working Address details</h2> -->
+              <!-- <h2 class=" outext1 mb-5 ml-4 pl-1">Address Information</h2> -->
+              <!-- <div class="form-group ">
+                <input type="text" class="form-control" placeholder="Address 1 ">
+              </div>
+
+              <div class="form-group ">
+                <input type="text" class="form-control" placeholder="Address 2">
+              </div> -->
+
+              <div class="form-group ">
+
+                <input class="form-control" type="text" placeholder="City">
+
+              </div>
+              <div class="form-group ">
+
+                <input class="form-control" type="text" placeholder="District">
+
+              </div>
+              <div class="form-group ">
+
+                <input class="form-control" type="text" placeholder="State">
+
+              </div>
+
+              <div class="form-group ">
+                <input class="form-control" type="text" placeholder="PinCode">
+              </div>
+
+              <div class="form-group ">
+                <input class="form-control" type="text" placeholder="Country">
+              </div>             
+            </div>
+
+              <div class="col-md-2 formin">
+
+              </div>
+
+            
+             <!-- Signup Column ends here  -->
+            </div> <!-- Signup Column ends here  -->   
+         
+       </form>
+        <!-- Form Ended -->
+      </div> <!-- Signup Form ends -->
+
+    </div>
+    <!--Right Col ends here -->
+  </div>
+  </div><!-- --Row ends here
+  </div> -->
+  <!---container fluid ends -->
+</section>
+<!---section ends -->

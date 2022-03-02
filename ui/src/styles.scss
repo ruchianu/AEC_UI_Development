@@ -1078,3 +1078,14 @@ body {
 //   }
 
 .mt-7{margin-top: 7rem !important;}
+.min-height-cover {
+	height:calc(100vh - 228px);
+}
+
+.min-height-cover1 {
+	height:calc(100vh - 170px);
+}
+.min-height-cover-partner
+{
+	height:calc(100vh -100px);
+}

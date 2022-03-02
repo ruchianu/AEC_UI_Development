@@ -43,3 +43,166 @@
 // 	padding: 10px;
 //   }
   
+
+/* Purple : #790666;
+gery text : #9A9A9A;
+ */
+ .bannerimg{
+	width:100%;
+	height:70%;
+  }
+ 
+ /* #banner
+ {
+	 /* background-color:#6F016F; 
+	 background-image: url("D:\AEC_14122021\ui\src\assets\images\contact.jpg");
+	
+	 background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	 padding: 8 0px 0;
+	width: 100%;;
+	height:300px;
+
+	 
+ } */
+ /* Place text in the middle of the image */
+/* .cuoutext {
+	text-align: center;
+	position: absolute; */
+	/* top: 80%; */
+	/* left: 50%;
+	transform: translate(-50%, -50%);
+	
+	color: #fff;
+	font-family: 'Lora';
+    font-size: 40px;  
+	font-weight:400px;
+  } */
+/* The hero image */
+.hero-image {
+	/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+	 /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("cus.jpg");  */
+	//  background-image: url("D:\AEC_14122021\ui\src\assets\images\contact.jpg");
+	// background-image: url("contact.jpg");
+	/* Set a specific height
+	height: 100%;
+   */
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	width: 100%;;
+	height:300px;
+
+  }
+
+  .cuoutext{
+	color:#790666;
+	/* font-family: 'Lora';
+    font-size: 20px;   */
+	font-family: 'Lato';
+    font-size: 25px;  
+	font-weight:400px;
+	
+  }
+ 
+  h4{
+	font-family: 'Lora';
+    font-size: 18px;  
+	color:black;
+  }
+  h5{
+	font-family: 'Lora';
+    font-size: 17px;  
+	color:#9A9A9A;
+  }
+  h6{
+	font-family: 'Lora';
+    font-size: 15px;  
+	color:#790666;
+  }
+  /* .container {
+	background-image: url("../images/cus.jpg");
+  } */
+  .main-header {
+	text-align: center;
+	width:100%;
+	
+  }
+  
+  .cinput{
+	border-radius: 5px;
+	background-color:#790666;
+	 /* #bfbfbf; */
+	
+  }
+  /* .cgoutext2{
+	color:#fff;
+	font-family: 'Lato',sans-serif;	
+	font-size:15px;
+	
+} */
+
+
+.form-control{
+	width:475px;
+	font-family: 'Lato',sans-serif;	
+	font-size:12px;
+}
+.form-control1{
+	width:300px;
+	font-family: 'Lato',sans-serif;	
+	font-size:10px;
+}
+.help{
+	width:475px;
+	font-family: 'Lato',sans-serif;	
+	font-size:12px;
+}
+.curwrap {
+	height: 100%;
+	
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+  }
+  .cubtn{
+	color:#790666;
+	background-color: white;
+	
+}
+.cuactbtn {
+	width: 122px;
+	height: 30px;
+	font-family: 'Lato';
+	font-size: 14px;
+
+	/* text-transform: uppercase; */
+	letter-spacing: 1.0px;
+	font-weight: 800;
+	color: #790666;/*#000;*/
+	background-color: #ccad00;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+  
+  .cuactbtn:hover {
+	background-color:#ccad00;
+	box-shadow: 0px 15px 20px rgba(201, 165, 5, 0.4);
+	color: #790666;
+	transform: translateY(-7px);
+  }
+  .box-part{
+		background-color: rgb(241, 238, 238);
+	  border-width: medium;
+	  border-color: #790666;
+	  border-style: solid;
+	  
+  }

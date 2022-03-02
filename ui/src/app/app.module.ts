@@ -32,6 +32,7 @@ import { VideoComponent } from './pages/video/video.component';
 import { BrowserAnimationsModule,NoopAnimationsModule  } from '@angular/platform-browser/animations';
 import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
 import { ProductComponent } from './pages/product/product.component';
+
 // used to create fake backend
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -52,6 +53,8 @@ import { SessionComponent } from './pages/session/session.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 import { DevicesComponent } from './pages/devices/devices.component';
 import { LearnersComponent } from './pages/learners/learners.component';
+import { ReferComponent } from './pages/refer/refer.component';
+import { PartnerComponent } from './pages/partner/partner.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +80,8 @@ import { LearnersComponent } from './pages/learners/learners.component';
     UserprofileComponent,
     DevicesComponent,
     LearnersComponent,
+    ReferComponent,
+    PartnerComponent,
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
