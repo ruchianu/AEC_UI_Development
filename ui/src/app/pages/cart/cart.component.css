@@ -1,7 +1,21 @@
-.csum{
+.csum {
+  font-size: 20px;
+  font-family: lato;
+  font-weight: 300;
+  color: #790666;
+}
 
-    font-size: 20px;
-    font-family:lato;
-    font-weight: 300;
-    color:#790666;
+#cart {
+  background: #f8f8f8;
+  min-height: 630px;
+}
+
+.shadow-4 .z-depth-1 {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.shadow-4 .stepper-set ::ng-deep .card-body {
+  padding-top: 0px;
+  margin-top: 0px;
 }

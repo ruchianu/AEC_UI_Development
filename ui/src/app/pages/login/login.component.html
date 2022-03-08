@@ -1,122 +1,121 @@
 <!-- SECTION 1----Login Section -
 	Completed on 31/12/2021-->
-	
-	
-	
 
-	<section id="banner" class="">
-		<!-- Container starts here -->
-		<div class ="container-fluid">
-			<!-- Row Starts here -->
-			<div class="row height-100">
-				<!--Col Starts here -->
-				<div class="col-md-5 left-Side ">               
-					<div class="logo-set ml-5">
-						<img class="logogif"  src="assets/images/anu-aca-logo.gif">
-					</div>
-					<div class="login-main-text ">
-						<!-- <img class="pic" src ="assets/images/gal1.jpg" > -->
-						<!-- <img class="pic" src ="assets/images/gal2.jpg" > -->
-						<!-- <img class="pic" src ="assets/images/gal3.jpg" > -->
-						<!-- <img class="pic" src ="assets/images/gal4.jpg" > -->
-						<img class="pic ml-5 mb-4 " style="align-items: center;"src ="assets/images/gal5.jpg" >
-						
-						<h2 class="welcome mt-3 text-center">Welcome to AEA</h2>
-	
-						<p class="text-center">Login or register from here to access.</p>
-						<div class="wrap mt-3 " style="display: flex;
+
+
+
+<section id="banner" class="">
+	<!-- Container starts here -->
+	<div class="container-fluid">
+		<!-- Row Starts here -->
+		<div class="row height-100">
+			<!--Col Starts here -->
+			<div class="col-md-5 left-Side ">
+				<div class="logo-set ml-5">
+					<img class="logogif" src="assets/images/anu-aca-logo.gif">
+				</div>
+				<div class="login-main-text ">
+					<!-- <img class="pic" src ="assets/images/gal1.jpg" > -->
+					<!-- <img class="pic" src ="assets/images/gal2.jpg" > -->
+					<!-- <img class="pic" src ="assets/images/gal3.jpg" > -->
+					<!-- <img class="pic" src ="assets/images/gal4.jpg" > -->
+					<img class="pic ml-5 mb-4 " style="align-items: center;" src="assets/images/gal5.jpg">
+
+					<h2 class="welcome mt-3 text-center">Welcome to AEA</h2>
+
+					<p class="text-center">Login or register from here to access.</p>
+					<div class="wrap mt-3 " style="display: flex;
 						align-items: center;
 						justify-content: center;">
-						<button type="submit" class="btn btn-black0 ">Explore Courses</button></div>
-					 </div>
-				</div>
-				<!--Col Starts here -->
-				<div class="col-md-7 right-Side ">               
-					<div class="row">
-						<div class="col bckbtn mt-5 ">							
-							<button class="back" (click) = routeWithQueryParams($event)><span><a href="#"><i class="ag mr-2 fas fa-angle-left"></i></a> Back </span></button>							
-						</div>
+						<button type="submit" class="btn btn-black0 ">Explore Courses</button>
 					</div>
-					<div class="login-form ">
-						
-						
-					   <form class="" >
+				</div>
+			</div>
+			<!--Col Starts here -->
+			<div class="col-md-7 right-Side ">
+				<div class="row">
+					<div class="col bckbtn mt-5 ">
+						<button class="back" (click)=routeWithQueryParams($event)><span><a href="#"><i
+										class="ag mr-2 fas fa-angle-left"></i></a> Back </span></button>
+					</div>
+				</div>
+				<div class="login-form ">
+
+
+					<form class="">
 						<h2 class=" outext mb-4 ml-3 pl-3">Log in</h2>
-						<div class="col formin ml-3 pl-3">
-						  <div class="form-group mb-2" *ngIf="!isButtonDisabled">
-							 <label class="outext1 ">Registered Mobile Number</label>
-							<div class="row"> 
-							 	<div class="col-md-4" > 
-							  <!-- <input type="text" class="form-control" placeholder="User Name">  -->									
-											<ngx-intl-tel-input 
-												[formControl] = "mobileFormControl"												
-												[class]="'form-control1'"
-												[preferredCountries]="preferredCountries"
-												[enableAutoCountrySelect]="true" 
-												[enablePlaceholder]="true" 
-												[searchCountryFlag]="true"
-												[searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-												[selectFirstCountry]="false"
-												[selectedCountryISO]="CountryISO.India"
-												[phoneValidation]="true"
-												[separateDialCode]="separateDialCode"
-												[(ngModel)]="mobile" 
-												(keyup)="keyPress($event)" 
-												(keypress)="keyPress($event)" 
-												[numberFormat]="PhoneNumberFormat.National"                                      
-												name="phone" >
-											</ngx-intl-tel-input>	
-											<!-- <div *ngIf="isMobileNumber">
+						<div class="formin ml-3 pl-3">
+							<div class="form-group mb-2" *ngIf="!isButtonDisabled">
+								<label class="outext1 ">Registered Mobile Number</label>
+								<div class="row">
+									<div class="col-md-4">
+										<!-- <input type="text" class="form-control" placeholder="User Name">  -->
+										<ngx-intl-tel-input [formControl]="mobileFormControl" [class]="'form-control1'"
+											[preferredCountries]="preferredCountries" [enableAutoCountrySelect]="true"
+											[enablePlaceholder]="true" [searchCountryFlag]="true"
+											[searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+											[selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India"
+											[phoneValidation]="true" [separateDialCode]="separateDialCode"
+											[(ngModel)]="mobile" (keyup)="keyPress($event)"
+											(keypress)="keyPress($event)" [numberFormat]="PhoneNumberFormat.National"
+											name="phone">
+										</ngx-intl-tel-input>
+										<!-- <div *ngIf="isMobileNumber">
 												<div class="col-12">													
 													<div  class = "alert" *ngIf="mobileFormControl.hasError('required')">														
 														<p class="outext1"> Enter registered mobile number</p> -->
-														<!-- {{showError('Enter registered mobile number')}} -->																												
-													<!-- </div>
+										<!-- {{showError('Enter registered mobile number')}} -->
+										<!-- </div>
 												</div>
 											</div>											 -->
-								</div>						
-							</div> 
-						</div>
-						  <div class="wrap mt-4" *ngIf="!isButtonDisabled">
-						  		<button type="button" class="btn btn-black1" (click)="onAuthenticate()">Authenticate</button>						 																			 																
-						  </div>																									 
-						
-						  <div class="form-group  mt-4" *ngIf="isButtonDisabled&&!isOtpValid"> 
-							<label class="outext1">Enter 6 digit OTP</label>
-							<input type="password" name="mobileOtp" [(ngModel)]="mobileOtp" class="form-control" placeholder="Enter 6 digit OTP" (keypress)="keyPressNumbers($event)" maxlength="6" minlength="6">
-						 </div>
+									</div>
+								</div>
+							</div>
+							<div class="wrap mt-4" *ngIf="!isButtonDisabled">
+								<button type="button" class="btn btn-black1"
+									(click)="onAuthenticate()">Authenticate</button>
+							</div>
 
-						 <div *ngIf="isButtonDisabled&&!isOtpValid">							
-						 	<button type="button" class="btn btn-link1  mt-2" >( Resend  OTP )</button>
-						</div>
-						 <!-- <div class="wrap  mt-4">
+							<div class="form-group  mt-4" *ngIf="isButtonDisabled&&!isOtpValid">
+								<label class="outext1">Enter 6 digit OTP</label>
+								<input type="password" name="mobileOtp" [(ngModel)]="mobileOtp" class="form-control"
+									placeholder="Enter 6 digit OTP" (keypress)="keyPressNumbers($event)" maxlength="6"
+									minlength="6">
+							</div>
+
+							<div *ngIf="isButtonDisabled&&!isOtpValid">
+								<button type="button" class="btn btn-link1  mt-2">( Resend OTP )</button>
+							</div>
+							<!-- <div class="wrap  mt-4">
 							 <div *ngIf="isOtpValid">
 						  		<button type="submit" class="btn btn-black1 mr-2" (click)="onGetOtp()" >Get OTP</button>
 						  		<button type="submit" class="btn btn-black1 ml-2" >Login</button>
 							</div>
 						</div> -->
-						<div class="wrap  mt-4">
-							<div *ngIf="isOtpValid">
-								 <button type="submit" class="btn btn-black1 mr-2" (click)="onGetOtp()" >Get OTP</button>								 
-						   </div>
-					   </div>
-					   <div class="wrap  mt-4">
-						<div *ngIf="isButtonDisabled&&!isOtpValid">						
-							<!-- <button type="submit" class="btn btn-black1 ml-2" (click) = routeWithQueryParams($event)>Login</button> -->
-							<button type="submit" class="btn btn-black1 ml-2" (click) = onLogin()>Login</button>
-					   </div>
-				   </div>						
-						<label class="outext1 mt-3 ml-1">Don't have an account?</label> <button type="button" class="btn btn-link1" (click) = routeWithQueryParams($event)>Register Now</button>
+							<div class="wrap  mt-4">
+								<div *ngIf="isOtpValid">
+									<button type="submit" class="btn btn-black1 mr-2" (click)="onGetOtp()">Get
+										OTP</button>
+								</div>
+							</div>
+							<div class="wrap  mt-4">
+								<div *ngIf="isButtonDisabled&&!isOtpValid">
+									<!-- <button type="submit" class="btn btn-black1 ml-2" (click) = routeWithQueryParams($event)>Login</button> -->
+									<button type="submit" class="btn btn-black1 ml-2" (click)=onLogin()>Login</button>
+								</div>
+							</div>
+							<label class="outext1 mt-3 ml-1">Don't have an account?</label> <button type="button"
+								class="btn btn-link1" (click)=routeWithQueryParams($event)>Register Now</button>
 						</div>
-					   </form>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
-	</section>
-	
-	
-	<!-- 
+	</div>
+</section>
+
+
+<!-- 
 	<div class="sidenav">
 		<div class="logo-set">
 			<img class="logogif"  src="assets/images/anu-aca-logo.gif">

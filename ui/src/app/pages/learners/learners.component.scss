@@ -33,49 +33,64 @@
 } */
 /* Testimonials */
 
-#Testimonials1{
+#Testimonials1 {
 
 
-    padding:7% 7% 15% 15%;	 
-text-align: center;
+  padding   : 7% 7% 15% 15%;
+  text-align: center;
 
 
 
 }
 
-.review{
-  background-color:#790666; 
-  border-color:#f8fbff;
+.review {
+  // background-color: #790666;
+  border-color: #f8fbff;
   border-width: thick;
-  border-style:inset;
-  width: auto;
-}
-.greview{
-color: #f8fbff;
-
+  border-style: inset;
+  width       : auto;
+  padding     : 20px;
 }
 
+.greview {
+  color: #f8fbff;
 
-.test-img{
-  width:100%;
+}
+
+
+.test-img {
+  width : 100%;
   height: auto;
- 
-  
-  }
-  .view{
-      display: flex;
-      justify-content: center;
-      
-  }
+
+
+}
+
+.view {
+  display        : flex;
+  justify-content: center;
+
+}
+
 /* .carousel-caption{
   top: 0;
   bottom: auto;
   
   color:#6F016F;
 } */
-.courses{
+.courses {
   font-family: 'Lora';
-  font-size: 40px;
+  font-size  : 40px;
   font-weight: 800;
-  color: #790666;
+  color      : #790666;
+}
+
+.mdb-cara-set {
+  display        : flex;
+  justify-content: center;
+}
+
+.mdb-cara-set .view {
+  border-radius: 8px;
+  padding      : 10px;
+  background   : #fff;
 }
