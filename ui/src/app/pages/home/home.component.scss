@@ -32,6 +32,11 @@
 	font-size  : 48px;
 	font-weight: 700;
 	color      : #790666;
+
+	@media (max-width:991px) {
+
+		line-height: 30px;
+	}
 }
 
 .promo-title {
@@ -40,6 +45,11 @@
 	font-weight   : 200;
 	color         : #000;
 	letter-spacing: -1px;
+
+	@media (max-width:991px) {
+		font-size  : 24px;
+		line-height: 30px;
+	}
 }
 
 #banner {
@@ -59,6 +69,10 @@
 	height          : 100%;
 	content         : "";
 	z-index         : -1;
+
+	@media (max-width:991px) {
+		display: none;
+	}
 }
 
 .owner {
@@ -66,6 +80,10 @@
 	border          : 8px #F6F6F6 solid;
 	background-color: whitesmoke;
 	margin-top      : 60px;
+
+	@media (max-width:991px) {
+		margin-top: 20px;
+	}
 
 }
 
@@ -82,6 +100,9 @@
 	opacity   : 0;
 	transition: opacity .35s ease;
 
+	@media (max-width:991px) {
+		top: 300px;
+	}
 }
 
 .btnabt a {
@@ -102,6 +123,12 @@
 
 .video-frame {
 	margin-top: 80px;
+
+	@media (max-width:1023px) {
+		.video-frame {
+			margin-top: 20px;
+		}
+	}
 }
 
 .message {
@@ -178,7 +205,7 @@
 }
 
 .abottom {
-	width              : 20%;
+	width              : 60px;
 	background-color   : #790666;
 	border             : 5px solid #fff;
 	position           : absolute;
@@ -303,18 +330,19 @@
 }
 
 /* ------------------------Section 4 What Learners Say ---------------------------------- */
-.rowcourse {
-	font-family: 'Lora';
-	font-size  : 40px;
-	font-weight: 700;
-	color      : #790666;
-	margin-top : 100px;
-}
+// .rowcourse {
+// 	font-family: 'Lora';
+// 	font-size  : 40px;
+// 	font-weight: 700;
+// 	color      : #790666;
+// 	margin-top : 100px;
+// }
 
 .learners {
 	margin-bottom   : 20px;
 	background-color: whitesmoke;
 	height          : 600px;
+	width           : 100%;
 	overflow-y      : auto;
 }
 
@@ -345,15 +373,26 @@
 	font-weight: 800;
 	color      : #790666;
 	margin-top : 100px;
-	margin-left: 60px;
+	margin-left: 0px;
+
+	@media (max-width:1023px) {
+		font-size : 32px;
+		margin-top: 20px;
+
+		br {
+			display: none;
+		}
+	}
 }
 
 .see-more {
-	font-family: 'Lato', sans-serif;
-	font-size  : 16px;
-	font-weight: 400;
-	color      : #790666;
-	margin-left: 200px;
+	font-family   : 'Lato', sans-serif;
+	font-size     : 16px;
+	font-weight   : 400;
+	color         : #790666;
+	float         : right;
+	// margin-left: 200px;
+	margin-top    : 50px;
 }
 
 .see-more:hover {
@@ -392,11 +431,12 @@
 .news {
 
 	height    : 600px;
-	overflow-y: scroll
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .news_pic {
-	width         : 200px;
+	width         : 100%;
 	height        : 200px;
 	border        : 2px #dcdcdc solid;
 	/* margin-left:10px;
@@ -407,20 +447,21 @@
 .newsname {
 
 	font-family: 'Lora';
-	font-size  : 32px;
+	font-size  : 24px;
 	font-weight: 700;
 	color      : #222831;
-	margin-left: 90px;
-	margin-top : 30px;
+	margin-left: 0px;
+	margin-top : 0px;
 
 }
 
 .head {
-	font-family: 'Lato';
-	font-size  : 16px;
-	font-weight: 400;
-	color      : #9A9A9A;
-	margin-left: 90px;
+	font-family  : 'Lato';
+	font-size    : 16px;
+	font-weight  : 400;
+	color        : #9A9A9A;
+	margin-left  : 0px;
+	margin-bottom: 20px;
 }
 
 
@@ -453,3 +494,11 @@ border-color: #ecdfea;
 // #banner {
 // 	background: #fff;
 // }
+
+#okeyoffers {
+	@media (max-width:991px) {
+		.icons {
+			text-align: center !important;
+		}
+	}
+}

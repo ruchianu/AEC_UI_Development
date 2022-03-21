@@ -36,7 +36,7 @@
 #Testimonials1 {
 
 
-  padding   : 7% 7% 15% 15%;
+  padding   : 7% 7% 15% 7%;
   text-align: center;
 
 
@@ -50,6 +50,11 @@
   border-style: inset;
   width       : auto;
   padding     : 20px;
+
+  @media (max-width:990px) {
+    padding: 0px;
+  }
+
 }
 
 .greview {

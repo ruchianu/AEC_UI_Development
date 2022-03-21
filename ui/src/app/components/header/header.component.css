@@ -51,6 +51,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 400px;
 }
+
 .nav-item.active a {
   color: #790666;
 }
@@ -150,4 +151,24 @@
   color: #790666;
   font-size: 15px;
   font-family: "Lato", sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 1151px) {
+  .nav-item {
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .logogif {
+    width: 200px;
+    height: auto;
+  }
+
+  .nav-item {
+    border-bottom: 1px #dcdcdc solid;
+    width: 100%;
+  }
 }

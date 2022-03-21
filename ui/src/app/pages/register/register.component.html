@@ -10,214 +10,201 @@ Done and finalised on 04/01/2022-->
 
 <!-- SECTION 1----banner section-->
 
-<section id="signup" class="">
+<section id="signup" class="form-section">
   <!-- Container starts here -->
-  <div class ="container-fluid">
-      <!-- Row Starts here -->
-      <div class="row height-100">
-          <!--Left Col Starts here -->
-          <div class="col-md-5 rleft-Side ">               
-      <div class="logo-set ml-5">
-        <img class="rlogogif"  src="assets/images/anu-aca-logo.gif">
-      </div>
-      <div class="rlogin-main-text ">
-       
-        <img class="rpic ml-5 mb-4 " style="align-items: center;"src ="assets/images/signup1.jpg" >
-   
-        <h2 class="rwelcome mt-3 text-center">Welcome to AEA</h2>
-
-        <p class="text-center">Signup yourself </p>
-
-        <div class="wrap mt-3 " style="display: flex;
-        align-items: center;
-        justify-content: center;">
-        <button type="submit" class="btn rbtn-black0 ">Explore Courses</button></div>
-       </div>
-          </div> 
-          <!--Left Col ends here -->
-
-    <!--Right Col Starts here -->
-    <div class="col-md-7 rright-Side ">     
-      <!-- Back Button -->
-      <div class="row">
-
-        <div class="col bckbtn_signup mt-5 ">
-          <button class="back" ><span><a [routerLink]="['/home']"><i class="rag mr-2 fas fa-angle-left"></i></a> Back </span></button>
+  <div class="container-fluid">
+    <!-- Row Starts here -->
+    <div class="row height-100">
+      <!--Left Col Starts here -->
+      <div class="col-md-5 left-side">
+        <div class="logo-set">
+          <img class="logogif" src="assets/images/anu-aca-logo.gif">
         </div>
-      </div>   <!-- Back Button -->
-     
-      <!-- Signup Form -->
-      <div class="signup-form ">
-        <!-- Form Started -->
-        
-     
-         
-         <form class="" >
-          <h2 class=" outext1 mb-5 ml-4 pl-1">Register with us</h2>
-          <!----Row starts-->
-         <div class="row">
-         <!-- Signup Column Starts from here  -->
+        <div class="login-main-text text-center">
 
-         <div class="col-md-5 formin ml-4">       
-          
-            <div class="form-group "> <!-- Unique ID starts -->
-              <input type="text" class="form-control" placeholder="Unique ID">            
-            </div> 
-            <!-- Unique ID ends -->
-           
-          
-           <!-- Enter 6 -digit OTP & Resend OTP  OTP -->    
-            <div class="form-group">
-                 <input type="password" class="form-control" placeholder="Enter 6 digit OTP">
-                 <button type="button" class="btn btn-link1 mr-5 mt-1 mb-2 ">( Resend  OTP )</button>
-            </div>
+          <img class="img-fluid mb-4" src="assets/images/signup1.jpg">
 
-              <!-- First Name , Last Name  -->
-            <div class="form-group ">
-                <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="John" >
-            </div>
-        
-            <div class="form-group ">
-            <!-- Email input -->     
-              <input type="text" class="form-control" placeholder= "emailaddress">
-            </div>
+          <h2 class="mt-3">Welcome to AEA</h2>
 
-        <div class="form-group ">
-        <label  class="goutext2  col-form-label">Gender</label>
-        
-        <div class="radio-item ">
-          <input type="radio" id="radio1"name="ritem" value="option1" checked >
-          <label  class=" outext2" for="radio1">Male</label>
-        </div>
-        <div class="radio-item ">
-          <input type="radio" id="radio2" name="ritem" value="option2" >
-          <label  class=" outext2" for="radio2">Female</label>
-        </div>
-        <div class="radio-item ">
-          <input type="radio" id="radio3" name="ritem" value="option3" >
-          <label  class=" outext2" for="radio3">Others</label>
-       
-        </div>
-        <div class="form-group ">
-          <!-- Email input -->
-          <label  class="goutext2 col-form-label mb-2">Profession</label>
-           <!-- <input type="email" id="form5Example2" class="form-control" /> -->
-           <div class="row">
-           <div class="col "> 
-        <select class="custom-select custom-select-sm menu align-items-md-start">
-          <option selected>Open this select menu</option>
-          <option value="1">Student</option>
-          <option value="2">Professional</option>
-          <option value="3">Housewife</option>
-        </select>
-            </div> 
+          <p>Signup yourself </p>
+
+          <div class="mt-3">
+            <button type="submit" class="btn rbtn-black0 ">Explore Courses</button>
           </div>
-      </div>
-
-    
-        </div>
-
-
-
-      <div class="form-group row">
-        <div class="col-md-12">
-         <div class="rwrap  mt-4">
-           <button type="submit" class="btn actbtn  mr-2">Submit</button> 
-          <button type="submit" class="btn actbtn ml-2">Cancel</button>
-         
-        </div>
-        <!-- <div class="wrap mt-2 "style="display: flex;
-         align-items: left;
-      justify-content: left;">
-           <button type="button" class="btn actbtn ml-5 mr-2">Get OTP</button>
-          <button type="submit" class="btn actbtn ml-2">Cancel</button>
-         
-        </div> -->
         </div>
       </div>
+      <!--Left Col ends here -->
+
+      <!--Right Col Starts here -->
+      <div class="col-md-7 right-side">
+        <!-- Back Button -->
+        <div class="row">
+
+          <div class="col bckbtn mt-3">
+            <button class="back"><span><a [routerLink]="['/home']"><i class="ag mr-2 fas fa-angle-left"></i></a> Back
+              </span></button>
+          </div>
+        </div> <!-- Back Button -->
+
+        <div class="row">
+          <div class="col">
+            <!-- Signup Form -->
+            <!-- Form Started -->
 
 
-        
-         </div>  <!-- Signup Column ends here  -->
+
+            <form class="mt-4 outext">
+              <h3 class="mb-3">Register with us</h3>
+              <!----Row starts-->
+              <div class="row">
+                <!-- Signup Column Starts from here  -->
+
+                <div class="col-md-6">
+
+                  <div class="form-group ">
+                    <!-- Unique ID starts -->
+                    <input type="text" class="form-control" placeholder="Unique ID">
+                  </div>
+                  <!-- Unique ID ends -->
 
 
-         <div class="col-md-5 formin">       
-          <div class="form-group ">
+                  <!-- Enter 6 -digit OTP & Resend OTP  OTP -->
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Enter 6 digit OTP">
+                    <button type="button" class="btn btn-link1 mt-1 mb-2">( Resend OTP )</button>
+                  </div>
+
+                  <!-- First Name , Last Name  -->
+                  <div class="form-group ">
+                    <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="John">
+                  </div>
+
+                  <div class="form-group ">
+                    <!-- Email input -->
+                    <input type="text" class="form-control" placeholder="emailaddress">
+                  </div>
+
+                  <div class="form-group ">
+                    <label class="goutext2  col-form-label">Gender</label>
+
+                    <div class="radio-item ">
+                      <input type="radio" id="radio1" name="ritem" value="option1" checked>
+                      <label class=" outext2" for="radio1">Male</label>
+                    </div>
+                    <div class="radio-item ">
+                      <input type="radio" id="radio2" name="ritem" value="option2">
+                      <label class=" outext2" for="radio2">Female</label>
+                    </div>
+                    <div class="radio-item ">
+                      <input type="radio" id="radio3" name="ritem" value="option3">
+                      <label class=" outext2" for="radio3">Others</label>
+
+                    </div>
+                    <div class="form-group ">
+                      <!-- Email input -->
+                      <label class="goutext2 col-form-label mb-2">Profession</label>
+                      <!-- <input type="email" id="form5Example2" class="form-control" /> -->
+                      <div class="row">
+                        <div class="col ">
+                          <select class="custom-select custom-select-sm menu align-items-md-start">
+                            <option selected>Open this select menu</option>
+                            <option value="1">Student</option>
+                            <option value="2">Professional</option>
+                            <option value="3">Housewife</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+
+
+
+
+
+
+                </div> <!-- Signup Column ends here  -->
+
+
+                <div class="col-md-6 formin">
+                  <div class="form-group ">
+
+                    <input class="form-control" type="text" placeholder="Enter Mobile Number" readonly>
+
+                  </div>
+                  <!-- Mob no -->
+                  <!-- Default input -->
+                  <!-- <div class="col-md-6">
+            <ngx-intl-tel-input [cssClass]="'form-control1'" 
+            [preferredcountries]="preferredCountries"
+            [enableAutoCountrySelect]="true" 
+            [enablePlaceholder]="true" 
+            [searchCountryFlag]="true"
+            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
+            [selectFirstCountry]="false"
+            [selectedCountryISO]="CountryISO.India"
+            [phoneValidation]="true"
+            [separateDialCode]="separateDialCode"
+            formControlName="mobile" 
+            (keyup)="keyPress($event)" 
+            (keypress)="keyPress($event)" 
+            [numberFormat]="PhoneNumberFormat.National" 
+            *ngIf="!further && !mobileDiv"
+            name="phone" >
+          </ngx-intl-tel-input>
+          <span *ngIf="further || mobileDiv">{{formGroup.get('mobile').value.dialCode}}  {{formGroup.get('mobile').value.number}}</span> 
             
-              <input class="form-control" type="text" placeholder="Enter Mobile Number" readonly>
-              
-            </div>
-            <!-- Mob no -->
-              <!-- Default input -->
-              <!-- <div class="col-md-6">
-                    <ngx-intl-tel-input [cssClass]="'form-control1'" 
-                    [preferredcountries]="preferredCountries"
-                    [enableAutoCountrySelect]="true" 
-                    [enablePlaceholder]="true" 
-                    [searchCountryFlag]="true"
-                    [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" 
-                    [selectFirstCountry]="false"
-                    [selectedCountryISO]="CountryISO.India"
-                    [phoneValidation]="true"
-                    [separateDialCode]="separateDialCode"
-                    formControlName="mobile" 
-                    (keyup)="keyPress($event)" 
-                    (keypress)="keyPress($event)" 
-                    [numberFormat]="PhoneNumberFormat.National" 
-                    *ngIf="!further && !mobileDiv"
-                    name="phone" >
-                  </ngx-intl-tel-input>
-                  <span *ngIf="further || mobileDiv">{{formGroup.get('mobile').value.dialCode}}  {{formGroup.get('mobile').value.number}}</span> 
-                    
-                 </div>  -->
-<!--             
-            <small *ngIf="!formGroup.controls['mobile'].valid && formGroup.controls['mobile'].touched && !further" >
-              Required Field , Please enter Phone number</small>
-              </div> -->
-              
-          <!-- Enter 6 -digit OTP & Resend OTP  OTP -->   
-          <div class="form-group ">
-           <button type="button" class="btn otpbtn">Get OTP</button> 
-          </div>
-            <div class="form-group">
-              <input class="form-control " type="text" placeholder="Display Mobile Number" readonly>
-              
-            </div>
-            <!-- <div class="form-group " style="width:200px;height:20px;">
-              <span></span>
-             </div> -->
-              <!--- Last Name  -->
-            <div class="form-group">
-                <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="Doe" >
-            </div>
-        
-            <div class="form-group "> <!--DOB-->        
-              <input type="text" class="form-control" placeholder= "Date of Birth">
-            </div>
-            <div class="form-group ">
-              <!-- Email input -->     
-                <input type="text" class="form-control" placeholder= "Age">
+         </div>  -->
+                  <!--             
+    <small *ngIf="!formGroup.controls['mobile'].valid && formGroup.controls['mobile'].touched && !further" >
+      Required Field , Please enter Phone number</small>
+      </div> -->
+
+                  <!-- Enter 6 -digit OTP & Resend OTP  OTP -->
+                  <div class="form-group ">
+                    <button type="button" class="btn otpbtn">Get OTP</button>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control " type="text" placeholder="Display Mobile Number" readonly>
+
+                  </div>
+                  <!-- <div class="form-group " style="width:200px;height:20px;">
+      <span></span>
+     </div> -->
+                  <!--- Last Name  -->
+                  <div class="form-group">
+                    <input mdbInput name="uid" formControlName="uid" class="form-control" placeholder="Doe">
+                  </div>
+
+                  <div class="form-group ">
+                    <!--DOB-->
+                    <input type="text" class="form-control" placeholder="Date of Birth">
+                  </div>
+                  <div class="form-group ">
+                    <!-- Email input -->
+                    <input type="text" class="form-control" placeholder="Age">
+                  </div>
+                </div>
+              </div> <!-- Signup Column ends here  -->
+              <div class="form-group row mt-2">
+                <div class="col-md-12">
+                  <button type="submit" class="btn actbtn  mr-2">Submit</button>
+                  <button type="submit" class="btn actbtn ml-2">Cancel</button>
+                </div>
               </div>
-      
-              
-         </div>
-  
+            </form>
+            <!---Form ended-->
+            <!-- Form Ended -->
+          </div> <!-- Signup Form ends -->
+        </div>
 
-         <div class="col-md-2 formin">
-         
-          </div>
-
-  </div>  <!-- Signup Column ends here  -->
-    
-         
-    
-    
-    </form> <!---Form ended-->
-         <!-- Form Ended -->
-      </div>  <!-- Signup Form ends -->
-    </div>   <!--Right Col ends here -->
-  </div> <!----Row ends here-->
-</div> <!---container fluid ends -->
-</section> <!---section ends -->
-
-
+      </div>
+      <!--Right Col ends here -->
+    </div>
+    <!----Row ends here-->
+  </div>
+  <!---container fluid ends -->
+</section>
+<!---section ends -->
